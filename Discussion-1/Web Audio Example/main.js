@@ -1,270 +1,224 @@
-// ============================================
-// DOM GLOBALS - HTML elements we interact with
-// ============================================
+// Grab DOM elements
 const controls = document.querySelector(".controls");
-const showControls = document.querySelector("#createContext");
+const createBtn = document.querySelector("#createContext");
+
+const playBtn = document.querySelector("#play");
+const pauseBtn = document.querySelector("#pause");
+
+const waveSelect = document.querySelector("#waveType");
+const freqSlider = document.querySelector("#frequency");
+const gainSlider = document.querySelector("#gain");
+
+const lfoToggle = document.querySelector("#lfoToggle");
 const lfoControls = document.querySelector("#lfoModulation");
+const lfoTypeSelect = document.querySelector("#lfoType");
+const lfoRateSlider = document.querySelector("#lfoRate");
+const lfoGainCheck = document.querySelector("#lfoGain");
+const lfoFreqCheck = document.querySelector("#lfoFreq");
 
-// SVGs created using -> https://github.com/Yqnn/svg-path-editor
-const waveSVG = {
-  sine: () => `<svg width="50" height="18" viewBox="0 0 50 18"><path d="M0 9 C 6 1, 12 1, 18 9 S 30 17, 36 9 S 44 1, 50 9" fill="none" stroke="currentColor" stroke-width="2"></svg>`,
-  triangle: () => `<svg width="50" height="18" viewBox="0 0 50 18"><path d="M0 16 L12 2 L25 16 L38 2 L50 16" fill="none" stroke="currentColor" stroke-width="2"></svg>`,
-  square: () => `<svg width="50" height="18" viewBox="0 0 50 18"><path d="M0 16 L0 2 L12 2 L12 16 L25 16 L25 2 L38 2 L38 16 L50 16" fill="none" stroke="currentColor" stroke-width="2"></svg>`,
-  sawtooth: () => `<svg width="50" height="18" viewBox="0 0 50 18"><path d="M0 16 L12 2 L12 16 L25 2 L25 16 L38 2 L38 16 L50 2" fill="none" stroke="currentColor" stroke-width="2"></svg>`
-};
+const oscWaveIcon = document.querySelector("#oscWaveIcon");
+const lfoWaveIcon = document.querySelector("#lfoWaveIcon");
 
+// Hide UI at start
 controls.style.display = "none";
 lfoControls.style.display = "none";
 
-// ============================================
-// SYNTH GLOBALS - Web Audio API objects
-// ============================================
-let audioContext, oscillator, gainNode, vcaGain;
-let lfo, lfoGain, lfoEnabled = false, lfoToGainDepth, lfoToFreqDepth, baseGainSource, baseFreqSource;
+// Web Audio globals
+let audioContext = null;
+let osc = null;
+let amp = null;
 
-// ============================================
-// INITIALIZE AUDIO CONTEXT
-// ============================================
-showControls.addEventListener("click", initializeAudioContext);
+let lfo = null;
+let lfoToGain = null; // depth for gain modulation
+let lfoToFreq = null; // depth for freq modulation
 
-// ============================================
-// PLAY AUDIO - Start the oscillator
-// ============================================
-document.querySelector("#play").addEventListener("click", playAudio);
+// SVG icons
+const waveSVG = {
+  sine: `<svg width="50" height="18" viewBox="0 0 50 18"><path d="M0 9 C 6 1, 12 1, 18 9 S 30 17, 36 9 S 44 1, 50 9" fill="none" stroke="currentColor" stroke-width="2"></svg>`,
+  triangle: `<svg width="50" height="18" viewBox="0 0 50 18"><path d="M0 16 L12 2 L25 16 L38 2 L50 16" fill="none" stroke="currentColor" stroke-width="2"></svg>`,
+  square: `<svg width="50" height="18" viewBox="0 0 50 18"><path d="M0 16 L0 2 L12 2 L12 16 L25 16 L25 2 L38 2 L38 16 L50 16" fill="none" stroke="currentColor" stroke-width="2"></svg>`,
+  sawtooth: `<svg width="50" height="18" viewBox="0 0 50 18"><path d="M0 16 L12 2 L12 16 L25 2 L25 16 L38 2 L38 16 L50 2" fill="none" stroke="currentColor" stroke-width="2"></svg>`
+};
 
-// ============================================
-// PAUSE AUDIO - Stop the oscillator
-// ============================================
-document.querySelector("#pause").addEventListener("click", pauseAudio);
+function setWaveIcon(containerEl, waveType) {
+  if (waveType === "sine") containerEl.innerHTML = waveSVG.sine;
+  else if (waveType === "square") containerEl.innerHTML = waveSVG.square;
+  else if (waveType === "triangle") containerEl.innerHTML = waveSVG.triangle;
+  else if (waveType === "sawtooth") containerEl.innerHTML = waveSVG.sawtooth;
+}
 
-// ============================================
-// OSCILLATOR CONTROLS
-// ============================================
-document.querySelector("#waveType").addEventListener("change", changeWaveform);
-document.querySelector("#frequency").addEventListener("input", changeFrequency);
-document.querySelector("#gain").addEventListener("input", changeGain);
+// set initial icons
+setWaveIcon(oscWaveIcon, waveSelect.value);
+setWaveIcon(lfoWaveIcon, lfoTypeSelect.value);
 
-// ============================================
-// LFO CONTROLS
-// ============================================
-document.querySelector("#lfoToggle").addEventListener("change", toggleLFO);
-document.querySelector("#lfoType").addEventListener("change", changeLFOType);
-document.querySelector("#lfoRate").addEventListener("input", changeLFORate);
-document.querySelector("#lfoGain").addEventListener("change", updateLFORouting);
-document.querySelector("#lfoFreq").addEventListener("change", updateLFORouting);
-
-// ============================================
-// INITIALIZE AUDIO CONTEXT FUNCTION
-// ============================================
-function initializeAudioContext() {
-  controls.style.display = controls.style.display === "none" ? "block" : "none";
+// Create Audio Context
+createBtn.addEventListener("click", () => {
   if (!audioContext) {
     audioContext = new (window.AudioContext || window.webkitAudioContext)();
-    gainNode = audioContext.createGain();
-    gainNode.gain.value =
-    parseFloat(document.querySelector("#gain").value); // Ensure start at slider's low volume
-    vcaGain = audioContext.createGain();
-    mediaDest = audioContext.createMediaStreamDestination();
-    setupAudioRouting();
-    document.querySelector("#record").disabled = false;
-    showControls.disabled = true;
-    showControls.style.opacity = "0.5";
-    showControls.style.cursor = "not-allowed";
   }
-}
 
-// ============================================
-// SETUP AUDIO ROUTING FUNCTION
-// ============================================
-function setupAudioRouting() {
-  gainNode.connect(vcaGain);
-  vcaGain.connect(audioContext.destination);
-}
+  // show synth controls
+  controls.style.display = "block";
 
-// ============================================
-// PLAY AUDIO FUNCTION
-// ============================================
-function playAudio() {
-  if (!oscillator) {
-    oscillator = audioContext.createOscillator();
-    const waveType = document.querySelector("#waveType").value;
-    oscillator.type = ['sine', 'square', 'sawtooth', 'triangle'].includes(waveType) ? waveType : 'sine';
-    oscillator.frequency.value = document.querySelector("#frequency").value;
-    oscillator.connect(gainNode);
-    oscillator.start();
-    if (lfoEnabled) createLFO();
+  // LFO module only shows if checkbox is checked
+  lfoControls.style.display = lfoToggle.checked ? "block" : "none";
+
+  // disable create button so you can't hide controls by clicking again
+  createBtn.disabled = true;
+  createBtn.style.opacity = "0.5";
+  createBtn.style.cursor = "not-allowed";
+});
+
+// Play / Pause
+playBtn.addEventListener("click", () => {
+  if (!audioContext) return; // context must be created first
+  if (osc) return; // already playing
+
+  // create oscillator + amp
+  osc = audioContext.createOscillator();
+  amp = audioContext.createGain();
+
+  // set values from UI
+  osc.type = waveSelect.value;
+  osc.frequency.value = parseFloat(freqSlider.value);
+  amp.gain.value = parseFloat(gainSlider.value);
+
+  // connect graph: osc -> amp -> speakers
+  osc.connect(amp);
+  amp.connect(audioContext.destination);
+
+  // start
+  osc.start();
+
+  // if LFO enabled, start it
+  if (lfoToggle.checked) {
+    startLFO();
   }
-}
+});
 
-// ============================================
-// PAUSE AUDIO FUNCTION
-// ============================================
-function pauseAudio() {
-  if (oscillator) {
-    oscillator.stop();
-    oscillator = null;
-  }
-  stopLFO();
-}
+pauseBtn.addEventListener("click", () => {
+  stopSound();
+});
 
-// ============================================
-// CHANGE WAVEFORM FUNCTION
-// ============================================
-function changeWaveform(e) {
-  if (oscillator) oscillator.type = e.target.value;
-}
+// Main synth controls
+waveSelect.addEventListener("change", () => {
+  setWaveIcon(oscWaveIcon, waveSelect.value);
+  if (osc) osc.type = waveSelect.value;
+});
 
-// ============================================
-// CHANGE FREQUENCY FUNCTION
-// ============================================
-function changeFrequency(e) {
-  const val = parseFloat(e.target.value);
-  if (oscillator) oscillator.frequency.value = val;
-  if (baseFreqSource) baseFreqSource.offset.value = val;
-}
+freqSlider.addEventListener("input", () => {
+  if (osc) osc.frequency.value = parseFloat(freqSlider.value);
+});
 
-// ============================================
-// CHANGE GAIN FUNCTION
-// ============================================
-function changeGain(e) {
-  gainNode.gain.value = parseFloat(e.target.value);
-}
+gainSlider.addEventListener("input", () => {
+  if (amp) amp.gain.value = parseFloat(gainSlider.value);
+});
 
-// ============================================
-// TOGGLE LFO FUNCTION AND DISPLAY (and enable LFO)
-// ============================================
-function toggleLFO(e) {
-  lfoEnabled = e.target.checked;
-  lfoControls.style.display = lfoEnabled ? "block" : "none";
-  if (lfoEnabled && oscillator) createLFO();
+// LFO controls
+lfoToggle.addEventListener("change", () => {
+  lfoControls.style.display = lfoToggle.checked ? "block" : "none";
+
+  if (!osc) return; // only run LFO if sound is playing
+
+  if (lfoToggle.checked) startLFO();
   else stopLFO();
-}
+});
 
-// ============================================
-// CHANGE LFO TYPE FUNCTION
-// ============================================
-function changeLFOType(e) {
-  if (lfo) lfo.type = e.target.value;
-}
+lfoTypeSelect.addEventListener("change", () => {
+  setWaveIcon(lfoWaveIcon, lfoTypeSelect.value);
+  if (lfo) lfo.type = lfoTypeSelect.value;
+});
 
-// ============================================
-// CHANGE LFO RATE FUNCTION
-// ============================================
-function changeLFORate(e) {
-  if (lfo) lfo.frequency.value = e.target.value;
-}
+lfoRateSlider.addEventListener("input", () => {
+  if (lfo) lfo.frequency.value = parseFloat(lfoRateSlider.value);
+});
 
-// ============================================
-// CREATE LFO FUNCTION
-// ============================================
-function createLFO() {
-  if (!audioContext || !oscillator || !gainNode) return;
-  stopLFO();
-  lfo = audioContext.createOscillator();
-  lfo.type = document.querySelector("#lfoType").value;
-  lfo.frequency.value = parseFloat(document.querySelector("#lfoRate").value);
-  setupLFOGainAndFrequency();
-  startLFO();
-}
+lfoGainCheck.addEventListener("change", () => {
+  if (lfo) updateLFORouting();
+});
 
-// ============================================
-// SETUP LFO GAIN AND FREQUENCY FUNCTION
-// ============================================
-function setupLFOGainAndFrequency() {
-  lfoToGainDepth = audioContext.createGain();
-  lfoToFreqDepth = audioContext.createGain();
-  lfoToGainDepth.gain.value = 0.4;
-  lfoToFreqDepth.gain.value = 30;
-  baseGainSource = audioContext.createConstantSource();
-  baseFreqSource = audioContext.createConstantSource();
-  baseGainSource.offset.value = parseFloat(document.querySelector("#gain").value) || 0.1;
-  baseFreqSource.offset.value = parseFloat(document.querySelector("#frequency").value) || 220;
-  lfo.connect(lfoToGainDepth);
-  lfo.connect(lfoToFreqDepth);
-  updateLFORouting();
-}
+lfoFreqCheck.addEventListener("change", () => {
+  if (lfo) updateLFORouting();
+});
 
-// ============================================
-// START LFO FUNCTION
-// ============================================
+// LFO helpers
 function startLFO() {
-  baseGainSource.start();
-  baseFreqSource.start();
+  // clear any old LFO first
+  stopLFO();
+
+  if (!audioContext || !osc || !amp) return;
+
+  lfo = audioContext.createOscillator();
+  lfo.type = lfoTypeSelect.value;
+  lfo.frequency.value = parseFloat(lfoRateSlider.value);
+
+  // Depth nodes (how strong the modulation is)
+  lfoToGain = audioContext.createGain();
+  lfoToFreq = audioContext.createGain();
+
+  // simple “depth” values
+  lfoToGain.gain.value = 0.4;  // gain wiggle amount
+  lfoToFreq.gain.value = 30;   // frequency wiggle amount
+
+  // connect LFO to depth nodes
+  lfo.connect(lfoToGain);
+  lfo.connect(lfoToFreq);
+
+  // connect to targets based on checkboxes
+  updateLFORouting();
+
   lfo.start();
 }
 
-// ============================================
-// UPDATE LFO ROUTING FUNCTION
-// ============================================
 function updateLFORouting() {
-  if (!lfo || !gainNode) return;
-  if (baseGainSource) baseGainSource.disconnect();
-  if (lfoToGainDepth) lfoToGainDepth.disconnect();
-  if (document.querySelector("#lfoGain").checked) {
-    baseGainSource.connect(vcaGain.gain);
-    lfoToGainDepth.connect(vcaGain.gain);
+  if (!lfo || !lfoToGain || !lfoToFreq) return;
+
+  // disconnect first so you don’t stack connections
+  lfoToGain.disconnect();
+  lfoToFreq.disconnect();
+
+  // if checked, connect to the AudioParam
+  if (lfoGainCheck.checked && amp) {
+    lfoToGain.connect(amp.gain);
   }
-  if (oscillator) {
-    if (baseFreqSource) baseFreqSource.disconnect();
-    if (lfoToFreqDepth) lfoToFreqDepth.disconnect();
-    if (document.querySelector("#lfoFreq").checked) {
-      baseFreqSource.connect(oscillator.frequency);
-      lfoToFreqDepth.connect(oscillator.frequency);
-    }
+
+  if (lfoFreqCheck.checked && osc) {
+    lfoToFreq.connect(osc.frequency);
   }
 }
 
-// ============================================
-// STOP LFO FUNCTION
-// ============================================
 function stopLFO() {
   if (lfo) {
     lfo.stop();
     lfo.disconnect();
     lfo = null;
   }
-  if (lfoToGainDepth) lfoToGainDepth.disconnect();
-  if (lfoToFreqDepth) lfoToFreqDepth.disconnect();
-  lfoToGainDepth = null;
-  lfoToFreqDepth = null;
-  if (baseGainSource) {
-    baseGainSource.stop();
-    baseGainSource.disconnect();
-    baseGainSource = null;
+
+  if (lfoToGain) {
+    lfoToGain.disconnect();
+    lfoToGain = null;
   }
-  if (baseFreqSource) {
-    baseFreqSource.stop();
-    baseFreqSource.disconnect();
-    baseFreqSource = null;
+
+  if (lfoToFreq) {
+    lfoToFreq.disconnect();
+    lfoToFreq = null;
   }
 }
 
-// ============================================
-// WAVEFORM ICON FUNCTIONS - Display wave visuals
-// ============================================
-function setWaveIcon(containerEl, waveType) {
-  const fn = waveSVG[waveType] || waveSVG.sine;
-  containerEl.innerHTML = fn();
+function stopSound() {
+  // stop LFO first
+  stopLFO();
+
+  // stop oscillator
+  if (osc) {
+    osc.stop();
+    osc.disconnect();
+    osc = null;
+  }
+
+  // clean amp
+  if (amp) {
+    amp.disconnect();
+    amp = null;
+  }
 }
-
-// Set initial oscillator icon
-const oscWaveIcon = document.querySelector("#oscWaveIcon");
-setWaveIcon(oscWaveIcon, document.querySelector("#waveType").value);
-
-// Update oscillator icon when waveform changes
-document.querySelector("#waveType").addEventListener("change", (e) => {
-  const type = e.target.value;
-  setWaveIcon(oscWaveIcon, type);
-  if (oscillator) oscillator.type = type;
-});
-
-// Set initial LFO icon
-const lfoWaveIcon = document.querySelector("#lfoWaveIcon");
-setWaveIcon(lfoWaveIcon, document.querySelector("#lfoType").value);
-
-// Update LFO icon when waveform changes
-document.querySelector("#lfoType").addEventListener("change", (e) => {
-  const type = e.target.value;
-  setWaveIcon(lfoWaveIcon, type);
-  if (lfo) lfo.type = type;
-});
