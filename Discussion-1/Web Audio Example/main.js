@@ -40,6 +40,7 @@ const waveSVG = {
   sawtooth: `<svg width="50" height="18" viewBox="0 0 50 18"><path d="M0 16 L12 2 L12 16 L25 2 L25 16 L38 2 L38 16 L50 2" fill="none" stroke="currentColor" stroke-width="2"></svg>`
 };
 
+// Set Icon next to wave type
 function setWaveIcon(containerEl, waveType) {
   if (waveType === "sine") containerEl.innerHTML = waveSVG.sine;
   else if (waveType === "square") containerEl.innerHTML = waveSVG.square;
@@ -69,7 +70,7 @@ createBtn.addEventListener("click", () => {
   createBtn.style.cursor = "not-allowed";
 });
 
-// Play / Pause
+// Play button
 playBtn.addEventListener("click", () => {
   if (!audioContext) return; // context must be created first
   if (osc) return; // already playing
@@ -96,25 +97,28 @@ playBtn.addEventListener("click", () => {
   }
 });
 
+// Pause button (does not terminate audio context)
 pauseBtn.addEventListener("click", () => {
   stopSound();
 });
 
-// Main synth controls
+// Wave selection
 waveSelect.addEventListener("change", () => {
   setWaveIcon(oscWaveIcon, waveSelect.value);
   if (osc) osc.type = waveSelect.value;
 });
 
+// Frequency slider
 freqSlider.addEventListener("input", () => {
   if (osc) osc.frequency.value = parseFloat(freqSlider.value);
 });
 
+// Gain (volume) slider
 gainSlider.addEventListener("input", () => {
   if (amp) amp.gain.value = parseFloat(gainSlider.value);
 });
 
-// LFO controls
+// LFO controls toggle (checkbox)
 lfoToggle.addEventListener("change", () => {
   lfoControls.style.display = lfoToggle.checked ? "block" : "none";
 
@@ -124,35 +128,40 @@ lfoToggle.addEventListener("change", () => {
   else stopLFO();
 });
 
+// LFO wave type selection
 lfoTypeSelect.addEventListener("change", () => {
   setWaveIcon(lfoWaveIcon, lfoTypeSelect.value);
   if (lfo) lfo.type = lfoTypeSelect.value;
 });
 
+// LFO frequency slider (speed)
 lfoRateSlider.addEventListener("input", () => {
   if (lfo) lfo.frequency.value = parseFloat(lfoRateSlider.value);
 });
 
+// Route to gain checkbox
 lfoGainCheck.addEventListener("change", () => {
   if (lfo) updateLFORouting();
 });
 
+// Route to frequency checkbox
 lfoFreqCheck.addEventListener("change", () => {
   if (lfo) updateLFORouting();
 });
 
 // LFO helpers
 function startLFO() {
-  // clear any old LFO first
+  // clear any old LFO first (don't want multiple LFOs at same time)
   stopLFO();
 
+  // If any of these do not exist, stop the function
   if (!audioContext || !osc || !amp) return;
 
   lfo = audioContext.createOscillator();
   lfo.type = lfoTypeSelect.value;
   lfo.frequency.value = parseFloat(lfoRateSlider.value);
 
-  // Depth nodes (how strong the modulation is)
+  // Depth/Intensity of modulation nodes (how strong the modulation is)
   lfoToGain = audioContext.createGain();
   lfoToFreq = audioContext.createGain();
 
