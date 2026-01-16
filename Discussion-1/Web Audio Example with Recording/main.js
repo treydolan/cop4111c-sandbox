@@ -4,6 +4,8 @@
 const controls = document.querySelector(".controls");
 const showControls = document.querySelector("#createContext");
 const lfoControls = document.querySelector("#lfoModulation");
+const recordBtn = document.querySelector("#record");
+const downloadLink = document.querySelector("#downloadRecording");
 
 // SVGs created using -> https://github.com/Yqnn/svg-path-editor
 const waveSVG = {
@@ -19,13 +21,19 @@ lfoControls.style.display = "none";
 // ============================================
 // SYNTH GLOBALS - Web Audio API objects
 // ============================================
-let audioContext, oscillator, gainNode, vcaGain;
+let audioContext, oscillator, gainNode, vcaGain, mediaDest, mediaRecorder;
+let recordedChunks = [], isRecording = false;
 let lfo, lfoGain, lfoEnabled = false, lfoToGainDepth, lfoToFreqDepth, baseGainSource, baseFreqSource;
 
 // ============================================
 // INITIALIZE AUDIO CONTEXT
 // ============================================
 showControls.addEventListener("click", initializeAudioContext);
+
+// ============================================
+// RECORDING FUNCTIONALITY
+// ============================================
+recordBtn.addEventListener("click", toggleRecording);
 
 // ============================================
 // PLAY AUDIO - Start the oscillator
@@ -79,6 +87,64 @@ function initializeAudioContext() {
 function setupAudioRouting() {
   gainNode.connect(vcaGain);
   vcaGain.connect(audioContext.destination);
+  vcaGain.connect(mediaDest);
+}
+
+// ============================================
+// TOGGLE RECORDING FUNCTION
+// ============================================
+function toggleRecording() {
+  if (!audioContext || !mediaDest) return;
+  downloadLink.style.display = "none";
+  downloadLink.removeAttribute("href");
+  isRecording ? stopRecording() : startRecording();
+}
+
+// ============================================
+// START RECORDING FUNCTION
+// ============================================
+function startRecording() {
+  recordedChunks = [];
+  const options = { mimeType: getSupportedMimeType() };
+  mediaRecorder = new MediaRecorder(mediaDest.stream, options);
+  mediaRecorder.ondataavailable = (e) => { if (e.data.size > 0) recordedChunks.push(e.data); };
+  mediaRecorder.onstop = createDownloadLink;
+  mediaRecorder.start();
+  isRecording = true;
+  recordBtn.textContent = "Stop Recording";
+}
+
+// ============================================
+// STOP RECORDING FUNCTION
+// ============================================
+function stopRecording() {
+  mediaRecorder.stop();
+  isRecording = false;
+  recordBtn.textContent = "Start Recording";
+}
+
+// ============================================
+// CREATE DOWNLOAD LINK FUNCTION
+// ============================================
+function createDownloadLink() {
+  const blob = new Blob(recordedChunks, { type: mediaRecorder.mimeType || "audio/webm" });
+  const url = URL.createObjectURL(blob);
+  downloadLink.href = url;
+  downloadLink.download = "recording.webm";
+  downloadLink.textContent = "Download Recording";
+  downloadLink.style.display = "inline-block";
+  console.log(blob);
+}
+
+// ============================================
+// GET SUPPORTED MIME TYPE FUNCTION (for MediaRecorder options)
+// ============================================
+function getSupportedMimeType() {
+  const preferredTypes = ["audio/webm;codecs=opus", "audio/webm", "audio/ogg;codecs=opus"];
+  for (const type of preferredTypes) {
+    if (MediaRecorder.isTypeSupported(type)) return type;
+  }
+  return null;
 }
 
 // ============================================
