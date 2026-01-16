@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <title>Discussion 1 - Web Audio API Example</title>
 </head>
 <body>
@@ -59,6 +60,17 @@
     <footer>
         <small>&copy; 2026 Thomas Dolan</small>
     </footer>
+    <!-- Volume warning modal -->
+    <div id="volumeModal" class="modal">
+        <div class="modal-card" role="dialog">
+            <h3 id="volumeTitle">Volume Warning</h3>
+            <p>
+            This synth can get loud. Please keep your system volume at a reasonable level
+            before pressing Play.
+            </p>
+            <button type="button" id="closeVolumeModal">I understand</button>
+        </div>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

@@ -19,9 +19,13 @@ const lfoFreqCheck = document.querySelector("#lfoFreq");
 const oscWaveIcon = document.querySelector("#oscWaveIcon");
 const lfoWaveIcon = document.querySelector("#lfoWaveIcon");
 
+const volumeModal = document.querySelector("#volumeModal");
+const closeVolumeModalBtn = document.querySelector("#closeVolumeModal");
+
 // Hide UI at start
 controls.style.display = "none";
 lfoControls.style.display = "none";
+
 
 // Web Audio globals
 let audioContext = null;
@@ -31,6 +35,9 @@ let amp = null;
 let lfo = null;
 let lfoToGain = null; // depth for gain modulation
 let lfoToFreq = null; // depth for freq modulation
+
+// Warning Message
+let didShowVolumeWarning = false;
 
 // SVG icons
 const waveSVG = {
@@ -56,6 +63,12 @@ setWaveIcon(lfoWaveIcon, lfoTypeSelect.value);
 createBtn.addEventListener("click", () => {
   if (!audioContext) {
     audioContext = new (window.AudioContext || window.webkitAudioContext)();
+  }
+
+  // Show warning once
+  if (!didShowVolumeWarning) {
+    showVolumeWarning();
+    didShowVolumeWarning = true;
   }
 
   // show synth controls
@@ -231,3 +244,18 @@ function stopSound() {
     amp = null;
   }
 }
+
+function showVolumeWarning() {
+  volumeModal.classList.add("show");
+  volumeModal.setAttribute("aria-hidden", "false");
+}
+
+function hideVolumeWarning() {
+  volumeModal.classList.remove("show");
+  volumeModal.setAttribute("aria-hidden", "true");
+}
+
+closeVolumeModalBtn.addEventListener("click", () => {
+  hideVolumeWarning();
+});
+

@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0b0f14;
+  --panel: rgba(255, 255, 255, 0.06);
+  --panel-2: rgba(255, 255, 255, 0.09);
+  --text: #e9eef6;
+  --muted: rgba(233, 238, 246, 0.7);
+  --border: rgba(233, 238, 246, 0.15);
+  --accent: #67f5c7;
+  --accent-2: #7aa7ff;
+  --danger: #ff6b6b;
+  --shadow: rgba(0, 0, 0, 0.35);
+}
+
+body {
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(1200px 600px at 15% 10%, rgba(103, 245, 199, 0.18), transparent 55%),
+    radial-gradient(900px 500px at 85% 20%, rgba(122, 167, 255, 0.18), transparent 60%),
+    linear-gradient(180deg, #070a0f, var(--bg));
+  min-height: 100vh;
+}
+
+/* Layout */
+header, footer {
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+  letter-spacing: 0.4px;
+}
+
+main {
+  padding: 18px;
+}
+
+section {
+  width: min(760px, 100%);
+  margin: 0 auto;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  box-shadow: 0 18px 45px var(--shadow);
+  padding: 18px;
+  backdrop-filter: blur(10px);
+}
+
+section h2 {
+  margin: 0 0 8px 0;
+  font-size: 1.15rem;
+}
+
+section p {
+  margin: 0 0 14px 0;
+  color: var(--muted);
+}
+
+/* Buttons */
+button {
+  appearance: none;
+  border: 1px solid var(--border);
+  background: linear-gradient(180deg, var(--panel-2), rgba(255,255,255,0.05));
+  color: var(--text);
+  border-radius: 12px;
+  padding: 10px 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 120ms ease, border-color 120ms ease, background 120ms ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  border-color: rgba(103, 245, 199, 0.35);
+}
+
+button:active {
+  transform: translateY(0px);
+}
+
+button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+/* Fieldset panel */
+fieldset.controls {
+  margin-top: 14px;
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 14px;
+  background: rgba(0, 0, 0, 0.20);
+}
+
+legend {
+  padding: 0 10px;
+  color: var(--muted);
+  letter-spacing: 0.3px;
+}
+
+/* Control grid */
+fieldset.controls {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+}
+
+/* Two columns on larger screens */
+@media (min-width: 700px) {
+  fieldset.controls {
+    grid-template-columns: 1fr 1fr;
+    gap: 12px 16px;
+    align-items: center;
+  }
+
+  /* Make play/pause sit nicely */
+  #play, #pause {
+    width: 100%;
+  }
+}
+
+/* Labels */
+label {
+  display: block;
+  font-size: 0.95rem;
+  color: var(--muted);
+}
+
+/* Inputs */
+select, input[type="range"] {
+  width: 100%;
+}
+
+select {
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(0,0,0,0.25);
+  color: var(--text);
+  padding: 10px 12px;
+  outline: none;
+}
+
+select:focus {
+  border-color: rgba(122, 167, 255, 0.45);
+}
+
+/* Range sliders */
+input[type="range"] {
+  margin-top: 6px;
+  accent-color: var(--accent);
+}
+
+/* Checkbox row spacing */
+input[type="checkbox"] {
+  transform: translateY(1px);
+  accent-color: var(--accent);
+}
+
+/* Make the wave select + icon line up */
+fieldset.controls > div {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+#oscWaveIcon,
+#lfoWaveIcon {
+  width: 56px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--accent);
+  padding: 6px 8px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: rgba(0,0,0,0.25);
+}
+
+/* LFO module panel */
+#lfoModulation {
+  border: 1px solid rgba(122, 167, 255, 0.28);
+  background: rgba(122, 167, 255, 0.08);
+  border-radius: 16px;
+  padding: 12px;
+  margin-top: 8px;
+
+  /* So it spans full width even on 2-col layout */
+  grid-column: 1 / -1;
+}
+
+/* Make LFO checkboxes feel like “routing switches” */
+#lfoModulation label {
+  margin-top: 6px;
+}
+
+#lfoModulation input[type="checkbox"] {
+  margin-right: 6px;
+}
+
+/* Footer */
+footer small {
+  color: var(--muted);
+}
+
+/* =========================
+   Volume warning modal
+   ========================= */
+.modal {
+  position: fixed;
+  inset: 0;
+  display: none;              /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
+  background: rgba(0, 0, 0, 0.65);
+  z-index: 9999;
+}
+
+.modal.show {
+  display: flex;
+}
+
+.modal-card {
+  width: min(520px, 100%);
+  background: rgba(15, 20, 28, 0.95);
+  border: 1px solid rgba(233, 238, 246, 0.18);
+  border-radius: 16px;
+  padding: 16px;
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.5);
+}
+
+.modal-card h3 {
+  margin: 0 0 8px 0;
+}
+
+.modal-card p {
+  margin: 0 0 14px 0;
+  color: rgba(233, 238, 246, 0.8);
+}
+
+/* Mobile polish */
+@media (max-width: 420px) {
+  section {
+    padding: 14px;
+  }
+
+  fieldset.controls {
+    padding: 12px;
+  }
+
+  button {
+    width: 100%;
+  }
+}
