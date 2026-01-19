@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="style.css">
+    <title>Web Audio API</title>
+
+</head>
+<body>
+    <div id = "title">
+        <h1>Web Audio API</h1>
+        <h2>This API generates, manipulate, and gets infomation from sounds</h2>
+    </div>
+    
+    <div id = "keyboard">
+        <button onclick="playSound(100)" style="background-color: red;"></button>
+        <button onclick="playSound(110)" style="background-color: orange;"></button>
+        <button onclick="playSound(120)" style="background-color: yellow;"></button>
+        <button onclick="playSound(130)" style="background-color: green;"></button>
+        <button onclick="playSound(140)" style="background-color: rgb(0, 255, 242);"></button>
+        <button onclick="playSound(150)" style="background-color: rgb(0, 89, 255);"></button>
+        <button onclick="playSound(160)" style="background-color: rgb(132, 0, 255);"></button>
+        <button onclick="playSound(170)" style="background-color: rgb(255, 0, 242);"></button>
+        <button onclick="playSound(180)" style="background-color: rgb(128, 0, 100);"></button>
+        <button onclick="playSound(190)" style="background-color: rgb(255, 0, 34);"></button>
+    </div>
+
+    <div>
+        <label for="sounds">Sounds:</label>
+        <select name="sounds" id="sounds" class="dropdown">
+        <option value="sine">sine</option>
+        <option value="square">square</option>
+        <option value="sawtooth">sawtooth</option>
+        <option value="triangle">triangle</option>
+        </select>
+    </div>
+    <div>
+        <label for="pitchSlider">Pitch: </label>
+        <input type="range" id="pitchSlider" class="slider" min="-100" max="1000" value="300" step="1">
+
+        <label for="volumeSlider">Volume: </label>
+        <input type="range" id="volumeSlider" class="slider" min="0" max="2" value="1" step="0.1">
+
+        <label for="reverbSlider">Reverb: </label>
+        <input type="range" id="reverbSlider" class="slider" min="0.5" max="5" value="2" step="0.5">
+    </div>
+    
+    <script src="produce_audio.js"></script>      
+</body>
+</html>

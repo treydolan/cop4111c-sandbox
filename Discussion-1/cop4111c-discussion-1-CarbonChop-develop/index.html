@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>History API SPA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="topbar">
+        <div class="brand">
+            <div class="logo" aria-hidden="true">H</div>
+            <div>
+                <div class="brandTitle">History API Mini-SPA</div>
+                <div class="brandSubtitle">No reload navigation</div>
+            </div>
+        </div>
+
+        <nav class="nav" aria-label="Primary navigation">
+            <a href="/" data-link>Home</a>
+            <a href="/projects" data-link>Projects</a>
+            <a href="/examples" data-link>Examples</a>
+            <a href="/about" data-link>About</a>
+        </nav>
+    </header>
+
+    <main class="container">
+        <div class="card">
+            <div class="statusRow">
+                <div class="pill" id="routePill" aria-live="polite">
+                    <span class="dot" id="routeDot"></span>
+                    <span id="routeText">Route: (loading)</span>
+                </div>
+
+                <div class="hint">
+                    Tip: use your browser Back/Forward buttons to prove the History API works.
+                </div>
+            </div>
+
+            <div class="divider"></div>
+
+            <div id="app" tabindex="-1">
+                <!-- JS renders routes here -->
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <span>Made with the History API</span>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>

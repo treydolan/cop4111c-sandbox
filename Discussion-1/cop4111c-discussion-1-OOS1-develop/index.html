@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Speech API Text-to-Speech Demo">
+    <title>SpeakEasy - Web Speech API Demo</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">SpeakEasy</a>
+            <ul class="nav-links">
+                <li><a href="index.html" class="nav-link active">Home</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <main class="main-content">
+        <section class="hero">
+            <h1>Text to Speech</h1>
+            <p class="hero-subtitle">Type it. Hear it. Simple as that.</p>
+        </section>
+
+        <div class="demo-section">
+            <div class="demo-card">
+                <div class="input-group">
+                    <label for="text-input">Your Text</label>
+                    <textarea id="text-input" rows="4" placeholder="Type something to hear it spoken...">Welcome to SpeakEasy. This demo showcases the Web Speech API, a powerful HTML5 feature that converts text into natural speech.</textarea>
+                </div>
+
+                <div class="controls-row">
+                    <div class="control-item">
+                        <label for="voice-select">Voice</label>
+                        <select id="voice-select">
+                            <option value="">Loading...</option>
+                        </select>
+                    </div>
+
+                    <div class="control-item">
+                        <label for="rate-range">Speed <span id="rate-value">1.0</span>x</label>
+                        <input type="range" id="rate-range" min="0.5" max="2" step="0.1" value="1">
+                    </div>
+
+                    <div class="control-item">
+                        <label for="pitch-range">Pitch <span id="pitch-value">1.0</span></label>
+                        <input type="range" id="pitch-range" min="0" max="2" step="0.1" value="1">
+                    </div>
+
+                    <div class="control-item">
+                        <label for="volume-range">Volume <span id="volume-value">100</span>%</label>
+                        <input type="range" id="volume-range" min="0" max="1" step="0.1" value="1">
+                    </div>
+                </div>
+
+                <div class="button-row">
+                    <button type="button" id="speak-btn" class="btn btn-primary">Speak</button>
+                    <button type="button" id="pause-btn" class="btn btn-secondary" disabled>Pause</button>
+                    <button type="button" id="resume-btn" class="btn btn-secondary" disabled>Resume</button>
+                    <button type="button" id="stop-btn" class="btn btn-secondary" disabled>Stop</button>
+                </div>
+
+                <div class="status-bar">
+                    <span class="status-dot" id="status-indicator"></span>
+                    <span id="status-text">Ready</span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <p>Created by Bensky Sainvilus &bull; CTS2356 Web Development</p>
+    </footer>
+
+    <script src="js/speech.js"></script>
+</body>
+</html>

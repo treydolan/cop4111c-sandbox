@@ -26,12 +26,12 @@ const closeVolumeModalBtn = document.querySelector("#closeVolumeModal");
 controls.style.display = "none";
 lfoControls.style.display = "none";
 
-
 // Web Audio globals
 let audioContext = null;
 let osc = null;
 let amp = null;
 
+// LFO Variables
 let lfo = null;
 let lfoToGain = null; // depth for gain modulation
 let lfoToFreq = null; // depth for freq modulation

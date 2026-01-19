@@ -1,0 +1,217 @@
+:root{
+    --bg: #0b1220;
+    --text: #eaf0ff;
+    --border: rgba(255,255,255,0.14);
+    --muted: #e4e7f0;
+    --card: rgba(255,255,255,0.06);
+    --working: #48d597;
+    --bad: #ff6b6b;
+}
+
+body{
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    color: var(--text);
+    background: 
+        radial-gradient(1000px 600px at 20% 10%, #4a2a0a, transparent), 
+        radial-gradient(900px 520px at 80% 30%, #7a3f12, transparent), 
+        var(--bg);
+}
+
+.topbar{
+    max-width: 980px;
+    margin: 18px auto 0;
+    padding: 14px 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 14px;
+    border: 1px solid var(--border);
+    background: linear-gradient(180deg, rgba(255,255,255,0.06), rgba(255,255,255,0.03));
+    border-radius: 16px;
+    backdrop-filter: blur(6px);
+}
+
+.brand{
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    min-width: 240px;
+}
+
+.logo{
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    display: grid;
+    place-items: center;
+    background: rgba(122,166,255,0.18);
+    border: 1px solid rgba(122,166,255,0.35);
+    font-weight: 900;
+}
+
+.brandTitle{
+    font-weight: 900;
+    letter-spacing: 0.2px;
+}
+
+.brandSubtitle{
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 2px;
+}
+
+.nav{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.nav a{
+    color: var(--text);
+    text-decoration: none;
+    padding: 8px 10px;
+    border-radius: 12px;
+    border: 1px solid transparent;
+    background: rgba(0,0,0,0.12);
+}
+
+.nav a:hover{
+    border-color: rgba(255,255,255,0.18);
+    background: rgba(0,0,0,0.18);
+}
+
+.nav a.active{
+    border-color: rgba(122,166,255,0.45);
+    background: rgba(122,166,255,0.18);
+}
+
+.container{
+    max-width: 980px;
+    margin: 14px auto 24px;
+    padding: 0 16px;
+}
+
+.card{
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    background: var(--card);
+    padding: 16px;
+    backdrop-filter: blur(6px);
+}
+
+.statusRow{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.pill{
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--border);
+    background: rgba(0,0,0,0.14);
+    border-radius: 999px;
+    padding: 6px 10px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.dot{
+    width: 8px;
+    height: 8px;
+    border-radius: 999px;
+    background: var(--muted);
+}
+.dot.working{ background: var(--working); }
+.dot.bad{ background: var(--bad); }
+
+.hint{
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.divider{
+    height: 1px;
+    background: var(--border);
+    margin: 14px 0;
+}
+
+h2{
+    margin: 0 0 8px;
+    font-size: 18px;
+}
+
+p{
+    margin: 0 0 10px;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+.footer {
+    max-width: 980px;
+    margin: 12px auto 24px;
+    padding: 0 16px;
+    color: var(--muted);
+    font-size: 12px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    margin-top: 10px;
+}
+@media (max-width: 800px){
+    .grid{ grid-template-columns: 1fr; }
+}
+
+.panel{
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 12px;
+    background: rgba(0,0,0,0.12);
+}
+
+.panelTitle{
+    font-weight: 800;
+    margin-bottom: 6px;
+}
+
+.list{
+    margin: 0;
+    padding-left: 18px;
+    color: var(--muted);
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.actions{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 10px;
+}
+
+button{
+    padding: 9px 12px;
+    border-radius: 12px;
+    border: 1px solid rgba(122,166,255,0.35);
+    background: rgba(122,166,255,0.18);
+    color: var(--text);
+    cursor: pointer;
+    font-weight: 700;
+}
+
+button:hover{
+    background: rgba(122,166,255,0.24);
+}
