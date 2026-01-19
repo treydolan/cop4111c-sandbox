@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>COP4111C Discussion 1 - Web Audio API</title>
+</head>
+<body>
+    <header>
+        <h1>Discussion 1</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Web Audio API Synthesizer</h2>
+            <button type="button" id="createContext">Get started!</button>
+            <fieldset class="controls">
+                <legend>Synth Controls</legend>
+                <div class="play-pause">
+                    <button type="button" id="play">Play</button>
+                    <button type="button" id="pause">Pause</button>
+                </div>
+                <br>
+                <div class="waveform-select">
+                    <label class="waveLabel" for="waveType">Select a wave type:</label>
+                    <div>
+                        <select name="waveType" id="waveType">
+                            <option value="sine" selected>Sine</option>
+                            <option value="square">Square</option>
+                            <option value="sawtooth">Sawtooth</option>
+                            <option value="triangle">Triangle</option>
+                        </select>
+                        <span id="oscWaveIcon"></span>
+                    </div>
+                </div>
+                <div class="fader-column">
+                    <div class="fader">
+                        <label for="frequency">Tuning</label>
+                        <input type="range" id="frequency" name="frequency" min="60" max="1000" value="440" class="vertical-slider">
+                    </div>
+                    <div class="fader">
+                        <label for="gain">Gain (Volume)</label>
+                        <input type="range" id="gain" class="vertical-slider" min="0" max="1" step="0.01" value="0.3">
+                    </div>
+                </div>
+                <br>
+                <div class="lfo-module">
+                    <div class="lfo-toggle">
+                        <label for="lfoToggle">Enable LFO</label>
+                        <input type="checkbox" id="lfoToggle">
+                    </div>
+                    <div id="lfoModulation">
+                        <label for="lfoType">LFO Wave</label>
+                        <div>
+                            <select id="lfoType">
+                                <option value="sine" selected>Sine</option>
+                                <option value="triangle">Triangle</option>
+                                <option value="square">Square</option>
+                                <option value="sawtooth">Sawtooth</option>
+                            </select>
+                            <span id="lfoWaveIcon"></span>
+                        </div>
+                        <label for="lfoRate">LFO Rate:</label>
+                        <input type="range" id="lfoRate" min="0.1" max="20" step="0.1" value="5">
+                        <label for="lfoGain">Modulate Gain</label>
+                        <input type="checkbox" id="lfoGain" checked> 
+                        <label for="lfoFreq">Modulate Frequency</label>
+                        <input type="checkbox" id="lfoFreq" checked>
+                    </div>
+                </div>
+            </fieldset>
+        </section>
+    </main>
+    <footer>
+        <small>&copy; 2026 Thomas Dolan</small>
+        <span>Background image courtesy of Adi Goldstein on Unsplash</span>
+    </footer>
+    <div id="volumeWarning" class="warning">
+        <div class="warning-card" role="dialog">
+            <h3 id="volumeTitle">Volume Warning</h3>
+            <p> This synth can get loud. Please keep your system volume at a reasonable level
+            before pressing Play.</p>
+            <button type="button" id="closeVolumeWarning">I understand</button>
+        </div>
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>
