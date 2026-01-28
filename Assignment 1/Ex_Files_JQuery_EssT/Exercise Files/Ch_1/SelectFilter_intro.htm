@@ -1,17 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Selectors and Filters</title>
     <link rel="stylesheet" href="../style.css" />
     <script type="text/javascript" src="../jquery-3.0.0.js"></script>
     <script type="text/javascript">
         $("document").ready(function() {
             //$("p").css("border", "3px solid red");
-            //$(".selectors").css("border", "3px solid red");
-            //$("#intro").css("border", "3px solid red");
-//            $("p:first").css("border", "3px solid red");
-//            $("h2:not(.selectors)").css("border", "3px solid red");
+            $(".selectors").css("border", "3px solid red");
+            $("#intro").css("border", "3px solid red");
+            $("p:first").css("border", "3px solid red");
+            $("h2:not(.selectors)").css("border", "3px solid red");
         });
     </script>
 </head>
