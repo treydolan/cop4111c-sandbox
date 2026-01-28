@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Using Form Selectors and Filters</title>
     <link rel="stylesheet" href="../style.css" />
     
@@ -37,48 +39,48 @@
                         <td class="style2">
                             First Name</td>
                         <td>
-                            <input id="FirstName" type="text" /></td>
+                            <input id="FirstName" type="text" placeholder="First Name" /></td>
                     </tr>
                     <tr>
                         <td class="style2">
                             Last Name</td>
                         <td>
-                            <input id="LastName" type="text" /></td>
+                            <input id="LastName" type="text" placeholder="Last Name" /></td>
                     </tr>
                     <tr>
                         <td class="style2">
                             Disabled Text Field</td>
                         <td>
-                            <input id="Text1" type="text" disabled="disabled" /></td>
+                            <input id="Text1" type="text" placeholder="Disabled field" disabled="disabled" /></td>
                     </tr>
                     <tr>
                         <td class="style2">
                             Gender</td>
                         <td>
-                            <input id="Male" type="radio" checked="checked" />M<input id="Female" type="radio" />F</td>
+                            <label for="Male"><input id="Male" type="radio" name="gender" checked="checked" />M</label><label for="Female"><input id="Female" type="radio" name="gender" />F</label></td>
                     </tr>
                     <tr>
                         <td class="style2">
                             What products are you interested in?</td>
                         <td>
-                            <input id="Checkbox1" type="checkbox" checked="checked" /><label for="Checkbox1">Widgets</label><br
+                            <input id="Checkbox1" type="checkbox" checked="checked" title="Widgets" /><label for="Checkbox1">Widgets</label><br
                             />
-                            <input id="Checkbox2" type="checkbox" /><label for="Checkbox1">Hibbity Jibbities</label><br />
-                            <input id="Checkbox3" type="checkbox" checked="checked" /><label for="Checkbox1">SplashBangers</label><br
+                            <input id="Checkbox2" type="checkbox" title="Hibbity Jibbities" /><label for="Checkbox1">Hibbity Jibbities</label><br />
+                            <input id="Checkbox3" type="checkbox" checked="checked" title="SplashBangers" /><label for="Checkbox1">SplashBangers</label><br
                             />
-                            <input id="Checkbox4" type="checkbox" /><label for="Checkbox1">Whatzits</label></td>
+                            <input id="Checkbox4" type="checkbox" title="Whatzits" /><label for="Checkbox1">Whatzits</label></td>
                     </tr>
                     <tr>
                         <td class="style2">
                             Comments:</td>
                         <td>
-                            <textarea id="Comments" cols="40" name="S1" rows="5"></textarea></td>
+                            <textarea id="Comments" cols="40" name="S1" rows="5" placeholder="Enter your comments"></textarea></td>
                     </tr>
                     <tr>
                         <td class="style2">
                             Optional life story file</td>
                         <td>
-                            <input id="File1" type="file" /></td>
+                            <input id="File1" type="file" title="Upload life story file" /></td>
                     </tr>
                     <tr>
                         <td class="style2">

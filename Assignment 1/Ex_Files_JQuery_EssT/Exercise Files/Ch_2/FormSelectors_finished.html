@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Using Form Selectors and Filters</title>
-    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../style.css">
 
-    <script type="text/javascript" src="../jquery-3.0.0.js"></script>
-    <script type="text/javascript">
+    <script src="../jquery-3.0.0.js"></script>
+    <script>
         $("document").ready(function() {
         //$("form :input").css("border", "3px solid red");
         //$("form :text").css("border", "3px solid red");
@@ -24,6 +26,10 @@
         form > div {
             margin-top: 10px;
         }
+        
+        .product-list {
+            display: inline-block;
+        }
     </style>
 </head>
 
@@ -37,43 +43,43 @@
             <li><code></code></li>
         </ul>
         <div>
-            <form action="" method="post">
+            <form action="#" method="post">
                 <div>
                     <label>First Name</label>
-                    <input id="FirstName" type="text" />
+                    <input id="FirstName" type="text" title="First Name">
                 </div>
                 <div>
                     <label>Last Name</label>
-                    <input id="LastName" type="text" />
+                    <input id="LastName" type="text" title="Last Name">
                 </div>
                 <div>
                     <label>Disabled Element</label>
-                    <input id="Text1" type="text" disabled="disabled" />
+                    <input id="Text1" type="text" disabled="disabled" title="Disabled Element">
                 </div>
                 <div>
                     <label>Gender</label>
-                    <input id="Male" type="radio" checked="checked" name="gender" />M
-                    <input id="Female" type="radio" name="gender"/>F
+                    <input id="Male" type="radio" checked="checked" name="gender" title="Male">M
+                    <input id="Female" type="radio" name="gender" title="Female">F
                 </div>
                 <div>
                     <label>What products are you interested in?</label>
-                    <div style="display:inline-block">
-                        <input id="Checkbox1" type="checkbox" checked="checked" /><label for="Checkbox1">Widgets</label><br/>
-                        <input id="Checkbox2" type="checkbox" /><label for="Checkbox1">Hibbity Jibbities</label><br />
-                        <input id="Checkbox3" type="checkbox" checked="checked" /><label for="Checkbox1">SplashBangers</label><br/>
-                        <input id="Checkbox4" type="checkbox" /><label for="Checkbox1">Whatzits</label>
+                    <div class="product-list">
+                        <input id="Checkbox1" type="checkbox" checked="checked"><label for="Checkbox1">Widgets</label><br>
+                        <input id="Checkbox2" type="checkbox" title="Hibbity Jibbities"><label for="Checkbox2">Hibbity Jibbities</label><br>
+                        <input id="Checkbox3" type="checkbox" checked="checked" title="SplashBangers"><label for="Checkbox1">SplashBangers</label><br>
+                        <input id="Checkbox4" type="checkbox" title="Whatzits"><label for="Checkbox1">Whatzits</label>
                     </div>
                 </div>
                 <div>
                     <label>Comments:</label>
-                    <textarea id="Comments" cols="40" name="S1" rows="5"></textarea>
+                    <textarea id="Comments" cols="40" name="S1" rows="5" title="Enter your comments"></textarea>
                 </div>
                 <div>
                     <label>Optional life story file</label>
-                    <input id="File1" type="file" />
+                    <input id="File1" type="file" title="Upload your life story">
                 </div>
                 <div>
-                    <input id="Submit1" type="submit" value="submit" /> <input id="Reset1" type="reset" value="reset" />
+                    <input id="Submit1" type="submit" value="submit"> <input id="Reset1" type="reset" value="reset">
                 </div>
             </form>
         </div>

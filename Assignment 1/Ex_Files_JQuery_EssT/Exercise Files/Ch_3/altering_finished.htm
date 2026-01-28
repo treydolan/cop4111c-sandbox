@@ -1,24 +1,26 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Altering Document Content</title>
     <link rel="stylesheet" href="../style.css" />
     <script type="text/javascript" src="../jquery-3.0.0.js"></script>
     <script type="text/javascript">
         $("document").ready(function() {
-        //$("#example p").wrap("<div style='color:red'/>");
-        //$("#example p").wrapAll("<div style='border:3px solid red'/>");
-        //$("#example").empty();
+        //"#example p").wrap("<div style='color:red'/>");
+        //"#example p").wrapAll("<div style='border:3px solid red'/>");
+        //"#example").empty();
         //$("#example p.a, #example p.b").remove();
-        //$("#example p.a, #example p.b").detach();
-        //$("<div>replaced</div>").replaceAll("#example p[id]");
-        //$("#example p[id]").replaceWith("<div>replaced</div>");
-        //$("#example p").replaceWith(replacementFn);
+        //"#example p.a, #example p.b").detach();
+        //"<div>replaced</div>").replaceAll("#example p[id]");
+        //"#example p[id]").replaceWith("<div>replaced</div>");
+        $("#example p").replaceWith(replacementFn);
     });
     
     function replacementFn() {
-        if ($(this).text().indexOf("1") != -1) {
+        if ($(this).text().indexOf("2") != -1) {
             return "<p>This is paragraph uno</p>";
         }
         else {
