@@ -8,21 +8,21 @@
     <script type="text/javascript">
         $(function() {
             // Older versions of jQuery used the "bind" and "unbind" functions
-            // $("#evtTarget").bind("mouseover mouseleave", highlight);
+             $("#evtTarget").bind("mouseover mouseleave", highlight);
 
-            // $("#evtTarget").bind("click", function(evt) {
-            //     $("#evtTarget").unbind("mouseover mouseleave", highlight);
-            //     $("#evtTarget").html("<p>You shut off the hover effect!</p>");
-            // });
+            $("#evtTarget").bind("click", function(evt) {
+                $("#evtTarget").unbind("mouseover mouseleave", highlight);
+                $("#evtTarget").html("<p>You shut off the hover effect!</p>");
+            });
 
             // jQuery as of 1.7 provides the universal "on" and "off" functions
             $("#evtTarget").on("mouseover mouseleave", highlight);
 
-            $("#evtTarget").on("click", function(evt) {
-                $("#evtTarget").off("mouseover mouseleave", highlight);
-                $("#evtTarget").html("<p>You shut off the hover effect!</p>");
-                $("#evtTarget").removeClass("highlighted");
-            });
+            // $("#evtTarget").on("click", function(evt) {
+            //     $("#evtTarget").off("mouseover mouseleave", highlight);
+            //     $("#evtTarget").html("<p>You shut off the hover effect!</p>");
+            //     $("#evtTarget").removeClass("highlighted");
+            // });
             
             $("#textEntry").on("keypress", function(evt) {
                 $("#keyPress").text(String.fromCharCode(evt.charCode));
