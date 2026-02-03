@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/themes/base/jquery-ui.css' integrity='sha512-Ikr9iIb48ljzg7k903d77p0AITNsf4DxtxK4g5R4UiqHpCdroXAX0zqr0uPSWskJOJ1pQoAOXCb8WPkohWY3Bw==' crossorigin='anonymous'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.js' integrity='sha512-+k1pnlgt4F1H8L7t3z95o3/KO+o78INEcXTbnoJQ/F2VqDVhWoaiVml/OEHv9HsVgxUaVW+IbiZPUJQfF/YxZw==' crossorigin='anonymous'></script>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.14.1/jquery-ui.js' integrity='sha512-ETeDoII5o/Zv6W1AtLiNDwfdkH684h6M/S8wd2N0vMEAeL3UAOf7a1SHdP1LGDieDrofe1KZpp9k6yLkR90E6A==' crossorigin='anonymous'></script>
+    
+    <script src="https://unpkg.com/intro.js/intro.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/intro.js/introjs.css">
+    <title>Sunshine Web Services</title>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Sunshine Web Services</h1>
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, ea dolores. Dolores labore cum possimus animi corporis autem eaque sapiente, eos blanditiis quod numquam sequi optio reprehenderit porro, earum ipsam?</p>
+        <nav>
+            <ul>
+                <li><a href="login.html">Login</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <button id="login">Login</button>
+        <button id="contact">Contact</button>
+    </header>
+    <main>
+        <section>
+            <h2>Who we are</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, recusandae aliquam iusto ex maiores tempore quos alias quasi quaerat vitae obcaecati atque. Temporibus incidunt impedit omnis minus natus quaerat adipisci!</p>
+        </section>
+        <section>
+            <h2>Schedule Consultation</h2>
+            <form id="calendar" method="dialog">
+                <fieldset>
+                    <legend>When should we contact you?</legend>
+                    <label for="datepicker">Select a Date:</label><input type="text" id="datepicker">
+                    <label for="timepick">Select a speed</label>
+                    <select name="timepick" id="timepick">
+                        <option selected="selected">Morning (9:00am - 11:30am)</option>
+                        <option>Afternoon (12:00pm - 4:00pm)</option>
+                        <option>Evening (5:00pm - 7:00pm)</option>
+                    </select>
+                    <label for="submit"></label>
+                    <input type="submit" value="A submit button">
+                </fieldset>
+            </form>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
