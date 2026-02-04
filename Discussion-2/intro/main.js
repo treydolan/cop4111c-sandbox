@@ -1,17 +1,14 @@
-introJs.tour().setOptions({
-  steps: [{
-    intro: "Hello world!"
-  }, {
-    element: document.querySelector('#login'),
-    intro: "Click here to login!"
-  }, {
-    element: document.querySelector('#calendar'),
-    intro: "Schedule an appointment"
-  }
-]
-}).start()
+// introJs.tour().setOptions({
+//   steps: [{
+//     intro: "Welcome to the Discussion 2!"
+//   }, {
+//     element: document.querySelector('#login'),
+//     intro: "Click here to login!"
+//   }, {
+//     element: document.querySelector('#calendar'),
+//     intro: "Schedule an appointment"
+//   }
+// ]
+// }).start()
 
-$( function() {
-    $( "#datepicker" ).datepicker();
-    $( "#timepicker" ).timepicker();
-} );
+introJs.tour().start();
