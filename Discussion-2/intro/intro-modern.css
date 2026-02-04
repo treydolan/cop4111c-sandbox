@@ -1,0 +1,212 @@
+:root{
+    --bg:#0b1220;
+    --card:#121b2e;
+    --text:#eaf0ff;
+    --muted:#b7c4ff;
+    --accent:#6ee7ff;
+    --accent2:#a78bfa;
+    --border:rgba(255,255,255,.12);
+}
+
+* {
+    box-sizing:border-box;
+}
+
+body {
+    margin: 0;
+    font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+    background: radial-gradient(1200px 600px at 20% 0%, rgba(110,231,255,.18), transparent 60%),
+                radial-gradient(1000px 700px at 80% 10%, rgba(167,139,250,.16), transparent 55%),
+                var(--bg);
+    color: var(--text);
+    line-height: 1.5;
+}
+
+header {
+    padding: 2.25rem 1.25rem 1.25rem;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.topbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    flex-wrap: wrap;
+    padding: .8rem 1rem;
+    border: 1px solid var(--border);
+    background: rgba(18,27,46,.72);
+    border-radius: 14px;
+    backdrop-filter: blur(8px);
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    gap: .75rem;
+}
+
+.logo {
+    width: 38px;
+    height: 38px;
+    border-radius: 12px;
+    background: linear-gradient(135deg, var(--accent), var(--accent2));
+    box-shadow: 0 10px 30px rgba(0,0,0,.25);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: .85rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text);
+    text-decoration: none;
+    opacity:.9;
+    padding: .35rem .55rem;
+    border-radius: 10px;
+}
+
+nav a:hover {
+    background: rgba(255,255,255,.06);
+}
+
+.hero {
+    display: grid;
+    grid-template-columns: 1.2fr .8fr;
+    gap: 1.25rem;
+    margin-top: 1.25rem;
+    align-items: start;
+}
+
+@media (max-width: 850px) {
+    .hero {
+        grid-template-columns: 1fr;
+    }
+}
+
+.panel {
+    border: 1px solid var(--border);
+    background: rgba(18,27,46,.72);
+    border-radius: 16px;
+    padding: 1.25rem;
+    backdrop-filter: blur(8px);
+}
+
+h1 {
+    margin: .2rem 0 .5rem;
+    font-size: 2rem;
+}
+
+.muted { 
+    color: var(--muted);
+    margin:0; 
+}
+
+.ctaRow {
+    display: flex;
+    gap: .75rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.btn {
+    border: 1px solid var(--border);
+    background: rgba(255,255,255,.06);
+    color: var(--text);
+    padding: .65rem .9rem;
+    border-radius: 12px;
+    cursor: pointer;
+    font-weight: 600;
+}
+.btn:hover {
+    background: rgba(255,255,255,.10);
+}
+
+.btnPrimary {
+    border-color: rgba(110,231,255,.45);
+    box-shadow: 0 12px 40px rgba(110,231,255,.12);
+}
+
+main{
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 1.25rem 2.5rem;
+    display:grid;
+    gap: 1.25rem;
+}
+
+.grid3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+}
+@media (max-width: 850px) {
+    .grid3 {
+        grid-template-columns: 1fr;
+    }
+}
+
+.cardTitle {
+    margin: 0 0 .35rem;
+}
+
+.cardText {
+    margin:0;
+    color:var(--muted);
+}
+
+form label {
+    display: block;
+    margin-top: .75rem;
+    color: var(--muted); 
+}
+
+input, select, textarea {
+    width: 100%;
+    margin-top: .35rem;
+    padding: .7rem .75rem;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    background: rgba(8,12,22,.65);
+    color: var(--text);
+}
+
+textarea { 
+    min-height: 110px;
+    resize: vertical; 
+}
+
+footer {
+    max-width:1100px;
+    margin: 0 auto 2.25rem;
+    padding: 0 1.25rem;
+    color: rgba(234,240,255,.75);
+    font-size: .95rem;
+}
+
+/* Outer tooltip container */
+.introjs-tooltip {
+  background: rgba(15, 15, 15, 0.85);
+  box-shadow: none;
+}
+
+/* Actual tooltip panel */
+.introjs-tooltiptext {
+    color: #f9fafb;
+    border-radius: 12px;
+    padding: 1rem;
+    backdrop-filter: blur(6px);
+}
+
+/* Buttons */
+.introjs-button {
+  background: #22c55e;
+  color: #022c22;
+  border-radius: 8px;
+}
