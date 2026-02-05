@@ -11,4 +11,10 @@
 // ]
 // }).start()
 
-introJs.tour().start();
+introJs.tour().setOptions({
+  showProgress: true,
+  exitOnOverlayClick: false,
+  nextLabel: 'Next →',
+  prevLabel: '← Back',
+  doneLabel: 'Finish Tour'
+}).start();

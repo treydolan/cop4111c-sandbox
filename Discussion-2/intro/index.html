@@ -6,7 +6,8 @@
     
     <script src="https://unpkg.com/intro.js/intro.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intro.js/8.3.2/introjs.min.css">
-    <link rel="stylesheet" href="intro-modern.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="intro-styles.css">
 
     <title>Sunshine Web Services</title>
 </head>
@@ -14,17 +15,28 @@
     <header data-intro="Welcome">
         <h1>Welcome to Sunshine Web Services</h1>
         <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Explicabo, ea dolores. Dolores labore cum possimus animi corporis autem eaque sapiente, eos blanditiis quod numquam sequi optio reprehenderit porro, earum ipsam?</p>
-        <nav data-intro="navigation">
-            <ul>
-                <li><a href="login.html" data-intro="Login here">Login</a></li>
-                <li><a href="#" data-intro="See what we're about">About</a></li>
-                <li><a href="#" data-intro="Get in touch!">Contact</a></li>
-            </ul>
-        </nav>
-        <button id="login">Login</button>
-        <button id="contact">Contact</button>
     </header>
     <main>
+        <section class="panel" data-intro="Ready to take the next step?">
+        <h2>Get Started</h2>
+        <p class="muted">
+            Choose how you'd like to move forward with Sunshine Web Services.
+        </p>
+
+        <div class="ctaRow">
+            <button class="btn btnPrimary" data-intro="Start a new project with us">
+            Start a Project
+            </button>
+
+            <button class="btn" data-intro="View examples of our past work">
+            View Portfolio
+            </button>
+
+            <button class="btn" data-intro="Reach out with questions">
+            Contact Us
+            </button>
+        </div>
+        </section>
         <section data-intro="Learn more">
             <h2>Who we are</h2>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut, recusandae aliquam iusto ex maiores tempore quos alias quasi quaerat vitae obcaecati atque. Temporibus incidunt impedit omnis minus natus quaerat adipisci!</p>
@@ -66,6 +78,11 @@
             </form>
         </section>
     </main>
+    <footer data-intro="Additional information and policies can be found here">
+        <p>
+            <small>&copy; 2026 Sunshine Web Services | Privacy Policy | Terms of Service</small>
+        </p>
+    </footer>
     <script src="main.js"></script>
 </body>
 </html>
