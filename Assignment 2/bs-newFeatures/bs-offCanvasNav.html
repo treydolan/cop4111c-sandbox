@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css' integrity='sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw==' crossorigin='anonymous'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js' integrity='sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==' crossorigin='anonymous'></script>
+    <title>Offcanvas Nav</title>
+</head>
+<body>
+    <header>
+        <h1 class="container mt-4">Offcanvas Nav</h1>
+    </header>
+    <main>
+        <h1 class="container mt-4">Offcanvas Navbar</h1>
+<h4 class="container text-secondary">Offcanvas Navbar</h4>
+
+<nav class="navbar bg-secondary navbar-expand-xl navbar-dark">
+  <div class="container">
+    <a href="#" class="navbar-brand">Binaryville</a>
+    <button class="navbar-toggler" type="button"
+      data-bs-toggle="offcanvas" 
+      data-bs-target="#navbarOffcanvas"
+      aria-controls="navbarOffcanvas"
+      aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end bg-secondary" id="navbarOffcanvas"
+        tabindex="-1" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title text-light" id="offcanvasNavbarLabel">Offcanvas</h5>
+          <button type="button" class="btn-close btn-close-white text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">          
+          <div class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <a class="nav-item nav-link active" aria-current="page" href="#">Bubbles</a>
+            <a class="nav-item nav-link" href="#">Cosmo</a>
+          </div>
+        </div>
+    </div>  
+  </div>
+</nav>
+
+<hr>
+
+<h4 class="container text-secondary">Regular Navbar</h4>
+
+<nav class="navbar navbar-expand-xl bg-secondary navbar-dark">
+  <div class="container">
+    <a href="#" class="navbar-brand">Binaryville</a>
+    <button class="navbar-toggler" type="button" 
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarText"
+      aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarText">
+      <div class="navbar-nav nav-underline ms-auto">
+        <a class="nav-item nav-link active" aria-current="page" href="#">Bubbles</a>
+        <a class="nav-item nav-link" href="#">Cosmo</a>
+      </div>
+    </div>
+  </div>
+</nav>
+    </main>
+</body>
+</html>
