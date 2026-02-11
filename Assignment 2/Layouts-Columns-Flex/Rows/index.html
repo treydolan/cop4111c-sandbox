@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css' integrity='sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw==' crossorigin='anonymous'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js' integrity='sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==' crossorigin='anonymous'></script>
+    <title>Rows & Gutters</title>
+</head>
+<body>
+    <header>
+        <h1 class="container mt-4">Rows & Gutters</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Rows</h2>
+            <ul>
+                <li>Column Container</li>
+                <li>Negative Margins</li>
+                <li>Reset Grid</li>
+            </ul>
+            <h3>Example:</h3>
+            <div class="container lh-sm fw-light">
+            <div class="row">
+                <div class="col">
+                <h4 class="text-secondary mb-0">Robotesque</h4>
+                <p>Considered ahead of their time, Robotesqué is known for combining class and sportiness for young-at-artificial-heart androids.</p>
+                </div>
+                <div class="col">
+                <h4 class="text-secondary mb-0">Denimomatic</h4>
+                <p>Launched as a brand for the robots that worked in the auto industry, Denimomatic still signifies hard work and good looks for all ages.</p>
+                </div>
+                <div class="col">
+                <h4 class="text-secondary mb-0">Bling Thing</h4>
+                <p>For the daring robot who loves flashier looks that include sequins, tassels, and diamond sprinkles.</p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                <h4 class="text-secondary mb-0">Robotlaza</h4>
+                <p>Made for those who love style, Robotlaza combines the lushness of fancy schmancy with the grunginess of rock and roll.</p>
+                </div>
+                <div class="col">
+                <h4 class="text-secondary mb-0">Dresscog Gear</h4>
+                <p>Every robot feels like a fashion model when wearing Dresscog Gear. Featuring polka dots and aluminum shavings, Dresscog is perfect for work to party to mountain climbing.</p>
+                </div>
+            </div>
+            </div>
+
+        </section>
+        <section>
+            <h2>Row Gutters</h2>
+            <code>g{-DIR}-{SIZ}</code>
+            <small>DIR:</small>
+            <ul>
+                <li><code>x</code></li>
+                <li><code>y</code></li>
+            </ul>
+            <small>SIZ:</small>
+            <ul>
+                <li><code>0</code></li>
+                <li><code>1</code></li>
+                <li><code>2</code></li>
+                <li><code>3</code></li>
+                <li><code>4</code></li>
+                <li><code>5</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <div class="container-fluid lh-sm fw-light px-5">
+            <h4 class="my-4 mb-2">gx-0</h4>
+            <div class="row gx-0">
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Robotesque</h4>
+                    <p class="mb-0">Considered ahead of their time, Robotesqué is known for combining class and sportiness for young-at-artificial-heart androids.</p>
+                </div>
+                </div>
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Denimomatic</h4>
+                    <p class="mb-0">Launched as a brand for the robots that worked in the auto industry, Denimomatic still signifies hard work and good looks for all ages.</p>
+                </div>
+                </div>
+            </div>
+
+            <h4 class="my-4 mb-2">gx-1</h4>
+            <div class="row gx-1">
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Robotesque</h4>
+                    <p class="mb-0">Considered ahead of their time, Robotesqué is known for combining class and sportiness for young-at-artificial-heart androids.</p>
+                </div>
+                </div>
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Denimomatic</h4>
+                    <p class="mb-0">Launched as a brand for the robots that worked in the auto industry, Denimomatic still signifies hard work and good looks for all ages.</p>
+                </div>
+                </div>
+            </div>
+
+            <h4 class="my-4 mb-2">gx-2</h4>
+            <div class="row gx-2">
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Robotesque</h4>
+                    <p class="mb-0">Considered ahead of their time, Robotesqué is known for combining class and sportiness for young-at-artificial-heart androids.</p>
+                </div>
+                </div>
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Denimomatic</h4>
+                    <p class="mb-0">Launched as a brand for the robots that worked in the auto industry, Denimomatic still signifies hard work and good looks for all ages.</p>
+                </div>
+                </div>
+            </div>
+
+            <h4 class="my-4 mb-2">gx-3</h4>
+            <div class="row gx-3">
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Robotesque</h4>
+                    <p class="mb-0">Considered ahead of their time, Robotesqué is known for combining class and sportiness for young-at-artificial-heart androids.</p>
+                </div>
+                </div>
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Denimomatic</h4>
+                    <p class="mb-0">Launched as a brand for the robots that worked in the auto industry, Denimomatic still signifies hard work and good looks for all ages.</p>
+                </div>
+                </div>
+            </div>
+
+            <h4 class="my-4 mb-2">gx-4</h4>
+            <div class="row gx-4">
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Robotesque</h4>
+                    <p class="mb-0">Considered ahead of their time, Robotesqué is known for combining class and sportiness for young-at-artificial-heart androids.</p>
+                </div>
+                </div>
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Denimomatic</h4>
+                    <p class="mb-0">Launched as a brand for the robots that worked in the auto industry, Denimomatic still signifies hard work and good looks for all ages.</p>
+                </div>
+                </div>
+            </div>
+
+            <h4 class="my-4 mb-2">gx-5</h4>
+            <div class="row gx-5">
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Robotesque</h4>
+                    <p class="mb-0">Considered ahead of their time, Robotesqué is known for combining class and sportiness for young-at-artificial-heart androids.</p>
+                </div>
+                </div>
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Denimomatic</h4>
+                    <p class="mb-0">Launched as a brand for the robots that worked in the auto industry, Denimomatic still signifies hard work and good looks for all ages.</p>
+                </div>
+                </div>
+            </div>
+
+            </div>
+        </section>
+        <section>
+            <h2>Row Columns</h2>
+            <code>row-cols-{SIZ}</code>
+            <small>SIZ:</small>
+            <ul>
+                <li><code>1</code></li>
+                <li><code>2</code></li>
+                <li><code>3</code></li>
+                <li><code>4</code></li>
+                <li><code>5</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <div class="container-fluid lh-sm fw-light px-5 mt-4">
+            <div class="row row-cols-3 g-2">
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Robotesque</h4>
+                    <p class="mb-0">Considered ahead of their time, Robotesqué is known for combining class and sportiness for young-at-artificial-heart androids.</p>
+                </div>
+                </div>
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Denimomatic</h4>
+                    <p class="mb-0">Launched as a brand for the robots that worked in the auto industry, Denimomatic still signifies hard work and good looks for all ages.</p>
+                </div>
+                </div>
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Robotesque</h4>
+                    <p class="mb-0">Considered ahead of their time, Robotesqué is known for combining class and sportiness for young-at-artificial-heart androids.</p>
+                </div>
+                </div>
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Denimomatic</h4>
+                    <p class="mb-0">Launched as a brand for the robots that worked in the auto industry, Denimomatic still signifies hard work and good looks for all ages.</p>
+                </div>
+                </div>
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Robotesque</h4>
+                    <p class="mb-0">Considered ahead of their time, Robotesqué is known for combining class and sportiness for young-at-artificial-heart androids.</p>
+                </div>
+                </div>
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Denimomatic</h4>
+                    <p class="mb-0">Launched as a brand for the robots that worked in the auto industry, Denimomatic still signifies hard work and good looks for all ages.</p>
+                </div>
+                </div>
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Robotesque</h4>
+                    <p class="mb-0">Considered ahead of their time, Robotesqué is known for combining class and sportiness for young-at-artificial-heart androids.</p>
+                </div>
+                </div>
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Denimomatic</h4>
+                    <p class="mb-0">Launched as a brand for the robots that worked in the auto industry, Denimomatic still signifies hard work and good looks for all ages.</p>
+                </div>
+                </div>
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Robotesque</h4>
+                    <p class="mb-0">Considered ahead of their time, Robotesqué is known for combining class and sportiness for young-at-artificial-heart androids.</p>
+                </div>
+                </div>
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Denimomatic</h4>
+                    <p class="mb-0">Launched as a brand for the robots that worked in the auto industry, Denimomatic still signifies hard work and good looks for all ages.</p>
+                </div>
+                </div>
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Robotesque</h4>
+                    <p class="mb-0">Considered ahead of their time, Robotesqué is known for combining class and sportiness for young-at-artificial-heart androids.</p>
+                </div>
+                </div>
+                <div class="col">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Denimomatic</h4>
+                    <p class="mb-0">Launched as a brand for the robots that worked in the auto industry, Denimomatic still signifies hard work and good looks for all ages.</p>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+        <section>
+            <h2>Row Columns</h2>
+            <h4>Features</h4>
+            <ul>
+                <li>Align to Grid</li>
+                <li>Standalone</li>
+                <li>Use on content</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Column Options</h2>
+            <code>col{-BR}-{SIZ}</code>
+            <small>BR:</small>
+            <ul>
+                <li><code>sm</code></li>
+                <li><code>md</code></li>
+                <li><code>lg</code></li>
+                <li><code>xl</code></li>
+                <li><code>xxl</code></li>
+            </ul>
+            <small>SIZ:</small>
+            <ul>
+                <li><code>1</code></li>
+                <li><code>2</code></li>
+                <li><code>3</code></li>
+                <li><code>4</code></li>
+                <li><code>5</code></li>
+                <li><code>6</code></li>
+                <li><code>7</code></li>
+                <li><code>8</code></li>
+                <li><code>9</code></li>
+                <li><code>10</code></li>
+                <li><code>11</code></li>
+                <li><code>12</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <div class="container-fluid lh-sm fw-light px-5 mt-4">
+
+            <h2 class="mt-4 mb-2">Different Sizes</h2>
+            <div class="row">
+                <div class="col-3">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Robotesque</h4>
+                    <p class="mb-0">Considered ahead of their time, Robotesqué is known for combining class and sportiness for young-at-artificial-heart androids.</p>
+                </div>
+                </div>
+                <div class="col col-9">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Denimomatic</h4>
+                    <p class="mb-0">Launched as a brand for the robots that worked in the auto industry, Denimomatic still signifies hard work and good looks for all ages.</p>
+                </div>
+                </div>
+            </div>
+            
+            <h2 class="mt-4 mb-2">Same Sizes</h2>
+            <div class="row">
+                <div class="col-6">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Robotesque</h4>
+                    <p class="mb-0">Considered ahead of their time, Robotesqué is known for combining class and sportiness for young-at-artificial-heart androids.</p>
+                </div>
+                </div>
+                <div class="col-6">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Denimomatic</h4>
+                    <p class="mb-0">Launched as a brand for the robots that worked in the auto industry, Denimomatic still signifies hard work and good looks for all ages.</p>
+                </div>
+                </div>
+                
+                
+            <h2 class="mt-4 mb-2">Responsive</h2>
+            <div class="row">
+                <div class="col-6 col-lg-3 col-xl-9">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Robotesque</h4>
+                    <p class="mb-0">Considered ahead of their time, Robotesqué is known for combining class and sportiness for young-at-artificial-heart androids.</p>
+                </div>
+                </div>
+                <div class="col-6 col-lg-9 col-xl-3">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Denimomatic</h4>
+                    <p class="mb-0">Launched as a brand for the robots that worked in the auto industry, Denimomatic still signifies hard work and good looks for all ages.</p>
+                </div>
+                </div>    
+            </div>
+        </section>
+        <section>
+            <h2>Reordering</h2>
+            <code>order{-BR}-{ORD}</code>
+            <small>BR:</small>
+            <ul>
+                <li><code>sm</code></li>
+                <li><code>md</code></li>
+                <li><code>lg</code></li>
+                <li><code>xl</code></li>
+                <li><code>xxl</code></li>
+            </ul>
+            <small>ORD:</small>
+            <ul>
+                <li><code>1</code></li>
+                <li><code>2</code></li>
+                <li><code>3</code></li>
+                <li><code>4</code></li>
+                <li><code>5</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <div class="container-fluid lh-sm fw-light px-5 mt-4">
+
+            <h2 class="mt-4 mb-2">Ordering Classes</h2>
+            <div class="row">
+                <div class="col-6 col-lg-3 order-xl-2">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Robotesque</h4>
+                    <p class="mb-0">Considered ahead of their time, Robotesqué is known for combining class and sportiness for young-at-artificial-heart androids.</p>
+                </div>
+                </div>
+                <div class="col-6 col-lg-9 order-xl-1">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Denimomatic</h4>
+                    <p class="mb-0">Launched as a brand for the robots that worked in the auto industry, Denimomatic still signifies hard work and good looks for all ages.</p>
+                </div>
+                </div>
+            </div>
+            
+            </div>
+        </section>
+        <section>
+            <h2>Offsetting</h2>
+            <code>offset-{-BR}-{POS}</code>
+            <small>BR:</small>
+            <ul>
+                <li><code>sm</code></li>
+                <li><code>md</code></li>
+                <li><code>lg</code></li>
+                <li><code>xl</code></li>
+                <li><code>xxl</code></li>
+            </ul>
+            <small>POS:</small>
+            <ul>
+                <li><code>1</code></li>
+                <li><code>2</code></li>
+                <li><code>3</code></li>
+                <li><code>4</code></li>
+                <li><code>5</code></li>
+                <li><code>6</code></li>
+                <li><code>7</code></li>
+                <li><code>8</code></li>
+                <li><code>9</code></li>
+                <li><code>10</code></li>
+                <li><code>11</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <div class="container-fluid lh-sm fw-light px-5 mt-4">
+
+            <h2 class="mt-4 mb-2">Offset Classes</h2>
+            <div class="row">
+                <div class="offset-2 col-3">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Robot</h4>
+                    <p class="mb-0">Considered ahead of their time, Robotesqué is known for combining class and sportiness for young-at-artificial-heart androids.</p>
+                </div>
+                </div>
+                <div class="col-6">
+                <div class="border p-3">
+                    <h4 class="text-secondary mb-0">Denimomatic</h4>
+                    <p class="mb-0">Launched as a brand for the robots that worked in the auto industry, Denimomatic still signifies hard work and good looks for all ages.</p>
+                </div>
+                </div>
+            </div>
+            
+            </div>
+        </section>
+    </main>
+</body>
+</html>
