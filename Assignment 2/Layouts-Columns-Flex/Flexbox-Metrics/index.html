@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css' integrity='sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw==' crossorigin='anonymous'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js' integrity='sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==' crossorigin='anonymous'></script>
+    <title>Flexbox Metrics</title>
+</head>
+<body>
+    <header>
+        <h1 class="container mt-4">Flexbox Metrics</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Responsive</h2>
+            <code>d{-BR}{-inline}-flex</code>
+            <small>BR:</small>
+            <ul>
+                <li><code>sm</code></li>
+                <li><code>md</code></li>
+                <li><code>lg</code></li>
+                <li><code>xl</code></li>
+                <li><code>xxl</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <div class="container">
+            <h1 class="mt-4 mb-2">Display Flex</h1>
+
+            <h4 class="text-secondary">d-flex</h4>
+            <div class="d-block d-md-flex">
+                <div class="border p-2">Rex</div>
+                <div class="border p-2">Dolores</div>
+                <div class="border p-2">Bubbles</div>
+            </div>
+            <div class="d-block d-md-flex">
+                <div class="border p-2">Fred</div>
+                <div class="border p-2">Rivet</div>
+                <div class="border p-2">Eileen</div>
+            </div>
+
+            <hr>
+
+            <h4 class="text-secondary">d-inline-flex</h4>
+
+            <div class="d-block d-md-inline-flex">
+                <div class="border p-2">Rex</div>
+                <div class="border p-2">Dolores</div>
+                <div class="border p-2">Bubbles</div>
+            </div>
+            <div class="d-block d-md-inline-flex">
+                <div class="border p-2">Fred</div>
+                <div class="border p-2">Rivet</div>
+                <div class="border p-2">Eileen</div>
+            </div>
+            </div>
+        </section>
+        <section>
+            <h2>Direction</h2>
+            <code>flex{-BR}{-TYP}{-reverse}</code>
+            <small>BR:</small>
+            <ul>
+                <li><code>sm</code></li>
+                <li><code>md</code></li>
+                <li><code>lg</code></li>
+                <li><code>xl</code></li>
+                <li><code>xxl</code></li>
+            </ul>
+            <small>TYP:</small>
+            <ul>
+                <li><code>row</code></li>
+                <li><code>column</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <div class="container">
+            <h1 class="mt-4 mb-2">Diplay Flex</h1>
+
+            <h4 class="text-secondary">flex-row</h4>
+            <div class="d-flex flex-md-row">
+                <div class="border p-2">Rex</div>
+                <div class="border p-2">Dolores</div>
+                <div class="border p-2">Bubbles</div>
+            </div>
+
+            <hr>
+
+            <h4 class="text-secondary">flex-row-reverse</h4>
+            <div class="d-flex flex-md-row-reverse">
+                <div class="border p-2">Rex</div>
+                <div class="border p-2">Dolores</div>
+                <div class="border p-2">Bubbles</div>
+            </div>
+
+            <hr>
+
+            <h4 class="text-secondary">flex-column</h4>
+            <div class="d-flex flex-md-column">
+                <div class="border p-2">Rex</div>
+                <div class="border p-2">Dolores</div>
+                <div class="border p-2">Bubbles</div>
+            </div>
+            <hr>
+
+            <h4 class="text-secondary">flex-column-reverse</h4>
+            <div class="d-flex flex-md-column-reverse">
+                <div class="border p-2">Rex</div>
+                <div class="border p-2">Dolores</div>
+                <div class="border p-2">Bubbles</div>
+            </div>
+            <hr>
+        </section>
+        <section>
+            <h2>Justify Content</h2>
+            <code>justify-content{-BR}-{TYP}</code>
+            <small>BR:</small>
+            <ul>
+                <li><code>sm</code></li>
+                <li><code>md</code></li>
+                <li><code>lg</code></li>
+                <li><code>xl</code></li>
+                <li><code>xxl</code></li>
+            </ul>
+            <small>TYP:</small>
+            <ul>
+                <li><code>start</code></li>
+                <li><code>end</code></li>
+                <li><code>center</code></li>
+                <li><code>between</code></li>
+                <li><code>around</code></li>
+                <li><code>evenly</code></li>
+            </ul>
+            <h3>Example:</h3>
+
+            <div class="container">
+            <h1 class="mt-4 mb-2">Diplay Flex</h1>
+
+            <h4 class="text-secondary">justify-content-start</h4>
+            <div class="d-flex justify-content-md-start">
+                <div class="border p-2">Rex</div>
+                <div class="border p-2">Dolores</div>
+                <div class="border p-2">Bubbles</div>
+            </div>
+            <hr>
+
+            <h4 class="text-secondary">justify-content-end</h4>
+            <div class="d-flex justify-content-md-end">
+                <div class="border p-2">Rex</div>
+                <div class="border p-2">Dolores</div>
+                <div class="border p-2">Bubbles</div>
+            </div>
+            <hr>
+
+            <h4 class="text-secondary">justify-content-center</h4>
+            <div class="d-flex justify-content-md-center">
+                <div class="border p-2">Rex</div>
+                <div class="border p-2">Dolores</div>
+                <div class="border p-2">Bubbles</div>
+            </div>
+            <hr>
+
+            <h4 class="text-secondary">justify-content-between</h4>
+            <div class="d-flex justify-content-md-between">
+                <div class="border p-2">Rex</div>
+                <div class="border p-2">Dolores</div>
+                <div class="border p-2">Bubbles</div>
+            </div>
+            <hr>
+
+            <h4 class="text-secondary">justify-content-around</h4>
+            <div class="d-flex justify-content-md-around">
+                <div class="border p-2">Rex</div>
+                <div class="border p-2">Dolores</div>
+                <div class="border p-2">Bubbles</div>
+            </div>
+            <hr>
+
+            <h4 class="text-secondary">justify-content-evenly</h4>
+            <div class="d-flex justify-content-md-evenly">
+                <div class="border p-2">Rex</div>
+                <div class="border p-2">Dolores</div>
+                <div class="border p-2">Bubbles</div>
+            </div>
+            <hr>
+        </section>
+        <section>
+            <h2>Vertical Alignment</h2>
+            <code>align-items{-BR}-{TYP}</code>
+            <small>BR:</small>
+            <ul>
+                <li><code>sm</code></li>
+                <li><code>md</code></li>
+                <li><code>lg</code></li>
+                <li><code>xl</code></li>
+                <li><code>xxl</code></li>
+            </ul>
+            <small>TYP:</small>
+            <ul>
+                <li><code>start</code></li>
+                <li><code>end</code></li>
+                <li><code>center</code></li>
+                <li><code>baseline</code></li>
+                <li><code>stretch</code></li>
+            </ul>
+            <h3>Example:</h3>
+
+            <div class="container">
+            <h1 class="mt-4 mb-2">Align Items</h1>
+
+            <h4 class="text-secondary">align-items-start</h4>
+            <div class="d-flex align-items-md-start bg-info" style="height: 200px">
+                <div class="fs-1 border p-2 bg-white">Rex</div>
+                <div class="fs-5 border p-2 bg-white">Dolores</div>
+                <div class="fs-3 border p-2 bg-white">Bubbles</div>
+            </div>
+            <hr>
+
+            <h4 class="text-secondary">align-items-end</h4>
+            <div class="d-flex align-items-md-end bg-info" style="height: 200px">
+                <div class="fs-1 border p-2 bg-white">Rex</div>
+                <div class="fs-5 border p-2 bg-white">Dolores</div>
+                <div class="fs-3 border p-2 bg-white">Bubbles</div>
+            </div>
+            <hr>
+
+            <h4 class="text-secondary">align-items-center</h4>
+            <div class="d-flex align-items-md-center bg-info" style="height: 200px">
+                <div class="fs-1 border p-2 bg-white">Rex</div>
+                <div class="fs-5 border p-2 bg-white">Dolores</div>
+                <div class="fs-3 border p-2 bg-white">Bubbles</div>
+            </div>
+            <hr>
+
+            <h4 class="text-secondary">align-items-baseline</h4>
+            <div class="d-flex align-items-md-baseline bg-info" style="height: 200px">
+                <div class="fs-1 border p-2 bg-white">Rex</div>
+                <div class="fs-5 border p-2 bg-white">Dolores</div>
+                <div class="fs-3 border p-2 bg-white">Bubbles</div>
+            </div>
+            <hr>
+
+            <h4 class="text-success">align-items-stretch</h4>
+            <div class="d-flex align-items-md-stretch bg-info" style="height: 200px">
+                <div class="fs-1 border p-2 bg-white">Rex</div>
+                <div class="fs-5 border p-2 bg-white">Dolores</div>
+                <div class="fs-3 border p-2 bg-white">Bubbles</div>
+            </div>
+            <hr>
+
+            </div>
+
+        </section>
+    </main>
+</body>
+</html>
