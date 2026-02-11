@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css' integrity='sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw==' crossorigin='anonymous'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js' integrity='sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==' crossorigin='anonymous'></script>
+    <title>Interactivity Classes</title>
+</head>
+<body>
+    <header>
+        <h1 class="container mt-4">Interactivity Classes</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Overflow</h2>
+            <code>overflow-{TYP}</code>
+            <small>TYP:</small>
+            <ul>
+                <li><code>auto</code></li>
+                <li><code>hidden</code></li>
+                <li><code>visible</code></li>
+                <li><code>scroll</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <h1 class="text-info">Overflow</h1>
+
+            <div class="d-flex">
+            <div class="overflow-auto bg-info p-3" style="height:150px;"> 
+                <h5>overflow-auto</h5>
+                <p>While robots have evolved to be able to do pretty much anything, most androids and bots work in the construction and manufacturing field as force multipliers. As experts in lifting, moving, and nuts-and-bolting, the robotic population is an ideal match for industry and repetitive tasks.</p>
+            </div>
+
+            <div class="overflow-hidden bg-info p-3" style="height:150px;">
+                <h5>overflow-hidden</h5>
+                <p>While robots have evolved to be able to do pretty much anything, most androids and bots work in the construction and manufacturing field as force multipliers. As experts in lifting, moving, and nuts-and-bolting, the robotic population is an ideal match for industry and repetitive tasks.</p>
+            </div>
+
+            <div class="overflow-visible bg-info p-3" style="height:150px;">
+                <h5>overflow-visible</h5>
+                <p>While robots have evolved to be able to do pretty much anything, most androids and bots work in the construction and manufacturing field as force multipliers. As experts in lifting, moving, and nuts-and-bolting, the robotic population is an ideal match for industry and repetitive tasks.</p>
+            </div>
+
+            <div class="overflow-scroll bg-info p-3" style="height:150px;">
+                <h5>overflow-scroll</h5>
+                <p>While robots have evolved to be able to do pretty much anything, most androids and bots work in the construction and manufacturing field as force multipliers. As experts in lifting, moving, and nuts-and-bolting, the robotic population is an ideal match for industry and repetitive tasks.</p>
+            </div>
+            </div>
+        </section>
+        <section>
+            <h2>Stretched Link</h2>
+            <code>stretched-link</code>
+            <h3>Example:</h3>
+            <h1>Stretched Link</h1>
+
+            <div class="position-relative bg-warning p-4 text-white" style="width:500px">
+            <img class="rounded img-fluid" src="https://pixelprowess.com/i/flight.jpg" alt="Robots in the Park">
+            <h3 class="mt-2">Dolores</h3>
+            <p class="text-wrap">While robots have evolved to be able to do pretty much anything, most androids and bots work in the construction and manufacturing field as force multipliers.</p>
+            <a href="#" class="stretched-link text-decoration-none d-inline-block bg-danger rounded-2 text-white px-2 py-1">
+            Bubbles
+            </a>
+            </div>
+        </section>
+        <section>
+            <h2>User Select</h2>
+            <code>user-select-{TYP}</code>
+            <small>TYP:</small>
+            <ul>
+                <li><code>auto</code></li>
+                <li><code>all</code></li>
+                <li><code>none</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <h1>User Select</h1>
+            <div class="d-flex">
+            <div class="position-relative bg-primary p-4 text-white">
+                <h3 class="mt-2">user-select-auto</h3>
+                <p class="user-select-auto">While robots have evolved to be able to do pretty much anything, most androids and bots work in the construction and manufacturing field as force multipliers.</p>
+            </div>
+            <div class="position-relative bg-danger p-4 text-white">
+                <h3 class="mt-2">user-select-all</h3>
+                <p class="user-select-all">While robots have evolved to be able to do pretty much anything, most androids and bots work in the construction and manufacturing field as force multipliers.</p>
+            </div>
+            <div class="position-relative bg-success p-4 text-white">
+                <h3 class="mt-2">user-select-none</h3>
+                <p class="user-select-none">While robots have evolved to be able to do pretty much anything, most androids and bots work in the construction and manufacturing field as force multipliers.</p>
+            </div>  
+            </div>
+        </section>
+        <section>
+            <h2>Pointer Events</h2>
+            <code>pe-{TYP}</code>
+            <code>none</code>
+            <code>auto</code>
+            <h3>Example:</h3>
+            <h1>User Select</h1>
+            <div class="d-flex">
+            <div class="position-relative bg-secondary p-4 text-white">
+                <h3 class="mt-2">pe-none</h3>
+                <p>While <a href="#" tabindex="-1" aria-disabled="true" class="pe-none text-warning">robots have evolved</a> to be able to do pretty much anything, most androids and bots work in the construction and manufacturing field as force multipliers.</p>
+            </div>
+            <div class="pe-none position-relative bg-warning p-4 text-white">
+                <h3 class="mt-2">pe-auto</h3>
+                <p>While <a href="#" class="pe-auto text-secondary">robots have evolved</a> to be able to do pretty much anything, most androids and bots work in the construction and manufacturing field as force multipliers.</p>
+            </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
