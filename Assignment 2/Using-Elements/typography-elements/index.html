@@ -7,14 +7,98 @@
     <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js' integrity='sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==' crossorigin='anonymous'></script>
     <title>Typography Elements</title>
 </head>
-<body>
+<body class="container">
     <header>
         <h1 class="container mt-4">Typography Elements</h1>
     </header>
     <main>
-        <div class="container">
-            <h1 class="placeholder placeholder-lg col-6">Typography Elements</h1>
-        </div>
+        <section>
+            <h2>Text Wrapping/Break</h2>
+            <code>text-{TYP}</code>
+            <ul>
+                <li><code>wrap</code></li>
+                <li><code>nowrap</code></li>
+                <li><code>break</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <h1 class="text-info">Text Wrap/Break</h1>
+
+            <h3 class="text-secondary">text-wrap</h3>
+            <p class="text-wrap">While robots have evolved to be able to do pretty much anything, most androids and bots work in the construction and manufacturing field as force multipliers.</p>
+
+            <hr>
+
+            <h3 class="text-secondary">text-nowrap</h3>
+            <p class="text-nowrap">While robots have evolved to be able to do pretty much anything, most androids and bots work in the construction and manufacturing field as force multipliers.</p>
+
+            <hr>
+
+            <h3 class="text-secondary">text-break</h3>
+            <p class="text-break">Hippopotomonstrosesquippedaliophobia</p>
+        </section>
+        <section>
+            <h2>Text Transform</h2>
+            <code>text-{TYP}</code>
+            <ul>
+                <li><code>lowercase</code></li>
+                <li><code>uppercase</code></li>
+                <li><code>capitalize</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <h1 class="text-info">Text Transform</h1>
+
+            <h3 class="text-secondary">text-lowercase</h3>
+            <p class="text-lowercase">SPACE TRAVEL AND EXPLORATION</p>
+
+            <hr>
+
+            <h3 class="text-secondary">text-uppercase</h3>
+            <p class="text-uppercase">intricate surgery</p>
+
+            <hr>
+
+            <h3 class="text-secondary">text-capitalize</h3>
+            <p class="text-capitalize">superFast mass production</p>
+        </section>
+        <section>
+            <h2>Vertical Alignment</h2>
+            <code>align-{TYP}</code>
+            <ul>
+                <li><code>baseline</code></li>
+                <li><code>top</code></li>
+                <li><code>middle</code></li>
+                <li><code>bottom</code></li>
+                <li><code>text-top</code></li>
+                <li><code>text-bottom</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <h1 class="text-info">Vertical Alignment</h1>
+
+            <ul class="list-unstyled">
+            <span class="align-baseline">Rex</span>
+            <span class="align-top">Dolores</span>
+            <span class="align-middle">Bubbles</span>
+            <span class="align-bottom">Fred</span>
+            <span class="align-text-top">Rivet</span>
+            <span class="align-text-bottom">Eileen</span>
+            </div>
+        </section>
+        <section>
+            <h2>MISC</h2>
+            <code>font-monospace</code>
+            <code>text-reset (picks parent color)</code>
+            <h3>Example:</h3>
+            <h1 class="text-info">Miscellaneous</h1>
+
+            <h3 class="text-secondary">font-monospace</h3>
+            <p class="font-monospace">There’s nothing more relaxing than an oil change and a polish, no matter what kind of robotting you do in your daily existence. Our world-class spa is now offering an Ultimate Robot Spa Treatment, a circuit-blowing combination of all of your favorite treatments.</p>
+
+            <hr>
+
+            <h3 class="text-reset">text-reset</h3>
+            <p class="text-danger">There’s nothing more relaxing than an <a href="#" class="text-reset">oil change</a> and a polish, no matter what kind of robotting you do in your daily existence. Our world-class spa is now offering an Ultimate Robot Spa Treatment, a circuit-blowing combination of all of your favorite treatments.</p>
+
+        </section>
     </main>
 </body>
 </html>
