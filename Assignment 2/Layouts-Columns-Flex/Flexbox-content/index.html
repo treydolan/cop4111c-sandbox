@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css' integrity='sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw==' crossorigin='anonymous'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js' integrity='sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==' crossorigin='anonymous'></script>
+    <title>Flexbox Content Fit</title>
+</head>
+<body>
+    <header>
+        <h1 class="container mt-4">Flexbox Content Fit</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Align Self</h2>
+            <code>align-self{-BR}-{TYP}</code>
+            <small>BR:</small>
+            <ul>
+                <li><code>sm</code></li>
+                <li><code>md</code></li>
+                <li><code>lg</code></li>
+                <li><code>xl</code></li>
+                <li><code>xxl</code></li>
+            </ul>
+            <small>TYP:</small>
+            <ul>
+                <li><code>start</code></li>
+                <li><code>end</code></li>
+                <li><code>center</code></li>
+                <li><code>baseline</code></li>
+                <li><code>stretch</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <div class="container">
+            <h1 class="mt-4 mb-2">Align Self</h1>
+
+            <h4 class="text-secondary">align-self-start</h4>
+            <div class="d-flex bg-info" style="height: 200px">
+                <div class="fs-1 border p-2 bg-white">Rex</div>
+                <div class="fs-5 border p-2 bg-white">Dolores</div>
+                <div class="align-self-md-start border p-2 bg-white">Bubbles</div>
+                <div class="fs-2 align-self-md-start border p-2 bg-white">Fred</div>
+                <div class="fs-3 border p-2 bg-white">Rivet</div>
+                <div class="fs-4 border p-2 bg-white">Eileen</div>
+            </div>
+            <hr>
+
+            <h4 class="text-secondary">align-self-end</h4>
+            <div class="d-flex bg-info" style="height: 200px">
+                <div class="fs-1 border p-2 bg-white">Rex</div>
+                <div class="fs-5 border p-2 bg-white">Dolores</div>
+                <div class="align-self-md-end border p-2 bg-white">Bubbles</div>
+                <div class="fs-2 align-self-md-end border p-2 bg-white">Fred</div>
+                <div class="fs-3 border p-2 bg-white">Rivet</div>
+                <div class="fs-4 border p-2 bg-white">Eileen</div>
+            </div>
+            <hr>
+
+            <h4 class="text-secondary">align-self-center</h4>
+            <div class="d-flex bg-info" style="height: 200px">
+                <div class="fs-1 border p-2 bg-white">Rex</div>
+                <div class="fs-5 border p-2 bg-white">Dolores</div>
+                <div class="align-self-md-center border p-2 bg-white">Bubbles</div>
+                <div class="fs-2 align-self-md-center border p-2 bg-white">Fred</div>
+                <div class="fs-3 border p-2 bg-white">Rivet</div>
+                <div class="fs-4 border p-2 bg-white">Eileen</div>
+            </div>
+            <hr>
+
+            <h4 class="text-secondary">align-self-baseline</h4>
+            <div class="d-flex bg-info" style="height: 200px">
+                <div class="fs-1 border p-2 bg-white">Rex</div>
+                <div class="fs-5 border p-2 bg-white">Dolores</div>
+                <div class="align-self-md-baseline border p-2 bg-white">Bubbles</div>
+                <div class="fs-2 align-self-md-baseline border p-2 bg-white">Fred</div>
+                <div class="fs-3 border p-2 bg-white">Rivet</div>
+                <div class="fs-4 border p-2 bg-white">Eileen</div>
+            </div>
+            <hr>
+
+            <h4 class="text-success">align-self-stretch</h4>
+            <div class="d-flex bg-info" style="height: 200px">
+                <div class="fs-1 border p-2 bg-white">Rex</div>
+                <div class="fs-5 border p-2 bg-white">Dolores</div>
+                <div class="align-self-md-stretch border p-2 bg-white">Bubbles</div>
+                <div class="fs-2 align-self-md-stretch border p-2 bg-white">Fred</div>
+                <div class="fs-3 border p-2 bg-white">Rivet</div>
+                <div class="fs-4 border p-2 bg-white">Eileen</div>
+            </div>
+            <hr>
+
+            </div>
+        </section>
+        <section>
+            <h2>Flex Fill</h2>
+            <code>flex{-BR}-fill</code>
+            <small>BR:</small>
+            <ul>
+                <li><code>sm</code></li>
+                <li><code>md</code></li>
+                <li><code>lg</code></li>
+                <li><code>xl</code></li>
+                <li><code>xxl</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <div class="container">
+            <h1 class="mt-4 mb-2">Flex Fill</h1>
+
+            <div class="d-flex">
+                <div class="p-2 bg-secondary text-white">
+                <h4 class="mb-0">Robotesque</h4>
+                <p class="mb-0">Considered ahead</p>
+                </div>
+                <div class="p-2 bg-warning flex-fill">
+                <h4 class="mb-0">Denimomatic</h4>
+                <p class="mb-0">Launched as a brand for robots</p>
+                </div>
+                <div class="p-2 bg-secondary text-white">
+                <h4 class="mb-0">Bling Thing</h4>
+                <p class="mb-0">For the daring robot</p>
+                </div>
+            </div>
+
+            </div>
+        </section>
+        <section>
+            <h2>Flex Grow/Shrink</h2>
+            <code>flex{-BR}{-TYP}{-BOOL}</code>
+            <small>BR:</small>
+            <ul>
+                <li><code>sm</code></li>
+                <li><code>md</code></li>
+                <li><code>lg</code></li>
+                <li><code>xl</code></li>
+                <li><code>xxl</code></li>
+            </ul>
+            <small>TYP:</small>
+            <ul>
+                <li><code>grow</code></li>
+                <li><code>shrink</code></li>
+            </ul>
+            <small>BOOL:</small>
+            <ul>
+                <li><code>0</code></li>
+                <li><code>1</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <div class="container">
+            <h1 class="mt-4 mb-2">Flex Grow/Shrink</h1>
+
+            <h4 class="text-secondary">flex-grow</h4>
+            <div class="d-flex">
+                <div class="p-2 bg-secondary text-white">
+                <h4 class="mb-0">Robotesque</h4>
+                <p class="mb-0">Considered ahead of it's time</p>
+                </div>
+                <div class="p-2 bg-warning flex-md-grow-1">
+                <h4 class="text-secondary mb-0">Denimomatic</h4>
+                <p class="mb-0">Launched as a brand for robots</p>
+                </div>
+                <div class="p-2 bg-secondary text-white">
+                <h4 class="mb-0">Bling Thing</h4>
+                <p class="mb-0">For the daring robot</p>
+                </div>
+            </div>
+            
+            <hr>
+
+            <h4 class="text-secondary">flex-shrink</h4>
+            <div class="d-flex">
+                <div class="flex-grow-1 w-50 p-2 bg-secondary text-white">
+                <h4 class="mb-0">Robotesque</h4>
+                <p class="mb-0">Considered ahead of it's time</p>
+                </div>
+                <div class="flex-md-shrink-1 p-2 bg-warning">
+                <h4 class="text-secondary mb-0">Denimomatic</h4>
+                <p class="mb-0">Launched as a brand for robots</p>
+                </div>
+                <div class="flex-grow-1 w-50 p-2 bg-secondary text-white">
+                <h4 class="mb-0">Bling Thing</h4>
+                <p class="mb-0">For the daring robot</p>
+                </div>
+            </div>
+
+            <hr>
+            
+            </div>
+        </section>
+    </main>
+</body>
+</html>

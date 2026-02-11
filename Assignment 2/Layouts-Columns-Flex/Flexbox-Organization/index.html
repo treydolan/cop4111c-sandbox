@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css' integrity='sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw==' crossorigin='anonymous'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js' integrity='sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==' crossorigin='anonymous'></script>
+    <title>Flexbox Organization</title>
+</head>
+<body>
+    <header>
+        <h1 class="container mt-4">Flexbox Organization</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Flex Wrap</h2>
+            <code>flex{-BR}{-TYP}{-reverse}</code>
+            <small>BR:</small>
+            <ul>
+                <li><code>sm</code></li>
+                <li><code>md</code></li>
+                <li><code>lg</code></li>
+                <li><code>xl</code></li>
+                <li><code>xxl</code></li>
+            </ul>
+            <small>TYP:</small>
+            <ul>
+                <li><code>wrap</code></li>
+                <li><code>nowrap</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <div class="container">
+            <h1 class="mt-4 mb-2">Flex Wrap</h1>
+
+            <h4 class="text-success">flex-nowrap</h4>
+
+            <div class="d-flex flex-md-nowrap bg-info" style="width: 310px;">
+                <div class="border p-2 text-center" style="width: 125px;">Rex</div>
+                <div class="border p-2 text-center" style="width: 125px;">Dolores</div>
+                <div class="border p-2 text-center" style="width: 125px;">Bubbles</div>
+                <div class="border p-2 text-center" style="width: 125px;">Fred</div>
+                <div class="border p-2 text-center" style="width: 125px;">Rivet</div>
+                <div class="border p-2 text-center" style="width: 125px;">Eileen</div>
+            </div>
+            
+            <hr>
+            
+            <h4 class="text-secondary">flex-wrap</h4>
+
+            <div class="d-flex flex-wrap bg-info" style="width: 310px;">
+                <div class="border p-2 text-center" style="width: 125px;">Rex</div>
+                <div class="border p-2 text-center" style="width: 125px;">Dolores</div>
+                <div class="border p-2 text-center" style="width: 125px;">Bubbles</div>
+                <div class="border p-2 text-center" style="width: 125px;">Fred</div>
+                <div class="border p-2 text-center" style="width: 125px;">Rivet</div>
+                <div class="border p-2 text-center" style="width: 125px;">Eileen</div>
+            </div>
+
+            <hr>
+
+                <h4 class="text-secondary">flex-wrap-reverse</h4>
+
+            <div class="d-flex flex-wrap-reverse bg-info" style="width: 310px;">
+                <div class="border p-2 text-center" style="width: 125px;">Rex</div>
+                <div class="border p-2 text-center" style="width: 125px;">Dolores</div>
+                <div class="border p-2 text-center" style="width: 125px;">Bubbles</div>
+                <div class="border p-2 text-center" style="width: 125px;">Fred</div>
+                <div class="border p-2 text-center" style="width: 125px;">Rivet</div>
+                <div class="border p-2 text-center" style="width: 125px;">Eileen</div>
+            </div>
+
+            <hr>
+        </section>
+        <section>
+            <h2>Order</h2>
+            <code>order{-BR}{-AMT}</code>
+            <small>BR:</small>
+            <ul>
+                <li><code>sm</code></li>
+                <li><code>md</code></li>
+                <li><code>lg</code></li>
+                <li><code>xl</code></li>
+                <li><code>xxl</code></li>
+            </ul>
+            <small>AMT:</small>
+            <ul>
+                <li><code>first</code></li>
+                <li><code>0</code></li>
+                <li><code>1</code></li>
+                <li><code>2</code></li>
+                <li><code>3</code></li>
+                <li><code>4</code></li>
+                <li><code>5</code></li>
+                <li><code>last</code></li>
+            </ul>
+            <h3>Example:</h3>
+
+            <div class="container">
+            <h1 class="mt-4 mb-2">Order</h1>
+
+            <div class="d-flex">
+                <div class="order-md-first border p-2 text-center bg-secondary text-white">first</div>
+                <div class="order-md-0 border p-2 text-center">zero</div>
+                <div class="order-md-1 border p-2 text-center">one</div>
+                <div class="order-md-2 border p-2 text-center">two</div>
+                <div class="order-md-3 border p-2 text-center">three</div>
+                <div class="order-md-4 border p-2 text-center">four</div>
+                <div class="order-md-5 border p-2 text-center">five</div>
+                <div class="order-md-last border p-2 text-center bg-secondary text-white">last</div>
+            </div>
+            
+            <hr>
+            
+        </section>
+        <section>
+            <h2>Align Content</h2>
+            <code>align-content{-BR}{-TYP}</code>
+            <small>BR:</small>
+            <ul>
+                <li><code>sm</code></li>
+                <li><code>md</code></li>
+                <li><code>lg</code></li>
+                <li><code>xl</code></li>
+                <li><code>xxl</code></li>
+            </ul>
+            <small>TYP:</small>
+            <ul>
+                <li><code>start</code></li>
+                <li><code>end</code></li>
+                <li><code>center</code></li>
+                <li><code>between</code></li>
+                <li><code>around</code></li>
+                <li><code>stretch</code></li>
+            </ul>
+            <h3>Example:</h3>
+
+            <div class="container">
+            <h1 class="mt-4 mb-2">Align Content</h1>
+
+            <h4 class="text-secondary">align-content-start</h4>
+            <div class="d-flex align-content-md-start flex-wrap bg-warning" style="height:200px; width:450px;">
+                <div class="bg-white border p-2">Bubbles</div>
+                <div class="bg-white border p-2">Cosmo</div>
+                <div class="bg-white border p-2">Dolores</div>
+                <div class="bg-white border p-2">Fred</div>
+                <div class="bg-white border p-2">Levi</div>
+                <div class="bg-white border p-2">Oscar</div>
+                <div class="bg-white border p-2">Rivet</div>
+                <div class="bg-white border p-2">Rex</div>
+                <div class="bg-white border p-2">Spring</div>
+            </div>
+            
+            <hr>
+
+            <h4 class="text-secondary">align-content-end</h4>
+            <div class="d-flex align-content-md-end flex-wrap bg-warning" style="height:200px; width:450px;">
+                <div class="bg-white border p-2">Bubbles</div>
+                <div class="bg-white border p-2">Cosmo</div>
+                <div class="bg-white border p-2">Dolores</div>
+                <div class="bg-white border p-2">Fred</div>
+                <div class="bg-white border p-2">Levi</div>
+                <div class="bg-white border p-2">Oscar</div>
+                <div class="bg-white border p-2">Rivet</div>
+                <div class="bg-white border p-2">Rex</div>
+                <div class="bg-white border p-2">Spring</div>
+            </div>
+
+            <hr>
+
+            <h4 class="text-secondary">align-content-center</h4>
+            <div class="d-flex align-content-md-center flex-wrap bg-warning" style="height:200px; width:450px;">
+                <div class="bg-white border p-2">Bubbles</div>
+                <div class="bg-white border p-2">Cosmo</div>
+                <div class="bg-white border p-2">Dolores</div>
+                <div class="bg-white border p-2">Fred</div>
+                <div class="bg-white border p-2">Levi</div>
+                <div class="bg-white border p-2">Oscar</div>
+                <div class="bg-white border p-2">Rivet</div>
+                <div class="bg-white border p-2">Rex</div>
+                <div class="bg-white border p-2">Spring</div>
+            </div>
+
+            <hr>
+
+            <h4 class="text-secondary">align-content-between</h4>
+            <div class="d-flex align-content-md-between flex-wrap bg-warning" style="height:200px; width:450px;">
+                <div class="bg-white border p-2">Bubbles</div>
+                <div class="bg-white border p-2">Cosmo</div>
+                <div class="bg-white border p-2">Dolores</div>
+                <div class="bg-white border p-2">Fred</div>
+                <div class="bg-white border p-2">Levi</div>
+                <div class="bg-white border p-2">Oscar</div>
+                <div class="bg-white border p-2">Rivet</div>
+                <div class="bg-white border p-2">Rex</div>
+                <div class="bg-white border p-2">Spring</div>
+            </div>
+            
+            <hr>
+
+            <h4 class="text-secondary">align-content-around</h4>
+            <div class="d-flex align-content-md-around flex-wrap bg-warning" style="height:200px; width:450px;">
+                <div class="bg-white border p-2">Bubbles</div>
+                <div class="bg-white border p-2">Cosmo</div>
+                <div class="bg-white border p-2">Dolores</div>
+                <div class="bg-white border p-2">Fred</div>
+                <div class="bg-white border p-2">Levi</div>
+                <div class="bg-white border p-2">Oscar</div>
+                <div class="bg-white border p-2">Rivet</div>
+                <div class="bg-white border p-2">Rex</div>
+                <div class="bg-white border p-2">Spring</div>
+            </div>
+            
+            <hr>
+
+            <h4 class="text-secondary">align-content-stretch</h4>
+            <div class="d-flex flex-wrap bg-warning" style="height:200px; width:450px;">
+                <div class="bg-white border p-2">Bubbles</div>
+                <div class="bg-white border p-2">Cosmo</div>
+                <div class="bg-white border p-2">Dolores</div>
+                <div class="bg-white border p-2">Fred</div>
+                <div class="bg-white border p-2">Levi</div>
+                <div class="bg-white border p-2">Oscar</div>
+                <div class="bg-white border p-2">Rivet</div>
+                <div class="bg-white border p-2">Rex</div>
+                <div class="bg-white border p-2">Spring</div>
+            </div>
+            
+            <hr>
+        </section>
+    </main>
+</body>
+</html>
