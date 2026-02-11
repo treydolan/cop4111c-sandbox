@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.13.1/font/bootstrap-icons.css' integrity='sha512-vWHsp0PuTxwRMLtGTnbS7PDNtI7yFmmiFq24hjcqpup/KK7ixxWdXwRmerG9gu7peaSRIVxpFcfBSVrGzWcF4w==' crossorigin='anonymous'>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js' integrity='sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==' crossorigin='anonymous'></script>
+    <title>Icons</title>
+</head>
+<body class="container">
+    <header>
+        <h1 class="container mt-4">Icons</h1>
+        <a href="https://icons.getbootstrap.com">Icon Search</a>
+    </header>
+    <main>
+        <h2>Position Properties</h2>
+        <p><code>position-{VAL}</code></p>
+        <ul>
+            <li>static (flow natural default)</li>
+            <li>relative (Go normal, offset)</li>
+            <li>absolute (relation to nearest relative)</li>
+            <li>fixed (relative to viewport)</li>
+            <li>sticky (stick when scrolled by)</li>
+        </ul>
+        <h3>Arrangement Properties</h3>
+        <p><code>{PRO}{POS}</code></p>
+        <p>PRO:</p>
+        <ul>
+            <li>top</li>
+            <li>start</li>
+            <li>bottom</li>
+            <li>end</li>
+        </ul>
+        <p>POS:</p>
+        <ul>
+            <li>0</li>
+            <li>50</li>
+            <li>100</li>
+        </ul>
+        <p>Translate:</p>
+        <code>translate-middle</code>
+        <em>Center in each corner</em>
+        <section>
+            <h3>Positioning Example</h3>
+            <h4 class="text-danger">Positioning</h4>
+
+            <div class="d-grid gap-2 bg-dark" style="padding:10px;">
+                <div class="bg-secondary text-white p-2" style="height:100px;">Rex</div>
+                <div class="position-sticky top-0 start-0 bg-danger text-white p-2" style="height:100px;">Dolores</div>
+                <div class="bg-secondary text-white p-2" style="height:100px;">Bubbles</div>
+                <div class="bg-secondary text-white p-2" style="height:100px;">Fred</div>
+                <div class="bg-secondary text-white p-2" style="height:100px;">Rivet</div>
+            </div>
+
+            <hr>
+
+            <div class="d-grid gap-2 bg-dark" style="padding:10px;">
+            <div class="bg-secondary text-white p-2" style="height:100px;">Rex</div>
+            <div class="bg-secondary text-white p-2" style="height:100px;">Dolores</div>
+            <div class="bg-secondary text-white p-2" style="height:100px;">Bubbles</div>
+            <div class="bg-secondary text-white p-2" style="height:100px;">Fred</div>
+            <div class="bg-secondary text-white p-2" style="height:100px;">Rivet</div>
+            </div>
+
+
+        </section>
+        <hr>
+        <section>
+            <h3>Practice Position</h3>
+                <div class="position-relative d-inline-block bg-primary text-white rounded-2 px-2 py-1">
+                Bubbles
+                    <i class="position-absolute top-0 start-100 translate-middle bi bi-heart-fill text-danger"></i>
+            </div>
+        </section>
+    </main>
+</body>
+</html>
