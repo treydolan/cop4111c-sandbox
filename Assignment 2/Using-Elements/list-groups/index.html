@@ -12,9 +12,112 @@
         <h1 class="container mt-4">List Groups</h1>
     </header>
     <main>
-        <div class="container">
-            <h1 class="placeholder placeholder-lg col-6">List Groups</h1>
-        </div>
+        <section>
+            <h2>List Groups</h2>
+            <code>list-group</code>
+            <code>list-group-item</code>
+            <p>Modifiers:</p>
+            <ul>
+                <li><code>active</code></li>
+                <li><code>aria-current="true"</code></li>
+                <li><code>disabled</code></li>
+                <li><code>tabindex="-1" aria-disabled="true"</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <h1 class="text-danger">List Group</h1>
+
+            <h4>What robots can do better than you.</h4>
+            <ul class="list-group">
+            <li class="list-group-item active" aria-current="true">Space travel and exploration</li>
+            <li class="list-group-item disabled" tabindex="-1" aria-disabled="true">Superfast mass production</li>
+            <li class="list-group-item">Intricate surgery</li>
+            <li class="list-group-item">Flipping pancakes</li>
+            <li class="list-group-item">Packing suitcases</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Flush List Groups</h2>
+            <code>list-group-flush</code>
+            <h3>Example:</h3>
+            <h1 class="text-danger">Flush List Group</h1>
+
+            <h4>What robots can do better than you.</h4>
+            <ul class="list-group list-group-flush">
+            <li class="list-group-item active" aria-current="true">Space travel and exploration</li>
+            <li class="list-group-item disabled" tabindex="-1" aria-disabled="true">Superfast mass production</li>
+            <li class="list-group-item">Intricate surgery</li>
+            <li class="list-group-item">Flipping pancakes</li>
+            <li class="list-group-item">Packing suitcases</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Actionable Items</h2>
+            <code>list-group-item-action</code>
+            <h3>Example:</h3>
+            <h1 class="text-danger">List Group Item Action</h1>
+
+            <h4>What robots can do better than you.</h4>
+            <div class="list-group">
+            <button class="list-group-item list-group-item-action">Space travel and exploration</button>
+            <a class="list-group-item list-group-item-action">Superfast mass production</a>
+            <a class="list-group-item list-group-item-action">Intricate surgery</a>
+            <button class="list-group-item list-group-item-action">Flipping pancakes</button>
+            <button class="list-group-item list-group-item-action">Packing suitcases</button>
+            </div>
+        </section>
+        <section>
+            <h2>Horizontal</h2>
+            <code>list-group-horizontal{-BR}</code>
+            <p>BR:</p>
+            <ul>
+                <li><code>sm</code></li>
+                <li><code>md</code></li>
+                <li><code>lg</code></li>
+                <li><code>xl</code></li>
+                <li><code>xxl</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <h1 class="text-danger">List Group</h1>
+
+            <h4>What robots can do better than you.</h4>
+            <ul class="list-group list-group-horizontal-md">
+            <li class="list-group-item">Space travel and exploration</li>
+            <li class="list-group-item">Superfast mass production</li>
+            <li class="list-group-item">Intricate surgery</li>
+            <li class="list-group-item">Flipping pancakes</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contextual Colors</h2>
+            <code>list-group-item{-COL}
+            </code>
+            <p>COL:</p>
+            <ul>
+                <li><code>primary</code></li>
+                <li><code>secondary</code></li>
+                <li><code>success</code></li>
+                <li><code>danger</code></li>
+                <li><code>warning</code></li>
+                <li><code>info</code></li>
+                <li><code>light</code></li>
+                <li><code>dark</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <h1 class="text-danger">Contextual List Group Classes</h1>
+
+            <h4>What robots can do better than you.</h4>
+            <ul class="list-group">
+            <li class="list-group-item list-group-item-primary">Space travel and exploration</li>
+            <li class="list-group-item list-group-item-secondary">Superfast mass production</li>
+            <li class="list-group-item list-group-item-success">Intricate surgery</li>
+            <li class="list-group-item list-group-item-danger">Flipping pancakes</li>
+            <li class="list-group-item list-group-item-warning">Packing suitcases</li>
+            <li class="list-group-item list-group-item-info">Space travel and exploration</li>
+            <li class="list-group-item list-group-item-light">Superfast mass production</li>
+            <li class="list-group-item list-group-item-dark">Intricate surgery</li>
+            </ul>
+
+        </section>
     </main>
 </body>
 </html>
