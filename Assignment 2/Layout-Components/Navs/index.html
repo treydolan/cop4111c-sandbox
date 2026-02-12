@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css' integrity='sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw==' crossorigin='anonymous'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js' integrity='sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==' crossorigin='anonymous'></script>
+    <title>Navs</title>
+</head>
+<body class="container">
+    <header>
+        <h1 class="container mt-4">Navs</h1>
+        <ul>
+            <li>Lists, no lists, or <code>nav</code> tag</li>
+            <li>Special Assistive tags</li>
+            <li>Align with flexbox</li>
+        </ul>
+    </header>
+    <main>
+        <section>
+            <h2>Nav</h2>
+            <ul>
+                <li><code>nav</code></li>
+                <li><code>nav-item</code></li>
+                <li><code>nav-link</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <div class="container">
+            <h1 class="mt-4 mb-2">Navs</h1>
+
+            <h4 class="text-secondary">Lists</h4>
+            
+            <ul class="nav">
+                <li class="nav-item">
+                <a class="nav-link" href="#">Dolores</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Bubbles</a>
+                </li>
+                <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Cosmo</a>
+                </li>
+            </ul>
+
+            <hr>
+
+            <h4 class="text-secondary">No Lists</h4>
+            
+            <div class="nav">
+                <a class="nav-item nav-link" href="#">Dolores</a>
+                <a class="nav-item nav-link active" aria-current="page" href="#">Bubbles</a>
+                <a class="nav-item nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Cosmo</a>
+            </div>
+
+            <hr>
+
+            <h4 class="text-secondary">nav tag</h4>
+            
+            <nav class="nav">
+                <a class="nav-link" href="#">Dolores</a>
+                <a class="nav-link active" aria-current="page" href="#">Bubbles</a>
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Cosmo</a>
+            </nav>
+
+            <hr>
+        </section>
+        <section>
+            <h2>Nav Styles</h2>
+            <ul>
+                <li><code>nav-tabs</code></li>
+                <li><code>nav-pills</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <div class="container">
+            <h1 class="mt-4 mb-2">Navs</h1>
+
+            <h4 class="text-secondary">tabs</h4>
+
+            <nav class="nav nav-tabs">
+            <a href="#" class="nav-link">Dolores</a>
+            <a href="#" class="nav-link active" aria-current="page" href="#">Bubbles</a>
+            <a href="#" class="nav-link">Cosmo</a>
+            </nav>
+
+            <hr>
+
+            <h4 class="text-secondary">pills</h4>
+
+            <nav class="nav nav-pills">
+            <a href="#" class="nav-link text-danger">Dolores</a>
+            <a href="#" class="nav-link active bg-danger" aria-current="page" href="#">Bubbles</a>
+            <a href="#" class="nav-link text-danger">Cosmo</a>
+            </nav>
+
+            <hr>
+        </section>
+        <section>
+            <h2>Nav Alignment</h2>
+            <ul>
+                <li><code>nav-fill</code></li>
+                <li><code>nav-justified</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <h1 class="mt-4 mb-2">Nav Alignment</h1>
+
+            <h4 class="text-secondary">Using nav-fill</h4>
+
+            <ul class="nav nav-pills nav-fill">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Dolores</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Bubbles is from a family of track footed robots</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Cosmo</a>
+            </li>
+            </ul>
+
+            <hr>
+
+            <h4 class="text-secondary">Using nav-justified</h4>
+
+            <ul class="nav nav-pills nav-justified">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Dolores</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Bubbles is from a family of track footed robots</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Cosmo</a>
+            </li>
+            </ul>
+
+            <hr>
+
+
+            <h4 class="text-secondary">Using justify-content</h4>
+
+            <ul class="nav nav-pills justify-content-md-center">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Dolores</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Bubbles</a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Cosmo</a>
+            </li>
+            </ul>
+
+            <hr>
+
+            <h4 class="text-secondary">Using flex-column</h4>
+
+            <nav class="nav  nav-pills flex-column flex-md-row">
+            <a class="nav-link" href="#">Dolores</a>
+            <a class="nav-link active" aria-current="page" href="#">Bubbles</a>
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Cosmo</a>
+            </nav>
+
+            <hr>
+        </section>
+    </main>
+</body>
+</html>
