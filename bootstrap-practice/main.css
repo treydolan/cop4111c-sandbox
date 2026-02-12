@@ -1,0 +1,12 @@
+/* .navbar-dark .navbar-toggler:hover {
+  --bs-navbar-toggler-icon-bg: url("data:image/svg+xml,%3csvg ... %3e");
+} */
+
+.navbar-toggler {
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.navbar-toggler:hover {
+  background-color: rgba(255,255,255,0.25);
+  transform: scale(1.05);
+}

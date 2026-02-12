@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css' integrity='sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw==' crossorigin='anonymous'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js' integrity='sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==' crossorigin='anonymous'></script>
+    <title>Carousel</title>
+</head>
+<body>
+    <header>
+        <h1 class="container mt-4">Carousel</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Carousel</h2>
+            <p><code>carousel</code></p>
+            <ul>
+                <li><code>data-bs-ride</code></li>
+                <li><code>slide</code></li>
+                <li><code>carousel-fade</code></li>
+            </ul>
+            <p><code>carousel-inner</code></p>
+            <p><code>carousel-item</code></p>
+            <p><code>class="d-block w-100"</code></p>
+            <p><code>active</code></p>
+            <h3>Example:</h3>
+            <h1>Carousel</h1>
+
+            <h4 class="text-secondary">Ride</h4>
+            <div id="robotcarousel" class="carousel" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                <img class="d-block w-100" src="https://pixelprowess.com/i/carousel_swamp.png" alt="swamp">
+                </div>
+                <div class="carousel-item active">
+                <img class="d-block w-100" src="https://pixelprowess.com/i/carousel_flight.png" alt="flight">
+                </div>
+            </div>
+            </div>
+            <hr>
+            <h4 class="text-secondary">Slide</h4>
+            <div id="robotcarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                <img class="d-block w-100" src="https://pixelprowess.com/i/carousel_swamp.png" alt="swamp">
+                </div>
+                <div class="carousel-item active">
+                <img class="d-block w-100" src="https://pixelprowess.com/i/carousel_flight.png" alt="flight">
+                </div>
+            </div>
+            </div>
+            <hr>
+            <h4 class="text-secondary">Fade</h4>
+            <div id="robotcarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                <img class="d-block w-100" src="https://pixelprowess.com/i/carousel_swamp.png" alt="swamp">
+                </div>
+                <div class="carousel-item active">
+                <img class="d-block w-100" src="https://pixelprowess.com/i/carousel_flight.png" alt="flight">
+                </div>
+            </div>
+            </div>
+        </section>
+        <section>
+            <h2>Button Control</h2>
+            <p><code>carousel-control-{TYP}</code></p>
+            <small>TYP:</small>
+            <ul>
+                <li><code>prev</code></li>
+                <li><code>next</code></li>
+            </ul>
+            <small>Tags:</small>
+            <ul>
+                <li><code>data-bs-target="ID"</code></li>
+                <li><code>data-bs-slide="{prev|next}"</code></li>
+            </ul>
+            <small>Icon:</small>
+            <p><code>carousel-control-{prev|next}-icon</code></p>
+            <h3>Example:</h3>
+            <h1>Carousel Button Controls</h1>
+
+            <div id="robotcarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                <img class="d-block w-100" src="https://pixelprowess.com/i/carousel_swamp.png" alt="swamp">
+                </div>
+                <div class="carousel-item active">
+                <img class="d-block w-100" src="https://pixelprowess.com/i/carousel_flight.png" alt="flight">
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#robotcarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#robotcarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            
+            </div>
+        </section>
+        <section>
+            <h2>Indicator Controls</h2>
+            <p><code>carousel-indicators</code></p>
+            <small>Options:</small>
+            <ul>
+                <li><code>data-bs-target="ID"</code></li>
+                <li><code>data-bs-slide-to="#"</code></li>
+                <li><code>aria-label="Label"</code></li>
+            </ul>
+            <small>Current:</small>
+            <ul>
+                <li><code>class="active"</code></li>
+                <li><code>aria-current="true"</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <h1>Carousel Indicators</h1>
+
+            <div id="robotcarousel" class="carousel slide" data-bs-ride="carousel">
+            
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#robotcarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#robotcarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                <img class="d-block w-100" src="https://pixelprowess.com/i/carousel_swamp.png" alt="swamp">
+                </div>
+                <div class="carousel-item active">
+                <img class="d-block w-100" src="https://pixelprowess.com/i/carousel_flight.png" alt="flight">
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#robotcarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#robotcarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            
+            </div>
+        </section>
+        <section>
+            <h2>Carousel Options</h2>
+            <p><code>carousel-caption</code></p>
+            <p><code>carousel-dark</code></p>
+            <h3>Example:</h3>
+            <h1>Carousel Options</h1>
+
+            <h4 class="container text-secondary">Captions</h4>
+            <div id="robotcarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                <img class="d-block w-100" src="https://pixelprowess.com/i/carousel_swamp.png" alt="swamp">
+                <div class="carousel-caption">
+                    <h2>Dolores</h2>
+                    <p>Dolores robot is a computational genius who performs calculations for various Binaryville businesses and organizations.</p>
+                </div>
+                </div>
+                <div class="carousel-item active">
+                <img class="d-block w-100" src="https://pixelprowess.com/i/carousel_flight.png" alt="flight">
+                <div class="carousel-caption">
+                    <h2>Cosmo</h2>
+                    <p>Cosmo is one of the most down-to-earth folks you'll ever meet. His favorite pastimes are playing bingo, soaking up the sun at Binaryville Beach, and reading spy novels.</p>
+                </div>
+                </div>
+            </div>
+            
+            </div>
+                
+            <hr>
+
+            <h4 class="container text-secondary">Carousel Dark</h4>
+            <div id="robotcarousel" class="carousel carousel-dark slide carousel-fade" data-bs-ride="carousel">
+            
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#robotcarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#robotcarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <div class="carousel-item">
+                <img class="d-block w-100" src="https://pixelprowess.com/i/carousel_swamp.png" alt="swamp">
+                <div class="carousel-caption">
+                    <h2>Dolores</h2>
+                    <p>Dolores robot is a computational genius who performs calculations for various Binaryville businesses and organizations.</p>
+                </div>
+                </div>
+                <div class="carousel-item active">
+                <img class="d-block w-100" src="https://pixelprowess.com/i/carousel_flight.png" alt="flight">
+                <div class="carousel-caption">
+                    <h2>Cosmo</h2>
+                    <p>Cosmo is one of the most down-to-earth folks you'll ever meet. His favorite pastimes are playing bingo, soaking up the sun at Binaryville Beach, and reading spy novels.</p>
+                </div>
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#robotcarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#robotcarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            
+            </div>
+                
+            <hr>
+        </section>
+        <section>
+            <h2>Carousel Interactivity</h2>
+            <p><code>data-bs-{TYP}</code></p>
+            <ul>
+                <li><code>ride(bool|carousel)</code></li>
+                <li><code>interval (ms|false)</code></li>
+                <li><code>pause(hover)</code></li>
+                <li><code>wrap</code></li>
+                <li><code>keyboard</code></li>
+                <li><code>touch</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <h1>Carousel Interactivity</h1>
+
+            <h4 class="text-secondary">Ride, Interval, Pause</h4>
+            <div id="robotcarousel" class="carousel slide" data-bs-interval="1000" data-pause="true" data-bs-ride="true">
+            
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#robotcarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#robotcarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            </div>
+            
+            <div class="carousel-inner">
+                <div class="carousel-item" data-bs-interval="2000">
+                <img class="d-block w-100" src="https://pixelprowess.com/i/carousel_swamp.png" alt="swamp">
+                </div>
+                <div class="carousel-item active">
+                <img class="d-block w-100" src="https://pixelprowess.com/i/carousel_flight.png" alt="flight">
+                </div>
+            </div>
+            
+            <button class="carousel-control-prev" type="button" data-bs-target="#robotcarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#robotcarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            
+            </div>
+        </section>
+    </main>
+</body>
+</html>
