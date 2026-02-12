@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css' integrity='sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw==' crossorigin='anonymous'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js' integrity='sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==' crossorigin='anonymous'></script>
+    <title>Toast</title>
+</head>
+<body>
+    <header>
+        <h1 class="container mt-4">Toast</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Toast Classes</h2>
+            <p><code>toast</code></p>
+            <p><code>toast-container</code></p>
+            <ul>
+                <li><code>toast-header</code></li>
+                <li><code>toast-body</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <h1>Basic Toast</h1>
+
+            <button type="button" class="btn btn-danger" id="basicToastBtn">Join us</button>
+
+            <div class="toast-container position-fixed top-0 end-0 p-3">
+            <div id="basicToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true">
+                <div class="toast-header bg-primary text-light">
+                <h5 class="my-0">Join Our Company</h5>
+                </div>
+                <div class="toast-body">
+                <strong>Mind Numbing Products</strong> is a force in the manufacturing and production market. Our motto is If it’s not Mind Numbing, it’s not worth it.
+                </div>
+            </div>  
+            </div>
+        </section>
+        <section>
+            <h2>Toast Options</h2>
+            <small>Show or Hide</small>
+            <ul>
+                <li><code>show</code></li>
+                <li><code>hide</code></li>
+            </ul>
+            <small>Close</small>
+            <p><code>btn-close</code></p>
+            <small><code>Data</code></small>
+            <ul>
+                <li><code>data-bs-animation</code></li>
+                <li><code>data-bs-autohide</code></li>
+                <li><code>data-bs-delay</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <h1>Toast Options</h1>
+
+            <h4 class="text-secondary">Basic Toast</h4>
+
+            <button type="button" class="btn btn-primary" id="basicToastBtn">Join us</button>
+            <button type="button" class="btn btn-info text-white" id="infoToastBtn">Info</button>
+
+            <div class="toast-container position-fixed top-0 end-0 p-3">
+            <div id="basicToast" class="toast hide" role="alert" aria-live="assertive" aria-atomic="true" data-bs-autohide="false">
+                <div class="toast-header bg-primary text-light d-flex justify-content-between">
+                <h5 class="my-0">Join Our Company</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+                <div class="toast-body">
+                <strong>Mind Numbing Products</strong> is a force in the manufacturing and production market. Our motto is If it’s not Mind Numbing, it’s not worth it.
+                </div>
+            </div>  
+
+            <div id="infoToast" class="toast" role="alert" aria-live="assertive" aria-atomic="true" data-bs-animation="false" data-bs-delay="2000">
+                <div class="toast-body bg-info text-light d-flex justify-content-between">
+                <p class="mb-0">As experts in lifting, moving, and nuts-and-bolting, the robotic population is an ideal match for industry and repetitive tasks.</p>
+                <button type="button" class="btn-close btn-close-white ms-3" data-bs-dismiss="toast" aria-label="Close"></button>
+                </div>
+            </div>  
+
+            </div>
+        </section>
+    </main>
+</body>
+</html>

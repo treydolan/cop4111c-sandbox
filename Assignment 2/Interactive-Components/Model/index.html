@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css' integrity='sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw==' crossorigin='anonymous'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js' integrity='sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==' crossorigin='anonymous'></script>
+    <title>Modals</title>
+</head>
+<body>
+    <header>
+        <h1 class="container mt-4">Modals</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Modal Classes</h2>
+            <p><code>modal</code></p>
+            <p><code>fade</code></p>
+            <ul>
+                <li><code>modal-dialog</code></li>
+                <li><code>modal-content</code></li>
+                <li><code>modal-header</code></li>
+                <li><code>modal-body</code></li>
+                <li><code>modal-footer</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <h1>Basic Modal</h1>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Space Robotettes
+            </button>
+
+        <div id="exampleModal" class="modal fade" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Success</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>Yay! You’ve launched all the robotettes and they are on their way to some other planet!</p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
+        </section>
+        <section>
+            <h2>Modal Options</h2>
+            <p><code>modal-dialog{-TYP}</code></p>
+            <ul>
+                <li><code>centered</code></li>
+                <li><code>scrollable</code></li>
+            </ul>
+            <p><code>modal{-SIZ}</code></p>
+            <small>SIZ: <code>sm</code>(300) none (500)</small>
+            <small><code>lg</code>(800)</small>
+            <small><code>xl</code>(1140)</small>
+            <p><code>modal-fullscreen{-SIZ}{-down}</code></p>
+            <small>SIZ:  sm(576) md(768) lg(992) xl(1200) xxl(1400)</small>
+            <p><code>data-bs-{TYP}</code></p>
+            <ul>
+                <li><code>backdrop(bool|static)</code></li>
+                <li><code>keyboard(bool)</code></li>
+                <li><code>focus(bool)</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <h1>Modal Options</h1>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#centeredModal">
+            Centered
+            </button>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#sizedModal">
+            Sized
+            </button>
+
+            <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#fullScreenModal">
+            Full Screen
+            </button>
+
+
+            <div id="centeredModal" class="modal" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Centered</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Yay! You’ve launched all the robotettes and they are on their way to some other planet!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <div id="sizedModal" class="modal" tabindex="-1">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Sized</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Yay! You’ve launched all the robotettes and they are on their way to some other planet!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+            </div>
+
+            <div id="fullScreenModal" class="modal" tabindex="-1">
+            <div class="modal-dialog modal-fullscreen-lg-down">
+                <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Full Screen</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Yay! You’ve launched all the robotettes and they are on their way to some other planet!</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+                </div>
+            </div>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

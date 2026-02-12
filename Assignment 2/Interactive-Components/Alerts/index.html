@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css' integrity='sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw==' crossorigin='anonymous'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js' integrity='sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==' crossorigin='anonymous'></script>
+    <title>Alerts</title>
+</head>
+<body>
+    <header>
+        <h1 class="container mt-4">Alerts</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Alert Classes</h2>
+            <p><code>alert</code></p>
+            <p>
+                <code>alert-{TYP}</code>
+            </p>
+            <ul>
+                <li><code>primary</code></li>
+                <li><code>secondary</code></li>
+                <li><code>success</code></li>
+                <li><code>danger</code></li>
+                <li><code>warning</code></li>
+                <li><code>info</code></li>
+                <li><code>light</code></li>
+                <li><code>dark</code></li>
+                <li><code>link</code></li>
+            </ul>
+            <small>Alert Options:</small>
+            <ul>
+                <li><code>alert-heading</code></li>
+                <li><code>alert-link</code></li>
+                <li><code>alert-dismissible</code></li>
+                <li><code>fade</code></li>
+                <li><code>show</code></li>
+                <li><code>btn-close</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <h1>Alerts</h1>
+
+            <h4 class="text-secondary">Simple Alert</h4>
+            <div class="alert alert-primary" role="alert">
+            Thanks for signing up for our Android and Atomaton mailing list! You’re all set.
+            </div>
+
+            <hr>
+
+            <h4 class="text-secondary">Alert with heading and link</h4>
+            <div class="alert alert-danger" role="alert">
+            <h4 class="alert-heading">Whoa!</h4> 
+            <p>That’s one crazy password you have there. But it’s not secure enough. <a href="#" class="alert-link">Create a new one</a> to save the world from chaos.</p>
+            </div>
+
+            <hr>
+
+            <h4 class="text-secondary">Dismissible alert</h4>
+
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+            Remember to <strong>bookmark this page</strong> and check back regularly for new contraptions and apparatuses for your personal reboot
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+            </div>
+        </section>
+    </main>
+</body>
+</html>

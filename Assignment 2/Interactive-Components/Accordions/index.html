@@ -14,14 +14,85 @@
     <main>
         <section>
             <h2>Accordion Classes</h2>
-            <p><code>accordion</code></p>
+            <p><code>accordion</code> Container</p>
             <p><code>accordion-item</code></p>
             <p><code>accordion-header (ID)</code></p>
             <p><code>accordion-button</code></p>
             <p><code>accordion-body</code></p>
             <p><code>accordion-collapse (ID)</code></p>
             <h3>Example:</h3>
-            
+            <h1>Accordions</h1>
+
+            <h4 class="text-secondary">Regular Accordion</h4>
+            <div class="accordion" id="regularAccordionRobots">
+
+            <div class="accordion-item">
+                <h2 id="regularHeadingFirst" class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#regularCollapseFirst" aria-expanded="true" aria-controls="regularCollapseFirst">
+                    The Mechanics of Mechanics
+                </button>
+                </h2>
+                <div id="regularCollapseFirst" class="accordion-collapse collapse show" aria-labelledby="regularHeadingFirst" data-bs-parent="#regularAccordionRobots">
+                <div class="accordion-body">
+                    Overview of the basic fundamentals of robot kinesiology, including rotational motion, laws of thermodynamics, space, time, and momentum. Students will learn to analyze and explain workings and gesticulations, identify and describe metals and fluids at rest and in motion, and explain the impact that the laws of gravity have on different forms of energy.
+                </div>
+                </div>
+            </div>
+
+            <div class="accordion-item"> 
+                <h2 class="accordion-header" id="regularHeadingSecond">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#regularCollapseSecond" aria-expanded="false" aria-controls="regularCollapseSecond">
+                    The Social Impact of Collective Artificial Intelligence
+                </button>
+                </h2>
+                <div id="regularCollapseSecond" class="accordion-collapse collapse" aria-labelledby="regularHeadingSecond" data-bs-parent="#regularAccordionRobots">
+                <div class="accordion-body">
+                    Throughout history, robots have both embraced and rejected the act of working with other robots in a collective. While science has shown that collective artificial intelligence helps both intellectual and technological development, it has also shown that some robots really want to just be and think by themselves. How do we harness the benefits of both while avoiding the downfall of each?
+                </div>
+                </div>
+            </div>
+
+            </div>
+
+            <hr>
+        </section>
+        <section>
+            <h2>Accordion Flush</h2>
+            <p><code>accordion-flush</code></p>
+            <h3>Example:</h3>
+            <h1>Flush Accordion</h1>
+
+                <div class="accordion accordion-flush" id="flushAccordionRobots">
+
+                <div class="accordion-item">
+                    <h2 id="flushHeadingFirst" class="accordion-header">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapseFirst" aria-expanded="true" aria-controls="flushCollapseFirst">
+                        The Mechanics of Mechanics
+                    </button>
+                    </h2>
+                    <div id="flushCollapseFirst" class="accordion-collapse collapse show" aria-labelledby="flushHeadingFirst" data-bs-parent="#flushAccordionRobots">
+                    <div class="accordion-body">
+                        Overview of the basic fundamentals of robot kinesiology, including rotational motion, laws of thermodynamics, space, time, and momentum. Students will learn to analyze and explain workings and gesticulations, identify and describe metals and fluids at rest and in motion, and explain the impact that the laws of gravity have on different forms of energy.
+                    </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item"> 
+                    <h2 class="accordion-header" id="flushHeadingSecond">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flushCollapseSecond" aria-expanded="false" aria-controls="flushCollapseSecond">
+                        The Social Impact of Collective Artificial Intelligence
+                    </button>
+                    </h2>
+                    <div id="flushCollapseSecond" class="accordion-collapse collapse" aria-labelledby="flushHeadingSecond" data-bs-parent="#flushAccordionRobots">
+                    <div class="accordion-body">
+                        Throughout history, robots have both embraced and rejected the act of working with other robots in a collective. While science has shown that collective artificial intelligence helps both intellectual and technological development, it has also shown that some robots really want to just be and think by themselves. How do we harness the benefits of both while avoiding the downfall of each?
+                    </div>
+                    </div>
+                </div>
+
+                </div>
+
+                <hr>
         </section>
     </main>
 </body>

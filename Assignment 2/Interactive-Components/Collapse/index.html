@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css' integrity='sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw==' crossorigin='anonymous'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js' integrity='sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==' crossorigin='anonymous'></script>
+    <title>Collapse</title>
+</head>
+<body>
+    <header>
+        <h1 class="container mt-4">Collapse</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Collapse Classes</h2>
+            <p><code>collapse</code></p>
+            <p><code>multi-collapse</code></p>
+            <ul>
+                <li><code>data-bs-toggle="collapse"</code></li>
+                <li><code>href</code> or <code>data-bs-target</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <h1>Collapse</h1>
+
+            <h4 class="text-secondary">Single Collapse</h4>
+            <div class="d-flex">
+            <div>
+                <a class="btn btn-primary" 
+                data-bs-toggle="collapse"
+                href="#productsExample"
+                role="button"
+                aria-expanded="false"
+                aria-controls="productsExample">
+                href</a>
+            </div>  
+            <div class="ms-3">
+                <button class="btn btn-info text-white"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#expertsExample"
+                aria-expanded="false"
+                aria-controls="expertsExample">
+                data-bs-target
+                </button>
+            </div>
+            </div>
+
+            <hr>
+
+            <h4 class="text-secondary">Multiple Collapse</h4>
+            <div class="d-flex">
+            <div>
+                <a class="btn btn-primary" 
+                data-bs-toggle="collapse"
+                href=".multi-collapse"
+                role="button"
+                aria-expanded="false"
+                aria-controls="productsExample">
+                href</a>
+            </div>  
+            <div class="ms-3">
+                <button class="btn btn-info text-white"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target=".multi-collapse"
+                aria-expanded="false"
+                aria-controls="expertsExample productsExample">
+                data-bs-target
+                </button>
+            </div>
+            </div>
+
+            <hr>
+
+            <div class="collapse multi-collapse" id="productsExample">
+            <strong>Mind Numbing Products</strong> is a force in the manufacturing and production market. Our motto is If it’s not Mind Numbing, it’s not worth it.
+            </div>
+
+            <div class="collapse multi-collapse" id="expertsExample">
+            As experts in lifting, moving, and nuts-and-bolting, the robotic population is an ideal match for industry and repetitive tasks.
+            </div>
+
+            <hr>
+        </section>
+    </main>
+</body>
+</html>
