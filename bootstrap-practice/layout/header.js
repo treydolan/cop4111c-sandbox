@@ -13,14 +13,23 @@ export function renderHeader(activePage = "") {
         </button>
 
         <div class="collapse navbar-collapse" id="mainNav">
-          <div class="navbar-nav ms-auto">
-            <a class="nav-link ${activePage === "home" ? "active" : ""}" href="index.html">Home</a>
-            <a class="nav-link ${activePage === "about" ? "active" : ""}" href="about.html">About</a>
-            <a class="nav-link ${activePage === "projects" ? "active" : ""}" href="projects.html">Projects</a>
-            <a class="nav-link ${activePage === "contact" ? "active" : ""}" href="contact.html">Contact</a>
-          </div>
+          <ul class="navbar-nav ms-lg-auto text-end align-items-lg-end">
+            <li class="nav-item">
+              <a class="nav-link ${activePage === "home" ? "active" : ""}" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ${activePage === "about" ? "active" : ""}" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ${activePage === "projects" ? "active" : ""}" href="projects.html">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link ${activePage === "contact" ? "active" : ""}" href="contact.html">Contact</a>
+            </li>
+        </ul>
         </div>
       </div>
     </nav>
+    <h1 class="d-flex justify-content-center py-4 text-capitalize">${activePage}</h1>
   `;
 }
