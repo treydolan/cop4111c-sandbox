@@ -16,10 +16,7 @@ const activeMap = {
 
 
 // Inject head
-document.head.innerHTML = renderHead(pageTitles[page] || "Binaryville");
-
-document.title = pageTitles[page] || "Binaryville";
-
+document.getElementById("site-head").innerHTML = renderHead();
 document.getElementById("site-header").innerHTML = renderHeader(activeMap[page] || "");
 document.getElementById("site-footer").innerHTML = renderFooter();
 
