@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css' integrity='sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw==' crossorigin='anonymous'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js' integrity='sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==' crossorigin='anonymous'></script>
+    <title>Form Validation</title>
+</head>
+<body>
+    <header>
+        <h1 class="container mt-4">Form Validation</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Validation Classes</h2>
+            <p><code>needs-validation</code></p>
+            <ul>
+                <li><code>valid-feedback</code></li>
+                <li><code>invalid-feedback</code></li>
+                <li><code>is-invalid</code></li>
+                <li><code>is-valid</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <h1>Validation</h1>
+
+            <form class="needs-validation" novalidate>
+            <div class="mb-3">
+                <label for="humanName" class="form-label fw-bold">Name</label>
+                <input type="name" required class="form-control" id="humanName" aria-describedby="nameHelp">
+                <div id="nameHelp" class="form-text">Let us know your name...human</div>
+                <div class="valid-feedback">
+                Acceptable name
+                </div>
+                <div class="invalid-feedback">
+                    Sorry Terran, not a valid username
+                </div>
+            </div>
+            <button type="submit" class="btn btn-secondary">submit</button>
+            </form>
+
+            <hr>
+        </section>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>

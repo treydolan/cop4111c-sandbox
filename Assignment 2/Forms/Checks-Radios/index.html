@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css' integrity='sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw==' crossorigin='anonymous'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js' integrity='sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==' crossorigin='anonymous'></script>
+    <title>Checkbox</title>
+</head>
+<body>
+    <header>
+        <h1 class="container mt-4">Checkbox</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Checkbox, Radio, and Switch</h2>
+            <p><code>form-check-{OPT}</code></p>
+            <small>OPT:</small>
+            <ul>
+                <li><code>label</code></li>
+                <li><code>input</code></li>
+                <li><code>inline</code></li>
+            </ul>
+            <p><code>form-switch</code></p>
+            <p><code>btn-check</code></p>
+            <h3>Example:</h3>
+            <h1>Form Checkboxes and Radio</h1>
+
+            <h4 class="text-secondary">Checkbox</h4>
+
+            <p class="form-label">
+            <span class="fw-bold">What vintage camper club memberships do you currently hold?</span>
+            <br>Choose all that are applicable.</p>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="checkboxTinCan">
+            <label class="form-check-label" for="checkboxTinCan">
+                Tin Cans in Tin Cans
+            </label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="checkbox" value="" id="checkboxRollingHomes" checked>
+            <label class="form-check-label" for="checkboxRollingHomes">
+                Rolling Homes
+            </label>
+            </div>
+
+            <hr>
+
+
+            <h4 class="text-secondary">Radio</h4>
+
+            <p class="form-label">
+            <span class="fw-bold">Choose which memership you prefer?</span>
+            <br>Choose all that are applicable.</p>
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="membershipChoice" value="Tin Can" id="radioTinCan">
+            <label class="form-check-label" for="radioTinCan">
+                Tin Cans in Tin Cans
+            </label>
+            </div>
+            <div class="form-check">
+            <input class="form-check-input" type="radio" name="membershipChoice" value="Rolling Homes" id="radioRollingHomes" checked>
+            <label class="form-check-label" for="radioRollingHomes">
+                Rolling Homes
+            </label>
+            </div>
+            <hr>
+
+            <h4 class="text-secondary">Inline</h4>
+
+            <p class="form-label">
+            <span class="fw-bold">What vintage camper club memberships do you currently hold?</span>
+            <br>Choose all that are applicable.</p>
+            <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" value="" id="checkboxTinCanInline">
+            <label class="form-check-label" for="checkboxTinCanInline">
+                Tin Cans in Tin Cans
+            </label>
+            </div>
+            <div class="form-check form-check-inline">
+            <input class="form-check-input" type="checkbox" value="" id="checkboxRollingHomesInline" checked>
+            <label class="form-check-label" for="checkboxRollingHomesInline">
+                Rolling Homes
+            </label>
+            </div>
+
+            <hr>
+
+            <h4 class="text-secondary">Switches</h4>
+
+            <p class="form-label">
+            <span class="fw-bold">What vintage camper club memberships do you currently hold?</span>
+            <br>Choose all that are applicable.</p>
+            <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" value="" id="switchTinCan">
+            <label class="form-check-label" for="switchTinCan">
+                Tin Cans in Tin Cans
+            </label>
+            </div>
+            <div class="form-check form-switch">
+            <input class="form-check-input" type="checkbox" value="" id="switchRollingHomes" checked>
+            <label class="form-check-label" for="switchRollingHomes">
+                Rolling Homes
+            </label>
+            </div>
+
+            <hr>
+
+            <h4 class="text-secondary">Button</h4>
+
+            <p class="form-label">
+            <span class="fw-bold">What vintage camper club memberships do you currently hold?</span>
+            <br>Choose all that are applicable.</p>
+            <input class="btn-check" type="checkbox" value="" id="buttonTinCan">
+            <label class="btn btn-outline-primary" for="buttonTinCan">
+                Tin Cans in Tin Cans
+            </label>
+            <input class="btn-check" type="checkbox" value="" id="buttonRollingHomes" checked>
+            <label class="btn btn-outline-primary" for="buttonRollingHomes">
+                Rolling Homes
+            </label>
+
+            <hr>
+        </section>
+    </main>
+</body>
+</html>

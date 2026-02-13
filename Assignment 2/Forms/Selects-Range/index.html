@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css' integrity='sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw==' crossorigin='anonymous'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js' integrity='sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==' crossorigin='anonymous'></script>
+    <title>Select & Range</title>
+</head>
+<body>
+    <header>
+        <h1 class="container mt-4">Select & Range</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Select</h2>
+            <p><code>form-select{-SIZ}</code></p>
+            <small>SIZ:</small>
+            <ul>
+                <li><code>sm</code></li>
+                <li><code>lg</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <h1>Select Fields</h1>
+
+            <h4 class="text-secondary">Select Field</h4>
+            <div class="mb-3">
+                <label for="humanName" class="form-label fw-bold">What kind of camper do you plan to bring?</label>
+                <select class="form-select">
+                <option selected>Choose...</option>
+                <option value="Trailer">A vintage travel trailer</option>
+                <option value="Class A">A Class-A bus or motorhome</option>
+                <option value="Ten">A self-building tent</option>
+                </select>
+            </div>
+
+            <hr>
+
+            <h4 class="text-secondary">Select Sizes</h4>
+            <div class="mb-3">
+                <label for="humanName" class="form-label fw-bold">What kind of camper do you plan to bring?</label>
+                <select class="form-select form-select-sm">
+                <option selected>Choose...</option>
+                <option value="Trailer">A vintage travel trailer</option>
+                <option value="Class A">A Class-A bus or motorhome</option>
+                <option value="Ten">A self-building tent</option>
+                </select>
+            </div>
+
+            <div class="mb-3">
+                <label for="humanName" class="form-label fw-bold">What kind of camper do you plan to bring?</label>
+                <select class="form-select form-select-lg">
+                <option selected>Choose...</option>
+                <option value="Trailer">A vintage travel trailer</option>
+                <option value="Class A">A Class-A bus or motorhome</option>
+                <option value="Ten">A self-building tent</option>
+                </select>
+            </div>
+
+            <hr>
+
+            <h4 class="text-secondary">Disabled</h4>
+            <div class="mb-3">
+                <label for="humanName" class="form-label fw-bold">What kind of camper do you plan to bring?</label>
+                <select class="form-select form-select" disabled>
+                <option selected>Choose...</option>
+                <option value="Trailer">A vintage travel trailer</option>
+                <option value="Class A">A Class-A bus or motorhome</option>
+                <option value="Ten">A self-building tent</option>
+                </select>
+            </div>
+
+            <h4 class="text-secondary">Select Multiple</h4>
+            <div class="mb-3">
+                <label for="humanName" class="form-label fw-bold">What kind of camper do you plan to bring?</label>
+                <select class="form-select" multiple size="2">
+                <option selected>Choose...</option>
+                <option value="Trailer">A vintage travel trailer</option>
+                <option value="Class A">A Class-A bus or motorhome</option>
+                <option value="Ten">A self-building tent</option>
+                </select>
+            </div>
+
+            <hr>
+        </section>
+        <section>
+            <h2>Range</h2>
+            <p><code>form-range</code></p>
+            <h3>Example:</h3>
+            <h1>Range</h1>
+
+            <label for="robotLoveRange" class="form-label">How much do you love robots?</label>
+            <input type="range" class="form-range" min="1" max="10" id="robotLoveRange">
+
+            <hr>
+        </section>
+    </main>
+</body>
+</html>

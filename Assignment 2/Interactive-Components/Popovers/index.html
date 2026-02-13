@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css' integrity='sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw==' crossorigin='anonymous'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js' integrity='sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==' crossorigin='anonymous'></script>
+    <title>Popovers</title>
+</head>
+<body>
+    <header>
+        <h1 class="container mt-4">Popovers</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Popover Data</h2>
+            <p><code>button</code> or <code>a</code></p>
+            <ul>
+                <li><code>title="Popover Headline"</code></li>
+                <li><code>data-bs-content="Popover Copy"</code></li>
+                <li><code>data-bs-toggle="popover"</code></li>
+                <li><code>data-bs-placement="{SID}"</code></li>
+            </ul>
+            <small>SID:</small>
+            <ul>
+                <li><code>top</code></li>
+                <li><code>right</code></li>
+                <li><code>bottom</code></li>
+                <li><code>left</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <div class="container mt-4">
+            <h1>Popovers</h1>
+
+            <div class="d-inline-flex flex-column gap-3">
+
+                <button type="button"
+                class="btn btn-secondary"
+                data-bs-container="body"
+                data-bs-toggle="popover"
+                data-bs-placement="top"
+                data-bs-content="Top popover"
+                title="Headline"
+                >
+                Popover on top
+                </button>
+                <button type="button"
+                class="btn btn-secondary"
+                data-bs-container="body"
+                data-bs-toggle="popover"
+                data-bs-placement="right"
+                data-bs-content="Right popover">
+                Popover on right
+                </button>
+                <button type="button"
+                class="btn btn-secondary"
+                data-bs-container="body"
+                data-bs-toggle="popover"
+                data-bs-placement="bottom"
+                data-bs-content="Bottom popover">
+                Popover on bottom
+                </button>
+                <button type="button"
+                class="btn btn-secondary"
+                data-bs-container="body"
+                data-bs-toggle="popover"
+                data-bs-placement="left"
+                data-bs-content="Left popover">
+                Popover on left
+                </button>
+            </div>
+            <hr>
+            </div>
+            <script src="main.js"></script>
+        </section>
+    </main>
+</body>
+</html>

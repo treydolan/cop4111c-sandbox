@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/css/bootstrap.css' integrity='sha512-zylce7fP6h4usg536JBTRj2rt7q22Z0qicHSlgSK53Irtfkz37ate3KCQ59du+aXZV6R3yyL2X1LyGKBEUMZaw==' crossorigin='anonymous'/>
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.8/js/bootstrap.js' integrity='sha512-GKxQGmCBqm3YHCZTdqD3Bvsz+AHRObqztq6xDo+68527RxgVw7wF1TR5ZSBvtWiz5qzpOzUGGvxJbT/6UzzSOQ==' crossorigin='anonymous'></script>
+    <title>Basic Inputs</title>
+</head>
+<body>
+    <header>
+        <h1 class="container mt-4">Basic Inputs</h1>
+    </header>
+    <main>
+        <section>
+            <h2>Basic Form</h2>
+            <p><code>form-label</code></p>
+            <p><code>form-control</code></p>
+            <p><code>form-text</code></p>
+            <h3>Example:</h3>
+            <h1>Basic Form</h1>
+
+            <form>
+            <div class="mb-3">
+                <label for="humanName" class="form-label fw-bold">Name</label>
+                <input type="name" class="form-control" id="humanName" aria-describedby="nameHelp">
+                <div id="nameHelp" class="form-text">Let us know your name...human</div>
+            </div>
+
+            <div class="mb-3">
+                <label for="whyFun" class="form-label fw-bold">Why is not being a robot fun?</label>
+                <textarea class="form-control" id="whyFun" rows="3"></textarea>
+            </div>
+            
+            <button type="submit" class="btn btn-secondary">submit</button>
+            </form>
+
+            <hr>
+        </section>
+    </main>
+</body>
+</html>
