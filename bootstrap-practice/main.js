@@ -33,3 +33,30 @@ document.getElementById("site-footer").innerHTML = renderFooter();
 //         link.classList.remove('active');
 //     });
 // });
+
+// Dark mode toggle
+
+function applyTheme(theme) {
+  document.documentElement.setAttribute("data-bs-theme", theme);
+  localStorage.setItem("theme", theme);
+
+  const btn = document.getElementById("themeToggle");
+  if (btn) btn.textContent = theme === "dark" ? "Light" : "Dark";
+}
+
+function initThemeToggle() {
+  const saved = localStorage.getItem("theme");
+  const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+  applyTheme(saved || (prefersDark ? "dark" : "light"));
+
+  const btn = document.getElementById("themeToggle");
+  if (!btn) return;
+
+  btn.addEventListener("click", () => {
+    const current = document.documentElement.getAttribute("data-bs-theme");
+    applyTheme(current === "dark" ? "light" : "dark");
+  });
+}
+
+document.addEventListener("DOMContentLoaded", initThemeToggle);

@@ -1,20 +1,48 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="light">
 <head id="site-head">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar-Practice</title>
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 pt-5">
     <header id="site-header">
     </header>
-    <main class="flex-fill">
-        <div class="container d-flex flex-wrap g-1">
-            <h2 class="col-6  my-5 mx-5">Lorem</h2>
-            <p class="my-5 mx-5 text-warning">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maiores ullam, suscipit exercitationem non amet debitis, inventore ratione natus aut voluptates itaque porro repellat earum, tenetur officia nulla laudantium praesentium maxime!</p>
-            <p class="col-2  my-5 mx-5">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Doloribus nihil unde beatae et libero non sapiente vel dicta ipsa eius? Inventore excepturi saepe harum in voluptas mollitia eveniet ducimus veritatis.</p>
-            <p class=" col-2 my-5 mx-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus id sint, esse itaque nihil modi, mollitia unde sunt commodi totam architecto doloremque quia similique iure. Porro assumenda quos laboriosam dolorem.</p>
-            <p class="col-2  my-5 mx-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam aut quasi sint facere consequatur harum provident perferendis incidunt natus, aspernatur qui eum obcaecati magnam tempora facilis quis? Impedit, dolores animi.</p>
+    <main class="pt-1">
+        <div class="container">
+            <div class="row g-4 my-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="flip-card h-100">
+                        <div class="flip-card-inner h-100">
+                            <div class="flip-card-front p-5 bg-secondary text-light rounded h-100">
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Error id magnam, dolor voluptas, quasi voluptatibus enim beatae esse fugiat quod harum consequatur quam rerum magni. Tenetur dolore velit voluptatem sit!
+                            </div>
+
+                            <div class="flip-card-back p-5 bg-dark text-light rounded h-100">
+                                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deserunt sint maxime obcaecati aspernatur laudantium ex explicabo quisquam numquam, assumenda, minima hic reiciendis! Perferendis dignissimos recusandae quae a facilis sunt consequuntur.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- <p class="p-5 text-light bg-secondary rounded h-100">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda officiis error animi dolores mollitia aspernatur nesciunt, dignissimos natus esse at autem dolorum facilis sit modi earum quia eos cupiditate a?
+                    </p> -->
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <p class="p-5 text-light bg-secondary rounded h-100">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, numquam. Explicabo ipsum blanditiis unde facilis! Tempore, soluta molestias magnam sunt exercitationem repellendus amet obcaecati. Esse quod deleniti fugiat dolores aut.
+                    </p>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-4">
+                    <p class="p-5 text-light bg-secondary rounded h-100">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis explicabo aperiam dolore cupiditate ipsum porro veritatis, maxime reprehenderit, odio pariatur soluta atque error earum exercitationem ullam quia laudantium? Pariatur, ullam?
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <button id="themeToggle" class="btn btn-outline-light btn-sm ms-2  bg-primary" type="button">Dark</button>
         </div>
         <form class="m-4">
             <div class="form-group col-4 mx-4">
@@ -26,7 +54,6 @@
                 </select>
             </div>
         </form>
-        <hr>
     </main>
     <footer id="site-footer" class="mt-auto container">
     </footer>

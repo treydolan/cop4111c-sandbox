@@ -1,7 +1,7 @@
 // layout/header.js
 export function renderHeader(activePage = "") {
   return `
-    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-secondary fixed-top">
       <div class="container">
         <a class="navbar-brand" href="index.html">Binaryville</a>
 
@@ -30,6 +30,6 @@ export function renderHeader(activePage = "") {
         </div>
       </div>
     </nav>
-    <h1 class="d-flex justify-content-center py-4 text-capitalize">${activePage}</h1>
+    <h1 class="d-flex justify-content-center p-4 text-capitalize align-end">${activePage}</h1>
   `;
 }

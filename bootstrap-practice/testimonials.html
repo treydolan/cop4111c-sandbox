@@ -5,13 +5,45 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Navbar-Practice</title>
 </head>
-<body class="d-flex flex-column min-vh-100">
+<body class="d-flex flex-column min-vh-100 pt-5">
     <header id="site-header">
     </header>
-    <main>
+    <main class="pt-1">
         <div class="container">
-            <h1 class="placeholder placeholder-lg col-6"></h1>
+            <div class="row g-4 my-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <p class="p-5 text-light bg-secondary rounded h-100">
+                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda officiis error animi dolores mollitia aspernatur nesciunt, dignissimos natus esse at autem dolorum facilis sit modi earum quia eos cupiditate a?
+                    </p>
+                </div>
+
+                <div class="col-12 col-md-6 col-lg-4">
+                    <p class="p-5 text-light bg-secondary rounded h-100">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum, numquam. Explicabo ipsum blanditiis unde facilis! Tempore, soluta molestias magnam sunt exercitationem repellendus amet obcaecati. Esse quod deleniti fugiat dolores aut.
+                    </p>
+                </div>
+
+                <div class="col-12 col-md-12 col-lg-4">
+                    <p class="p-5 text-light bg-secondary rounded h-100">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis explicabo aperiam dolore cupiditate ipsum porro veritatis, maxime reprehenderit, odio pariatur soluta atque error earum exercitationem ullam quia laudantium? Pariatur, ullam?
+                    </p>
+                </div>
+            </div>
         </div>
+        <div class="container">
+            <button id="themeToggle" class="btn btn-outline-light btn-sm ms-2  bg-primary" type="button">Dark</button>
+        </div>
+
+        <form class="m-4">
+            <div class="form-group col-4 mx-4">
+                <label for="dropdown-select">Select an option</label>
+                <select class="form-control form-control-sm" name="dropdown-select" id="dropdown-select">
+                    <option>1</option>
+                    <option>2</option>
+                    <option>3</option>
+                </select>
+            </div>
+        </form>
     </main>
     <footer id="site-footer" class="mt-auto container">
     </footer>
