@@ -44,7 +44,7 @@
 }
 
 /* Disable flip on small screens (no hover / touch devices) */
-@media (max-width: 659px) {
+@media (max-width: 767px) {
   .flip-card-inner {
     transform: none !important;
   }
