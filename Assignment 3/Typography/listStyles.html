@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>List Styles</title>
+</head>
+<body>
+    <header>
+        <h1>List Styles</h1>
+        <p>by default, lists are shown without bullet points or numbers and without any indenting, so these styles allow you to control those parameters and pretty much insert them back.</p>
+    </header>
+    <main>
+        <section>
+            <h2>List Style Type</h2>
+            <p><code>list-</code></p>
+            <small>TYP: none, disc, decimal</small>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div class="antialiased">
+                    <div class="font-light text-3xl align-middle mb-2">Favorite Rivets</div>      
+                        <ul class="list-none">
+                        <li>Buck rivets</li>
+                        <li>Olympic rivets</li>
+                        <li>Pop rivets</li>
+                        </ul>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">list-style-type</span>: none;</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">list-none</div>
+                </li>
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div class="antialiased">
+                    <div class="font-light text-3xl align-middle mb-2">Favorite Rivets</div>      
+                        <ul class="list-disc">
+                        <li>Buck rivets</li>
+                        <li>Olympic rivets</li>
+                        <li>Pop rivets</li>
+                        </ul>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">list-style-type</span>: disc;</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">list-disc</div>
+                </li>
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div class="antialiased">
+                    <div class="font-light text-3xl align-middle mb-2">Favorite Rivets</div>      
+                        <ul class="list-decimal">
+                        <li>Buck rivets</li>
+                        <li>Olympic rivets</li>
+                        <li>Pop rivets</li>
+                        </ul>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">list-style-type</span>: decimal;</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">list-decimal</div>
+                </li>
+                
+            </ul>
+        </section>
+        <section>
+            <h2>List Style Position</h2>
+            <p><code>list-</code></p>
+            <small>TYP</small>
+            <ul>
+                <li><code>inside</code></li>
+                <li><code>outside</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div class="antialiased">
+                    <div class="font-light text-3xl align-middle mb-2">Favorite Rivets</div>      
+                        <ul class="list-outside list-disc">
+                        <li>Buck rivets</li>
+                        <li>Olympic rivets</li>
+                        <li>Pop rivets</li>
+                        </ul>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">list-style-position</span>: outside;</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">list-outside</div>
+                </li>
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div class="antialiased">
+                    <div class="font-light text-3xl align-middle mb-2">Favorite Rivets</div>      
+                        <ul class="list-inside list-disc">
+                        <li>Buck rivets</li>
+                        <li>Olympic rivets</li>
+                        <li>Pop rivets</li>
+                        </ul>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">list-style-position</span>: inside;</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">list-inside</div>
+                </li>
+                
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
