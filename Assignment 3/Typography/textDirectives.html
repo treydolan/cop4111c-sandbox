@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Text Directives</title>
+</head>
+<body class="text-left">
+    <header>
+        <h1 class="text-8xl font-bold">Text Directives</h1>
+        <p>In addition to fonts, there are related text properties that let you control things like color, opacity, aligment, and more.</p>
+    </header>
+    <main>
+        <section>
+            <h2 class="text-3xl font-bold">Text Colors</h2>
+            <p><code>text-COL(-STR)</code></p>
+            <div class="text-2xl bg-amber-100">
+                <code style="color: transparent; background: transparent;">transparent</code>
+                <code style="color: black; background: transparent;">black</code>
+                <code style="color: white;">white</code><br>
+                <code style="color: rgb(107, 114, 128); background: transparent" contenteditable="false">gray</code>
+                <code class="text-red-500">red</code>
+                <code style="color: rgb(252, 211, 77); background: transparent">yellow</code>
+                <code style="color: rgb(16, 185, 129); background: transparent">green</code>
+                <code style="color: rgb(59, 130, 246); background: transparent">blue</code>
+                <code style="color: rgb(99, 102, 241); background: transparent">indigo</code>
+                <code style="color: rgb(139, 92, 246); background: transparent">purple</code>
+                <code style="color: rgb(236, 72, 153); background: transparent">pink</code><br>
+                <code style="color: rgb(249, 250, 251); background: transparent">50</code>
+                <code style="color: rgb(243, 244, 246); background: transparent">100</code>
+                <code style="color: rgb(229, 231, 235); background: transparent">200</code>
+                <code style="color: rgb(209, 213, 219); background: transparent">300</code>
+                <code style="color: rgb(156, 163, 175); background: transparent">400</code>
+                <code style="color: rgb(107, 114, 128); background: transparent">500</code>
+                <code style="color: rgb(75, 85, 99); background: transparent">600</code>
+                <code style="color: rgb(55, 65, 81); background: transparent">700</code>
+                <code style="color: rgb(31, 41, 55); background: transparent">800</code>
+                <code style="color: rgb(17, 24, 3); background: transparent">900</code><br>
+                <code style="color: rgb(254, 242, 242); background: transparent">50</code>
+                <code style="color: rgb(254, 226, 226); background: transparent">100</code>
+                <code style="color: rgb(254, 202, 202); background: transparent">200</code>
+                <code style="color: rgb(252, 165, 165); background: transparent">300</code>
+                <code style="color: rgb(248, 113, 113); background: transparent">400</code>
+                <code style="color: rgb(239, 68, 68); background: transparent">500</code>
+                <code style="color: rgb(220, 38, 38); background: transparent">600</code>
+                <code style="color: rgb(185, 28, 28); background: transparent">700</code>
+                <code style="color: rgb(153, 27, 27); background: transparent">800</code>
+                <code style="color: rgb(127, 29, 29); background: transparent">900</code><br>
+                <code style="color: rgb(255, 251, 235); background: transparent">50</code>
+                <code style="color: rgb(254, 243, 199); background: transparent">100</code>
+                <code style="color: rgb(253, 230, 138); background: transparent">200</code>
+                <code style="color: rgb(252, 211, 77); background: transparent">300</code>
+                <code style="color: rgb(251, 191, 36); background: transparent">400</code>
+                <code style="color: rgb(245, 158, 11); background: transparent">500</code>
+                <code style="color: rgb(217, 119, 6); background: transparent">600</code>
+                <code style="color: rgb(180, 83, 9); background: transparent">700</code>
+                <code style="color: rgb(146, 64, 14); background: transparent">800</code>
+                <code style="color: rgb(120, 53, 15); background: transparent">900</code><br>
+                <code style="color: rgb(236, 253, 245); background: transparent">50</code>
+                <code style="color: rgb(209, 250, 229); background: transparent">100</code>
+                <code style="color: rgb(167, 243, 208); background: transparent">200</code>
+                <code style="color: rgb(110, 231, 183); background: transparent">300</code>
+                <code style="color: rgb(52, 211, 153); background: transparent">400</code>
+                <code style="color: rgb(16, 185, 129); background: transparent">500</code>
+                <code style="color: rgb(5, 150, 105); background: transparent">600</code>
+                <code style="color: rgb(4, 120, 87); background: transparent">700</code>
+                <code style="color: rgb(6, 95, 70); background: transparent">800</code>
+                <code style="color: rgb(6, 78, 59); background: transparent">900</code><br>
+                <code style="color: rgb(239, 246, 255); background: transparent">50</code>
+                <code style="color: rgb(219, 234, 254); background: transparent">100</code>
+                <code style="color: rgb(191, 219, 254); background: transparent">200</code>
+                <code style="color: rgb(147, 197, 253); background: transparent">300</code>
+                <code style="color: rgb(96, 165, 250); background: transparent">400</code>
+                <code style="color: rgb(59, 130, 246); background: transparent">500</code>
+                <code style="color: rgb(37, 99, 235); background: transparent">600</code>
+                <code style="color: rgb(29, 78, 216); background: transparent">700</code>
+                <code style="color: rgb(30, 64, 175); background: transparent">800</code>
+                <code style="color: rgb(30, 58, 138); background: transparent">900</code><br>
+                <code style="color: rgb(238, 242, 255); background: transparent">50</code>
+                <code style="color: rgb(224, 231, 255); background: transparent">100</code>
+                <code style="color: rgb(199, 210, 254); background: transparent">200</code>
+                <code style="color: rgb(165, 180, 252); background: transparent">300</code>
+                <code style="color: rgb(129, 140, 248); background: transparent">400</code>
+                <code style="color: rgb(99, 102, 241); background: transparent">500</code>
+                <code style="color: rgb(79, 70, 229); background: transparent">600</code>
+                <code style="color: rgb(67, 56, 202); background: transparent">700</code>
+                <code style="color: rgb(55, 48, 163); background: transparent">800</code>
+                <code style="color: rgb(49, 46, 129); background: transparent">900</code><br>
+                <code style="color: rgb(245, 243, 255); background: transparent">50</code>
+                <code style="color: rgb(237, 233, 254); background: transparent">100</code>
+                <code style="color: rgb(221, 214, 254); background: transparent">200</code>
+                <code style="color: rgb(196, 181, 253); background: transparent">300</code>
+                <code style="color: rgb(167, 139, 250); background: transparent">400</code>
+                <code style="color: rgb(139, 92, 246); background: transparent">500</code>
+                <code style="color: rgb(124, 58, 237); background: transparent">600</code>
+                <code style="color: rgb(109, 40, 217); background: transparent">700</code>
+                <code style="color: rgb(91, 33, 182); background: transparent">800</code>
+                <code style="color: rgb(76, 29, 149); background: transparent">900</code><br>
+                <code style="color: rgb(253, 242, 248); background: transparent">50</code>
+                <code style="color: rgb(252, 231, 243); background: transparent">100</code>
+                <code style="color: rgb(251, 207, 232); background: transparent">200</code>
+                <code style="color: rgb(249, 168, 212); background: transparent">300</code>
+                <code style="color: rgb(244, 114, 182); background: transparent">400</code>
+                <code style="color: rgb(236, 72, 153); background: transparent">500</code>
+                <code style="color: rgb(219, 39, 119); background: transparent">600</code>
+                <code style="color: rgb(190, 24, 93); background: transparent">700</code>
+                <code style="color: rgb(157, 23, 77); background: transparent">800</code>
+                <code style="color: rgb(131, 24, 67); background: transparent">900</code>
+            </div>
+            <p>text keyword, followed by color names</p>
+            <ul>
+                <li>transparent</li>
+                <li>black</li>
+                <li>white</li>
+            </ul>
+            <p>Need to include a strength for normal color</p>
+        </section>
+        <section>
+            <h2 class="text-3xl font-bold">Text opacity</h2>
+            <p><code>text-opacity-AMT</code></p>
+            <small>AMT(opacity/100)</small>
+            <ul>
+                <li><code>0</code></li>
+                <li><code>5</code></li>
+                <li><code>10</code></li>
+                <li><code>20</code></li>
+                <li><code>25</code></li>
+                <li><code>30</code></li>
+                <li><code>40</code></li>
+                <li><code>50</code></li>
+                <li><code>60</code></li>
+                <li><code>70</code></li>
+                <li><code>75</code></li>
+                <li><code>80</code></li>
+                <li><code>90</code></li>
+                <li><code>95</code></li>
+                <li><code>100</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto leading-none divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class=" text-opacity-0 bg-indigo-500 text-white rounded-2 px-2 py-1 rounded inline-block font-light text-2xl align-middle mb-2">Dolores</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 text-white bg-pink-500 rounded">text-opacity-0</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class=" text-opacity-5 bg-indigo-500 text-white rounded-2 px-2 py-1 rounded inline-block font-light text-2xl align-middle mb-2">Dolores</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 text-white bg-pink-500 rounded">text-opacity-5</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class=" text-opacity-10 bg-indigo-500 text-white rounded-2 px-2 py-1 rounded inline-block font-light text-2xl align-middle mb-2">Dolores</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 text-white bg-pink-500 rounded">text-opacity-10</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class=" text-opacity-20 bg-indigo-500 text-white rounded-2 px-2 py-1 rounded inline-block font-light text-2xl align-middle mb-2">Dolores</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 text-white bg-pink-500 rounded">text-opacity-20</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class=" text-opacity-25 bg-indigo-500 text-white rounded-2 px-2 py-1 rounded inline-block font-light text-2xl align-middle mb-2">Dolores</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 text-white bg-pink-500 rounded">text-opacity-25</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class=" text-opacity-30 bg-indigo-500 text-white rounded-2 px-2 py-1 rounded inline-block font-light text-2xl align-middle mb-2">Dolores</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 text-white bg-pink-500 rounded">text-opacity-30</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class=" text-opacity-40 bg-indigo-500 text-white rounded-2 px-2 py-1 rounded inline-block font-light text-2xl align-middle mb-2">Dolores</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 text-white bg-pink-500 rounded">text-opacity-40</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class=" text-opacity-50 bg-indigo-500 text-white rounded-2 px-2 py-1 rounded inline-block font-light text-2xl align-middle mb-2">Dolores</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 text-white bg-pink-500 rounded">text-opacity-50</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class=" text-opacity-60 bg-indigo-500 text-white rounded-2 px-2 py-1 rounded inline-block font-light text-2xl align-middle mb-2">Dolores</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 text-white bg-pink-500 rounded">text-opacity-60</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class=" text-opacity-70 bg-indigo-500 text-white rounded-2 px-2 py-1 rounded inline-block font-light text-2xl align-middle mb-2">Dolores</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 text-white bg-pink-500 rounded">text-opacity-70</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class=" text-opacity-75 bg-indigo-500 text-white rounded-2 px-2 py-1 rounded inline-block font-light text-2xl align-middle mb-2">Dolores</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 text-white bg-pink-500 rounded">text-opacity-75</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class=" text-opacity-70 bg-indigo-500 text-white rounded-2 px-2 py-1 rounded inline-block font-light text-2xl align-middle mb-2">Dolores</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 text-white bg-pink-500 rounded">text-opacity-70</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class=" text-opacity-75 bg-indigo-500 text-white rounded-2 px-2 py-1 rounded inline-block font-light text-2xl align-middle mb-2">Dolores</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 text-white bg-pink-500 rounded">text-opacity-75</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class=" text-opacity-80 bg-indigo-500 text-white rounded-2 px-2 py-1 rounded inline-block font-light text-2xl align-middle mb-2">Dolores</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 text-white bg-pink-500 rounded">text-opacity-80</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class=" text-opacity-90 bg-indigo-500 text-white rounded-2 px-2 py-1 rounded inline-block font-light text-2xl align-middle mb-2">Dolores</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 text-white bg-pink-500 rounded">text-opacity-90</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class=" text-opacity-95 bg-indigo-500 text-white rounded-2 px-2 py-1 rounded inline-block font-light text-2xl align-middle mb-2">Dolores</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 text-white bg-pink-500 rounded">text-opacity-95</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class=" text-opacity-100 bg-indigo-500 text-white rounded-2 px-2 py-1 rounded inline-block font-light text-2xl align-middle mb-2">Dolores</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 text-white bg-pink-500 rounded">text-opacity-100</div>
+                </li>
+            </ul>
+        </section>  
+        <section>
+            <h2 class="text-3xl font-bold">Text Alignment</h2>
+            <p><code>TYP(text-align)</code></p>
+            <ul>
+                <li><code>left</code></li>
+                <li><code>center</code></li>
+                <li><code>right</code></li>
+                <li><code>justify</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div class="text-left">
+                    <div class="font-light text-5xl align-middle mb-2">Rex</div>
+                        <p class="text-md leading-tight">Rex is the Mayor of Binaryville and a well-loved personality in town. He rose to robotdom from a microprocessor plant on the south side of town, where many famous and influential robots before him were conceived.</p>
+                    <div class="text-xs font-mono font-light leading-tight text-gray-500 mt-2"><span class="font-bold">text-align</span>: left</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">text-left</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div class="text-center">
+                    <div class="font-light text-5xl align-middle mb-2">Dolores</div>
+                    <p class="text-md leading-tight">Dolores robot is a computational genius who performs calculations for various Binaryville businesses and organizations. In her spare time, Dolores has been noodling on the creation of the perfect web browser that will make all other browsers obsolete. We're rooting for you, Dolores!</p>
+                    <div class="text-xs font-mono font-light leading-tight text-gray-500 mt-2"><span class="font-bold">text-align</span>: center</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">text-center</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div class="text-right">
+                    <div class="font-light text-5xl align-middle mb-2">Bubbles</div>
+                    <p class="text-md leading-tight">Bubble Gum robot, or “Bubbles” for short, is from a family of track-footed robots that ¬originated from an experiment melding candy vending machines with robotics in the early 1980s. Bubbles is a favorite of Binaryville, not just because she generously dispenses candy, but also because she has one of the more "bubbly" personalities of the villagers.</p>  
+                    <div class="text-xs font-mono font-light leading-tight text-gray-500 mt-2"><span class="font-bold">text-align</span>: right</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">text-right</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div class="text-justify">
+                    <div class="font-light text-5xl align-middle mb-2">Fred</div>
+                    <p class="text-md leading-tight">Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville and the lives of its inhabitants. He's been at the forefront of many inventions, but has a special affinity for improving the world through alternative energy and green-living. Fred's engineering collaborations with the City of Binaryville have helped the city reduce its energy consumption year over year, and he's twice been awarded the highly coveted Binaryville Medallion of Honor.</p>  
+                    <div class="text-xs font-mono font-light leading-tight text-gray-500 mt-2"><span class="font-bold">text-align</span>: justify</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">text-justify</div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Text Decoration</h2>
+            <ul>
+                <li><code>underline</code></li>
+                <li><code>line-through</code></li>
+                <li><code>no-underline</code></li>
+            </ul>
+            <h3>Example</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div class="text-left">
+                    <div class="font-light text-5xl align-middle mb-2">Rex</div>
+                        <p class="underline text-md leading-tight">Rex is the Mayor of Binaryville and a well-loved personality in town. He rose to robotdom from a microprocessor plant on the south side of town, where many famous and influential robots before him were conceived.</p>
+                    <div class="text-xs font-mono font-light leading-tight text-gray-500 mt-2"><span class="font-bold">text-decoration</span>: underline;</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">underline</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class="font-light text-5xl align-middle mb-2">Dolores</div>
+                    <p class="line-through text-md leading-tight">Dolores robot is a computational genius who performs calculations for various Binaryville businesses and organizations. In her spare time, Dolores has been noodling on the creation of the perfect web browser that will make all other browsers obsolete. We're rooting for you, Dolores!</p>
+                    <div class="text-xs font-mono font-light leading-tight text-gray-500 mt-2"><span class="font-bold">text-decoration</span>: center</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">line-through</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class="font-light text-5xl align-middle mb-2">Bubbles</div>
+                    <p class="text-md leading-tight"><u class="no-underline">Bubble Gum robot</u>, or “Bubbles” for short, is from a family of track-footed robots that ¬originated from an experiment melding candy vending machines with robotics in the early 1980s. Bubbles is a favorite of Binaryville, not just because she generously dispenses candy, but also because she has one of the more "bubbly" personalities of the villagers.</p>  
+                    <div class="text-xs font-mono font-light leading-tight text-gray-500 mt-2"><span class="font-bold">text-decoration</span>: right</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">no-underline</div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Text Transform</h2>
+            <ul>
+                <li><code>uppercase</code></li>
+                <li><code>lowercase</code></li>
+                <li><code>capitalize</code></li>
+                <li><code>normal-case</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div class="text-left">
+                        <p class="uppercase text-xl leading-tight">Rex is the Mayor of Binaryville and a well-loved personality in town.</p>
+                    <div class="text-xs font-mono font-light leading-tight text-gray-500 mt-2"><span class="font-bold">text-transform</span>: uppercase;</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">uppercase</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="lowercase text-xl leading-tight">Dolores robot is a computational genius who performs calculations for various Binaryville businesses and organizations.</p>
+                    <div class="text-xs font-mono font-light leading-tight text-gray-500 mt-2"><span class="font-bold">text-transform</span>: lowercase</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">lowercase</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="capitalize text-xl leading-tight">Bubble Gum robot, or “Bubbles” for short, is from a family of track-footed robots that ¬originated from an experiment melding candy vending machines with robotics in the early 1980s.</p>
+                    <div class="text-xs font-mono font-light leading-tight text-gray-500 mt-2"><span class="font-bold">text-transform</span>: capitalize</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">capitalize</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div style="text-transform: capitalize">
+                    <p class="normal-case text-xl leading-tight">Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville and the lives of its inhabitants.</p>
+                    <div class="normal-case text-xs font-mono font-light leading-tight text-gray-500 mt-2"><span class="font-bold">text-transform</span>: normal-case</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">normal-case</div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Text Overflow</h2>
+            <ul>
+                <li><code>truncate</code></li>
+                <li><code>overflow-ellipsis</code></li>
+                <li>codeoverflow-clip</li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <p class="truncate w-96 bg-yellow-200 text-md p-4">Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville and the lives of its inhabitants. He's been at the forefront of many inventions, but has a special affinity for improving the world through alternative energy and green-living. Fred's engineering collaborations with the City of Binaryville have helped the city reduce its energy consumption year over year, and he's twice been awarded the highly coveted Binaryville Medallion of Honor.</p>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">truncate</div>
+                </li>
+                
+                <li class="flex items-center justify-between px-4 py-2">
+                    <p class="overflow-ellipsis overflow-hidden w-96 p-4 bg-yellow-200 text-md">
+                    Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville. He's twice been awarded the highly coveted BinaryvilleMedallionOfHonorAndExcellentAward</p>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">overflow-ellipsis</div>
+                </li>
+                
+                <li class="flex items-center justify-between px-4 py-2">
+                    <p class="overflow-clip overflow-hidden w-96 p-4 bg-yellow-200 text-md">
+                    Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville. He's twice been awarded the highly coveted BinaryvilleMedallionOfHonorAndExcellentAward</p>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">overflow-clip</div>
+                </li>
+                
+            </ul>
+        </section>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
