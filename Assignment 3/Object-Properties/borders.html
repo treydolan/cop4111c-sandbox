@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Borders</title>
+</head>
+<body>
+    <header>
+        <h1>Borders</h1>
+        <p>There are styles that allow you to control the look of border elements.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Border Width</h2>
+            <p><code>border(-SID)(-AMT)</code></p>
+            <small>SID</small>
+            <ul>
+                <li><code>t</code></li>
+                <li><code>r</code></li>
+                <li><code>b</code></li>
+                <li><code>l</code></li>
+            </ul>
+            <small>AMT (border-width)</small>
+            <ul>
+                <li><code>0</code></li>
+                <li><code>2</code></li>
+                <li><code>4</code></li>
+                <li><code>8</code></li>
+            </ul>
+            <p>Specify border in four directions: Top, Right, Bottom, and Left</p>
+            <h3>Examples:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class="border-0 border-red-500 font-bold text-red-500 rounded-md p-2 my-2 text-center">Rivet</div>
+                    <div class="border-2 border-red-500 font-bold text-red-500 rounded-md p-2 my-2 text-center">Rivet</div>
+                    <div class="border-4 border-red-500 font-bold text-red-500 rounded-md p-2 my-2 text-center">Rivet</div>
+                    <div class="border-8 border-red-500 font-bold text-red-500 rounded-md p-2 my-2 text-center">Rivet</div>
+                    </div>
+                    <div class="ml-5 text-right">
+                    <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">border-SID-AMT</div>
+                    <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">SID</b><br>t r b l</div>
+                    <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">AMT</b><br>0 2 4 8</div>
+                    </div>
+                </li>  
+            </ul>
+        </section>
+        <section>
+            <h2>Border Opacity</h2>
+            <p><code>border-opacity-AMT</code></p>
+            <small>AMT(opacity/100)</small>
+            <ul>
+                <li><code>0</code></li>
+                <li><code>5</code></li>
+                <li><code>10</code></li>
+                <li><code>20</code></li>
+                <li><code>25</code></li>
+                <li><code>30</code></li>
+                <li><code>40</code></li>
+                <li><code>50</code></li>
+                <li><code>60</code></li>
+                <li><code>70</code></li>
+                <li><code>75</code></li>
+                <li><code>80</code></li>
+                <li><code>90</code></li>
+                <li><code>95</code></li>
+                <li><code>100</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div class="antialiased">
+                    <div class="border-opacity-0 border-4 border-purple-500 font-bold text-purple-500 rounded-md p-2 my-1 text-center">Rivet</div>
+                    <div class="border-opacity-5 border-4 border-purple-500 font-bold text-purple-500 rounded-md p-2 my-1 text-center">Rivet</div>
+                    <div class="border-opacity-10 border-4 border-purple-500 font-bold text-purple-500 rounded-md p-2 my-1 text-center">Rivet</div>
+                    <div class="border-opacity-20 border-4 border-purple-500 font-bold text-purple-500 rounded-md p-2 my-1 text-center">Rivet</div>
+                    <div class="border-opacity-25 border-4 border-purple-500 font-bold text-purple-500 rounded-md p-2 my-1 text-center">Rivet</div>
+                    <div class="border-opacity-30 border-4 border-purple-500 font-bold text-purple-500 rounded-md p-2 my-1 text-center">Rivet</div>
+                    <div class="border-opacity-40 border-4 border-purple-500 font-bold text-purple-500 rounded-md p-2 my-1 text-center">Rivet</div>
+                    <div class="border-opacity-50 border-4 border-purple-500 font-bold text-purple-500 rounded-md p-2 my-1 text-center">Rivet</div>
+                    <div class="border-opacity-60 border-4 border-purple-500 font-bold text-purple-500 rounded-md p-2 my-1 text-center">Rivet</div>
+                    <div class="border-opacity-70 border-4 border-purple-500 font-bold text-purple-500 rounded-md p-2 my-1 text-center">Rivet</div>
+                    <div class="border-opacity-75 border-4 border-purple-500 font-bold text-purple-500 rounded-md p-2 my-1 text-center">Rivet</div>
+                    <div class="border-opacity-80 border-4 border-purple-500 font-bold text-purple-500 rounded-md p-2 my-1 text-center">Rivet</div>
+                    <div class="border-opacity-90 border-4 border-purple-500 font-bold text-purple-500 rounded-md p-2 my-1 text-center">Rivet</div>
+                    <div class="border-opacity-95 border-4 border-purple-500 font-bold text-purple-500 rounded-md p-2 my-1 text-center">Rivet</div>
+                    <div class="border-opacity-100 border-4 0 border-purple-500 font-bold text-purple-500 rounded-md p-2 my-1 text-center">Rivet</div>
+                    </div>
+                    <div class="ml-5 text-right">
+                    <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">border-opacity-AMT</div>
+                    <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">AMT</b><br>0 5 10 20 25 30 40 50 60 70 75 80 90 95 100</div>
+                    </div>
+                </li>  
+            </ul>
+        </section>
+        <section>
+            <h2>Border Color</h2>
+            <p><code>border-COL-STR</code></p>
+            <h3>Example:</h3>
+            <ul class="container mx-auto" style="font-family: Raleway">
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div>
+                        <div class="border-gray-500 border-4 text-center rounded-md p-2 my-4">Belle</div>
+                        <div class="border-red-500 border-4 text-center rounded-md p-2 my-4">Belle</div>
+                        <div class="border-yellow-500 border-4 text-center rounded-md p-2 my-4">Belle</div>
+                        <div class="border-green-500 border-4 text-center rounded-md p-2 my-4">Belle</div>
+                        <div class="border-blue-500 border-4 text-center rounded-md p-2 my-4">Belle</div>
+                        <div class="border-indigo-500 border-4 text-center rounded-md p-2 my-4">Belle</div>
+                        <div class="border-purple-500 border-4 text-center rounded-md p-2 my-4">Belle</div>
+                        <div class="border-pink-500 border-4 text-center rounded-md p-2 my-4">Belle</div>
+                    </div>
+                    </div>
+                    <div class="ml-5 text-right">
+                    <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">border-COL-STR</div>
+                    <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">COL</b><br>transparent current black white<br>gray red yellow green blue indigo purple pink</div>
+                    <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">STR</b><br>100 200 300 400 500 600 700 800 900</div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Border Radius</h2>
+            <p><code>rounder-(SID)(-AMT)</code></p>
+            <small>COL</small>
+            <ul>
+                <li><code>t</code></li>
+                <li><code>tl</code></li>
+                <li><code>r</code></li>
+                <li><code>tr</code></li>
+                <li><code>b</code></li>
+                <li><code>br</code></li>
+                <li><code>l</code></li>
+                <li><code>bl</code></li>
+            </ul>
+            <small>AMT</small>
+            <ul>
+                <li><code>none</code></li>
+                <li><code>full</code></li>
+                <li><code>sm</code></li>
+                <li><code>md</code></li>
+                <li><code>lg</code></li>
+                <li><code>xl</code></li>
+                <li><code>2xl</code></li>
+                <li><code>3xl</code></li>
+            </ul>
+            <h3>Exmaple:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class="rounded-none border-2 border-red-500 font-bold text-red-500 p-2 my-2 text-center">Rivet</div>
+                    <div class="rounded-sm border-2 border-red-500 font-bold text-red-500 p-2 my-2 text-center">Rivet</div>
+                    <div class="rounded-md border-2 border-red-500 font-bold text-red-500 p-2 my-2 text-center">Rivet</div>
+                    <div class="rounded-lg border-2 border-red-500 font-bold text-red-500 p-2 my-2 text-center">Rivet</div>
+                    <div class="rounded-xl border-2 border-red-500 font-bold text-red-500 p-2 my-2 text-center">Rivet</div>
+                    <div class="rounded-2xl border-2 border-red-500 font-bold text-red-500 p-2 my-2 text-center">Rivet</div>
+                    <div class="rounded-3xl border-2 border-red-500 font-bold text-red-500 p-2 my-2 text-center">Rivet<br>the Robot</div>
+                    <div class="rounded-full border-2 border-red-500 font-bold text-red-500 p-2 my-2 text-center">Rivet<br>the Robot</div>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">border-radius</span>: rem</div>
+                    </div>
+                    <div class="ml-5 text-right">
+                    <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">rounded(-SID)(-AMT)</div>
+                    <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">SID</b><br>t tl r tr b br l bl</div>
+                    <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">AMT</b><br>(.25) none-0  full-&infin;<br>sm-.125 md-.375 lg-.5<br>xl-.75 2xl-1 3xl-1.5</div>
+                    </div>
+                </li>  
+            </ul>
+        </section>
+        <section>
+            <h2>Border Style</h2>
+            <p><code>border-(STL)</code></p>
+            <small>SML</small>
+            <ul>
+                <li><code>none</code></li>
+                <li><code>solid</code></li>
+                <li><code>dashed</code></li>
+                <li><code>dotted</code></li>
+                <li><code>double</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class="border-none rounded-lg border-2 border-blue-500 font-bold text-blue-500 p-2 my-2 text-center">Dolores</div>
+                    <div class="border-solid rounded-lg border-2 border-blue-500 font-bold text-blue-500 p-2 my-2 text-center">Dolores</div>
+                    <div class="border-dashed rounded-lg border-2 border-blue-500 font-bold text-blue-500 p-2 my-2 text-center">Dolores</div>
+                    <div class="border-dotted rounded-lg border-2 border-blue-500 font-bold text-blue-500 p-2 my-2 text-center">Dolores</div>
+                    <div class="border-double rounded-lg border-4 border-blue-500 font-bold text-blue-500 p-2 my-2 text-center">Dolores</div>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">border-style</span></div>
+                    </div>
+                    <div class="ml-5 text-right">
+                    <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">border-(STL)</div>
+                    <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">STL</b><br>none solid dashed dotted double</div>
+                    </div>
+                </li>  
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
