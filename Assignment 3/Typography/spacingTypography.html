@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Document</title>
+</head>
+<body class="leading-loose">
+    <header>
+        <h1>Spacing Typography</h1>
+        <p>Classes let you control the spacing between lines of text and characters</p>
+    </header>
+    <main>
+        <section>
+            <h2>Line Height</h2>
+            <p><code>leading-TYP</code></p>
+            <small>TYP (line-height...in rem)</small>
+            <ul>
+                <li><code>3</code> .75</li>
+                <li><code>4</code> 1</li>
+                <li><code>5</code> 1.25</li>
+                <li><code>6</code> 1.5</li>
+                <li><code>7</code> 1.75</li>
+                <li><code>8</code> 2</li>
+                <li><code>9</code> 2.25</li>
+                <li><code>10</code> 2.5</li>
+            </ul>
+            <small>TYP(line-height...relative)</small>
+            <ul>
+                <li><code>none</code></li>
+                <li><code>tight</code></li>
+                <li><code>snug</code></li>
+                <li><code>normal</code></li>
+                <li><code>relaxed</code></li>
+                <li><code>loose</code></li>
+            </ul>
+            <p>Customize config file using: <code>theme.extend.lineHeight</code></p>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="leading-3 text-md">Belle is a safety inspector at Binaryville's Advanced Robotics Assembly Division, and while she doesn't particularly like to toot her own horn, her job does require blaring her siren and flashing her warning light whenever a safety concern is discovered.</p>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">line-height</span>: .75rem</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">leading-3</div>
+                </li>
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="leading-4 text-md">Belle is a safety inspector at Binaryville's Advanced Robotics Assembly Division, and while she doesn't particularly like to toot her own horn, her job does require blaring her siren and flashing her warning light whenever a safety concern is discovered.</p>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">line-height</span>: 1rem</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">leading-4</div>
+                </li>
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="leading-5 text-md">Belle is a safety inspector at Binaryville's Advanced Robotics Assembly Division, and while she doesn't particularly like to toot her own horn, her job does require blaring her siren and flashing her warning light whenever a safety concern is discovered.</p>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">line-height</span>: 1.25rem</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">leading-5</div>
+                </li>
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="leading-6 text-md">Belle is a safety inspector at Binaryville's Advanced Robotics Assembly Division, and while she doesn't particularly like to toot her own horn, her job does require blaring her siren and flashing her warning light whenever a safety concern is discovered.</p>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">line-height</span>: 1.5rem</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">leading-6</div>
+                </li>
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="leading-7 text-md">Belle is a safety inspector at Binaryville's Advanced Robotics Assembly Division, and while she doesn't particularly like to toot her own horn, her job does require blaring her siren and flashing her warning light whenever a safety concern is discovered.</p>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">line-height</span>: 1.75rem</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">leading-7</div>
+                </li>
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="leading-8 text-md">Belle is a safety inspector at Binaryville's Advanced Robotics Assembly Division, and while she doesn't particularly like to toot her own horn, her job does require blaring her siren and flashing her warning light whenever a safety concern is discovered.</p>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">line-height</span>: 2rem</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">leading-8</div>
+                </li>
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="leading-9 text-md">Belle is a safety inspector at Binaryville's Advanced Robotics Assembly Division, and while she doesn't particularly like to toot her own horn, her job does require blaring her siren and flashing her warning light whenever a safety concern is discovered.</p>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">line-height</span>: 2.25rem</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">leading-9</div>
+                </li>
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="leading-10 text-md">Belle is a safety inspector at Binaryville's Advanced Robotics Assembly Division, and while she doesn't particularly like to toot her own horn, her job does require blaring her siren and flashing her warning light whenever a safety concern is discovered.</p>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">line-height</span>: 2.5rem</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">leading-10</div>
+                </li>
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="leading-none text-md">Belle is a safety inspector at Binaryville's Advanced Robotics Assembly Division, and while she doesn't particularly like to toot her own horn, her job does require blaring her siren and flashing her warning light whenever a safety concern is discovered.</p>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">line-height</span>: 1</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-indigo-500 rounded-2">leading-none</div>
+                </li>
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="leading-tight text-md">Belle is a safety inspector at Binaryville's Advanced Robotics Assembly Division, and while she doesn't particularly like to toot her own horn, her job does require blaring her siren and flashing her warning light whenever a safety concern is discovered.</p>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">line-height</span>: 1.25</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-indigo-500 rounded-2">leading-tight</div>
+                </li>
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="leading-snug text-md">Belle is a safety inspector at Binaryville's Advanced Robotics Assembly Division, and while she doesn't particularly like to toot her own horn, her job does require blaring her siren and flashing her warning light whenever a safety concern is discovered.</p>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">line-height</span>: 1.375</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-indigo-500 rounded-2">leading-snug</div>
+                </li>
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="leading-normal text-md">Belle is a safety inspector at Binaryville's Advanced Robotics Assembly Division, and while she doesn't particularly like to toot her own horn, her job does require blaring her siren and flashing her warning light whenever a safety concern is discovered.</p>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">line-height</span>: 1.5</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-indigo-500 rounded-2">leading-normal</div>
+                </li>
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="leading-relaxed text-md">Belle is a safety inspector at Binaryville's Advanced Robotics Assembly Division, and while she doesn't particularly like to toot her own horn, her job does require blaring her siren and flashing her warning light whenever a safety concern is discovered.</p>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">line-height</span>: 1.625</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-indigo-500 rounded-2">leading-relaxed</div>
+                </li>
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="leading-loose text-md">Belle is a safety inspector at Binaryville's Advanced Robotics Assembly Division, and while she doesn't particularly like to toot her own horn, her job does require blaring her siren and flashing her warning light whenever a safety concern is discovered.</p>
+                    <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">line-height</span>: 2</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-indigo-500 rounded-2">leading-loose</div>
+                </li>
+
+            </ul>
+        </section>
+        <section>
+            <h2>Letter Spacing</h2>
+            <p><code>tracking-TYP</code></p>
+            <small>TYP(letter-spacing...in ems)</small>
+            <ul>
+                <li><code>tighter</code></li>
+                <li><code>tight</code></li>
+                <li><code>normal</code></li>
+                <li><code>wide</code></li>
+                <li><code>wider</code></li>
+                <li><code>widest</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="tracking-tighter text-md leading-tight">Bubble Gum robot, or “Bubbles” for short, is from a family of track-footed robots that ¬originated from an experiment melding candy vending machines with robotics in the early 1980s. Bubbles is a favorite of Binaryville, not just because she generously dispenses candy, but also because she has one of the more "bubbly" personalities of the villagers.</p>  
+                    <div class="text-xs font-mono font-light leading-tight text-gray-500 mt-2"><span class="font-bold">letter-spacing:</span>: -0.05em</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">tracking-tighter</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="tracking-tight text-md leading-tight">Bubble Gum robot, or “Bubbles” for short, is from a family of track-footed robots that ¬originated from an experiment melding candy vending machines with robotics in the early 1980s. Bubbles is a favorite of Binaryville, not just because she generously dispenses candy, but also because she has one of the more "bubbly" personalities of the villagers.</p>  
+                    <div class="text-xs font-mono font-light leading-tight text-gray-500 mt-2"><span class="font-bold">letter-spacing</span>: -0.025em</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">tracking-tight</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="tracking-normal text-md leading-tight">Bubble Gum robot, or “Bubbles” for short, is from a family of track-footed robots that ¬originated from an experiment melding candy vending machines with robotics in the early 1980s. Bubbles is a favorite of Binaryville, not just because she generously dispenses candy, but also because she has one of the more "bubbly" personalities of the villagers.</p>  
+                    <div class="text-xs font-mono font-light leading-tight text-gray-500 mt-2"><span class="font-bold">letter-spacing:</span>: 0</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">tracking-normal</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="tracking-wide text-md leading-tight">Bubble Gum robot, or “Bubbles” for short, is from a family of track-footed robots that ¬originated from an experiment melding candy vending machines with robotics in the early 1980s. Bubbles is a favorite of Binaryville, not just because she generously dispenses candy, but also because she has one of the more "bubbly" personalities of the villagers.</p>  
+                    <div class="text-xs font-mono font-light leading-tight text-gray-500 mt-2"><span class="font-bold">letter-spacing</span>: 0.025em</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">tracking-wide</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="tracking-wider text-md leading-tight">Bubble Gum robot, or “Bubbles” for short, is from a family of track-footed robots that ¬originated from an experiment melding candy vending machines with robotics in the early 1980s. Bubbles is a favorite of Binaryville, not just because she generously dispenses candy, but also because she has one of the more "bubbly" personalities of the villagers.</p>  
+                    <div class="text-xs font-mono font-light leading-tight text-gray-500 mt-2"><span class="font-bold">letter-spacing</span>: 0.05em</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">tracking-wider</div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <p class="tracking-widest text-md leading-tight">Bubble Gum robot, or “Bubbles” for short, is from a family of track-footed robots that ¬originated from an experiment melding candy vending machines with robotics in the early 1980s. Bubbles is a favorite of Binaryville, not just because she generously dispenses candy, but also because she has one of the more "bubbly" personalities of the villagers.</p>  
+                    <div class="text-xs font-mono font-light leading-tight text-gray-500 mt-2"><span class="font-bold">letter-spacing</span>: 0.1em</div>
+                    </div>
+                    <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">tracking-widest</div>
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
