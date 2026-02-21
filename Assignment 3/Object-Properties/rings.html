@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rings</title>
+</head>
+<body>
+    <header>
+        <h1>Rings</h1>
+        <p>Rings are very similar to borders, but use shadows instead and some options that are slightly different.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Ring Width</h2>
+            <p><code>ring(-AMT)</code></p>
+            <small>AMT (--tw-ring-offset-width)</small>
+            <ul>
+                <li><code>0</code></li>
+                <li><code>1</code></li>
+                <li><code>2</code></li>
+                <li><code>4</code></li>
+                <li><code>8</code></li>
+                <li><code>inset</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <div class="ring-0 font-bold text-blue-500 rounded-md p-2 my-4 text-center">Spring</div>
+                <div class="ring-1 :focus-ring-2 font-bold text-blue-500 rounded-md p-2 my-4 text-center">Spring</div>
+                <div class="ring-2 font-bold text-blue-500 rounded-md p-2 my-4 text-center">Spring</div>
+                <div class="ring font-bold text-blue-500 rounded-md p-2 my-4 text-center">Spring</div>
+                <div class="ring-4 font-bold text-blue-500 rounded-md p-2 my-4 text-center">Spring</div>
+                <div class="ring-8 font-bold text-blue-500 rounded-md p-2 my-4 text-center">Spring</div>
+                <div class="ring-8 ring-inset font-bold text-blue-500 rounded-md p-2 my-4 text-center">Spring</div>
+                <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">box-shadow</span></div>
+                </div>
+                <div class="ml-5 text-right">
+                <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">border-SID-AMT</div>
+                <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">AMT</b><br>0 1 2 4 8 inset</div>
+                </div>
+            </li>  
+            </ul>
+        </section>
+        <section>
+            <h2>Ring Opacity</h2>
+            <p><code>ring-opacity-AMT</code></p>
+            <ul>
+                <li><code>0</code></li>
+                <li><code>5</code></li>
+                <li><code>10</code></li>
+                <li><code>20</code></li>
+                <li><code>25</code></li>
+                <li><code>30</code></li>
+                <li><code>40</code></li>
+                <li><code>50</code></li>
+                <li><code>60</code></li>
+                <li><code>70</code></li>
+                <li><code>75</code></li>
+                <li><code>80</code></li>
+                <li><code>90</code></li>
+                <li><code>95</code></li>
+                <li><code>100</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="antialiased">
+                <div class="ring-opacity-0 ring-4 ring-purple-500 font-bold text-purple-500 rounded-md p-2 my-3 text-center">Rivet</div>
+                <div class="ring-opacity-5 ring-4 ring-purple-500 font-bold text-purple-500 rounded-md p-2 my-3 text-center">Rivet</div>
+                <div class="ring-opacity-10 ring-4 ring-purple-500 font-bold text-purple-500 rounded-md p-2 my-3 text-center">Rivet</div>
+                <div class="ring-opacity-20 ring-4 ring-purple-500 font-bold text-purple-500 rounded-md p-2 my-3 text-center">Rivet</div>
+                <div class="ring-opacity-25 ring-4 ring-purple-500 font-bold text-purple-500 rounded-md p-2 my-3 text-center">Rivet</div>
+                <div class="ring-opacity-30 ring-4 ring-purple-500 font-bold text-purple-500 rounded-md p-2 my-3 text-center">Rivet</div>
+                <div class="ring-opacity-40 ring-4 ring-purple-500 font-bold text-purple-500 rounded-md p-2 my-3 text-center">Rivet</div>
+                <div class="ring-opacity-50 ring-4 ring-purple-500 font-bold text-purple-500 rounded-md p-2 my-3 text-center">Rivet</div>
+                <div class="ring-opacity-60 ring-4 ring-purple-500 font-bold text-purple-500 rounded-md p-2 my-3 text-center">Rivet</div>
+                <div class="ring-opacity-70 ring-4 ring-purple-500 font-bold text-purple-500 rounded-md p-2 my-3 text-center">Rivet</div>
+                <div class="ring-opacity-75 ring-4 ring-purple-500 font-bold text-purple-500 rounded-md p-2 my-3 text-center">Rivet</div>
+                <div class="ring-opacity-80 ring-4 ring-purple-500 font-bold text-purple-500 rounded-md p-2 my-3 text-center">Rivet</div>
+                <div class="ring-opacity-90 ring-4 ring-purple-500 font-bold text-purple-500 rounded-md p-2 my-3 text-center">Rivet</div>
+                <div class="ring-opacity-95 ring-4 ring-purple-500 font-bold text-purple-500 rounded-md p-2 my-3 text-center">Rivet</div>
+                <div class="ring-opacity-100 ring-4 0 ring-purple-500 font-bold text-purple-500 rounded-md p-2 my-3 text-center">Rivet</div>
+                <div class="text-xs font-mono font-light text-gray-500 mt-2"><span class="font-bold">--tw-ring-opacity</span>: VARIED</div>
+                </div>
+                <div class="ml-5 text-right">
+                <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">ring-opacity-AMT</div>
+                <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">AMT</b><br>0 5 10 20 25 30 40 50 60 70 75 80 90 95 100</div>
+                </div>
+            </li>  
+            </ul>
+        </section>
+        <section>
+            <h2>Ring Color</h2>
+            <p><code>ring-COL-STR</code></p>
+            <ul class="container mx-auto" style="font-family: Raleway">
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <div>
+                    <div class="ring-gray-500 ring-4 text-center rounded-md p-2 my-4">Belle</div>
+                    <div class="ring-red-500 ring-4 text-center rounded-md p-2 my-4">Belle</div>
+                    <div class="ring-yellow-500 ring-4 text-center rounded-md p-2 my-4">Belle</div>
+                    <div class="ring-green-500 ring-4 text-center rounded-md p-2 my-4">Belle</div>
+                    <div class="ring-blue-500 ring-4 text-center rounded-md p-2 my-4">Belle</div>
+                    <div class="ring-indigo-500 ring-4 text-center rounded-md p-2 my-4">Belle</div>
+                    <div class="ring-purple-500 ring-4 text-center rounded-md p-2 my-4">Belle</div>
+                    <div class="ring-pink-500 ring-4 text-center rounded-md p-2 my-4">Belle</div>
+                </div>
+                <div class="text-xs font-mono font-light text-gray-500 mt-4"><span class="font-bold">tw-ring-color</span>: VARIED</div>
+                </div>
+                <div class="ml-5 text-right">
+                <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">ring-COL-STR</div>
+                <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">COL</b><br>transparent current black white<br>gray red yellow green blue indigo purple pink</div>
+                <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">STR</b><br>100 200 300 400 500 600 700 800 900</div>
+                </div>
+            </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Ring Offset Width</h2>
+            <p><code>ring-offset-WDT</code></p>
+            <small>WDT(--tw-ring-offset-width)</small>
+            <ul>
+                <li><code>0</code></li>
+                <li><code>1</code></li>
+                <li><code>2</code></li>
+                <li><code>4</code></li>
+                <li><code>8</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto" style="font-family: Raleway">
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <div>
+                    <div class="ring-offset-0 ring-purple-500 ring-4 bg-purple-500 text-white text-center rounded-md p-2 my-6">Elton</div>
+                    <div class="ring-offset-1 ring-purple-500 ring-4 bg-purple-500 text-white text-center rounded-md p-2 my-6">Elton</div>
+                    <div class="ring-offset-2 ring-purple-500 ring-4 bg-purple-500 text-white text-center rounded-md p-2 my-6">Elton</div>
+                    <div class="ring-offset-4 ring-purple-500 ring-4 bg-purple-500 text-white text-center rounded-md p-2 my-6">Elton</div>
+                    <div class="ring-offset-8 ring-purple-500 ring-4 bg-purple-500 text-white text-center rounded-md p-2 my-6">Elton</div>
+                </div>
+                <div class="text-xs font-mono font-light text-gray-500 mt-4"><span class="font-bold">--tw-offset-width</span>: VARIED</div>
+                </div>
+                <div class="ml-5 text-right">
+                <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">ring-WDT</div>
+                <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">WDT</b><br>0 1 2 4 8</div>
+                </div>
+            </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Ring Offset Color</h2>
+            <p><code>ring-offset-COL-STR</code></p>
+            You can also set the color of the ring's space to whatever color you want, which gives you some other options for styles. The color are the usual variables, which includes black, white and transparent, plus the current color option as well.
+            <h3>Example:</h3>
+            <ul class="container mx-auto" style="font-family: Raleway">
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <div>
+                    <div class="ring-offset-4 ring-offset-gray-500 ring-black ring-4 bg-black text-white text-center rounded-md p-2 my-6">Elton</div>
+                    <div class="ring-offset-4 ring-offset-red-500 ring-black ring-4 bg-black text-white text-center rounded-md p-2 my-6">Elton</div>
+                    <div class="ring-offset-4 ring-offset-yellow-500 ring-black ring-4 bg-black text-white text-center rounded-md p-2 my-6">Elton</div>
+                    <div class="ring-offset-4 ring-offset-green-500 ring-black ring-4 bg-black text-white text-center rounded-md p-2 my-6">Elton</div>
+                    <div class="ring-offset-4 ring-offset-blue-500 ring-black ring-4 bg-black text-white text-center rounded-md p-2 my-6">Elton</div>
+                    <div class="ring-offset-4 ring-offset-indigo-500 ring-black ring-4 bg-black text-white text-center rounded-md p-2 my-6">Elton</div>
+                    <div class="ring-offset-4 ring-offset-purple-500 ring-black ring-4 bg-black text-white text-center rounded-md p-2 my-6">Elton</div>
+                    <div class="ring-offset-4 ring-offset-pink-500 ring-black ring-4 bg-black text-white text-center rounded-md p-2 my-6">Elton</div>
+                </div>
+                <div class="text-xs font-mono font-light text-gray-500 mt-4"><span class="font-bold">--tw-ring-offset-color</span>: VARIED</div>
+                </div>
+                <div class="ml-5 text-right">
+                <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">ring-offset-COL</div>
+                <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">COL</b><br>
+                    transparent current black white<br>
+            gray red yellow green blue indigo purple pink</div>
+                </div>
+            </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Ring Focus Variants</h2>
+            <p><code>focus:</code></p>
+            <p>There are two other properties you can use to modify the rings. These are prefixes that you use as modifier. Focus lets you control the look fields when they gain focus, so this is really good for things like buttons and other input fields in forms.</p>
+            <p>By default, rings are drawn on the outside of an element, but there's a variant you can use to switch that so it displays inside the element.</p>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="w-full">
+                <button class="focus:outline-none bg-blue-500 text-white font-bold rounded-md p-2 mr-2">Normal</button>
+                <button class="focus:ring-8 focus:ring-pink-400 bg-blue-500 text-white font-bold rounded-md p-2 my-4">Focus</button>
+                </div> 
+                <div class="ml-5 text-right">
+                <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">:focus</div>
+                </div>
+            </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
