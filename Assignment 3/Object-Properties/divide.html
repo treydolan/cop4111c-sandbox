@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divide</title>
+</head>
+<body>
+    <header>
+        <h1>Divide</h1>
+        <p>The divide classes allow you to easily set up borders between elements</p>
+    </header>
+    <main>
+        <section>
+            <h2>Divide Width</h2>
+            <p><code>divide(-DIR)(-AMT)</code></p>
+            <small>SID</small>
+            <ul>
+                <li><code>x</code></li>
+                <li><code>y</code></li>
+            </ul>
+            <small>AMT(divide)</small>
+            <ul>
+                <li><code>0</code></li>
+                <li><code>2</code></li>
+                <li><code>4</code></li>
+                <li><code>8</code></li>
+                <li><code>reverse</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto" style="font-family: Raleway">
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <div class="divide-y-2">
+                    <div class="text-center py-3">Fred</div>
+                    <div class="text-center py-3">Rivet</div>
+                    <div class="text-center py-3">Eileen</div>
+                    <div class="text-center py-3">Belle</div>
+                    <div class="text-center py-3">Cosmo</div>
+                    <div class="text-center py-3">Dolly</div>
+                </div>
+                <div class="text-xs font-mono font-light text-gray-500 mt-4"><span class="font-bold">border</span>: VARIED</div>
+                </div>
+                <div class="ml-5 text-right">
+                <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">divide-(DIR)(-STR)</div>
+                <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">DIR</b><br>x y</div>
+                <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">STR</b><br>0 2 4 8 reverse</div>
+                </div>
+            </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Divide Opacity</h2>
+            <p><code>divide-opacity-AMT</code></p>
+            <small>AMT(opacity/100)</small>
+            <ul>
+                <li><code>0</code></li>
+                <li><code>5</code></li>
+                <li><code>10</code></li>
+                <li><code>20</code></li>
+                <li><code>25</code></li>
+                <li><code>30</code></li>
+                <li><code>40</code></li>
+                <li><code>50</code></li>
+                <li><code>60</code></li>
+                <li><code>70</code></li>
+                <li><code>75</code></li>
+                <li><code>80</code></li>
+                <li><code>90</code></li>
+                <li><code>95</code></li>
+                <li><code>100</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted">
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <div class="divide-opacity-0 divide-x-4 divide-red-500">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                </div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">divide-opacity-0</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <div class="divide-opacity-5 divide-x-4 divide-red-500">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                </div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">divide-opacity-5</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <div class="divide-opacity-10 divide-x-4 divide-red-500">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                </div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">divide-opacity-10</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <div class="divide-opacity-20 divide-x-4 divide-red-500">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                </div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">divide-opacity-20</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <div class="divide-opacity-25 divide-x-4 divide-red-500">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                </div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">divide-opacity-25</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <div class="divide-opacity-30 divide-x-4 divide-red-500">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                </div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">divide-opacity-30</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <div class="divide-opacity-40 divide-x-4 divide-red-500">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                </div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">divide-opacity-40</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <div class="divide-opacity-50 divide-x-4 divide-red-500">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                </div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">divide-opacity-50</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <div class="divide-opacity-60 divide-x-4 divide-red-500">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                </div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">divide-opacity-60</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <div class="divide-opacity-70 divide-x-4 divide-red-500">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                </div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">divide-opacity-70</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <div class="divide-opacity-75 divide-x-4 divide-red-500">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                </div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">divide-opacity-75</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <div class="divide-opacity-80 divide-x-4 divide-red-500">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                </div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">divide-opacity-80</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <div class="divide-opacity-90 divide-x-4 divide-red-500">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                </div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">divide-opacity-90</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <div class="divide-opacity-95 divide-x-4 divide-red-500">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                </div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">divide-opacity-95</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <div class="divide-opacity-100 divide-x-4 divide-red-500">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                </div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">divide-opacity-100</div>
+            </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Divide Color</h2>
+            <p>The border colors just as you'd expect are trasnparent, black white and current...which sets the color to whatever the current color is set to. Plus the traditional gray, red, yellow, etc. and the strengths go from 100 to 900.</p>
+            <p><code>divide-COL-STR</code></p>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted">
+            <li class="flex items-center justify-between pl-4 py-2">
+                <div>
+                <div class="divide-gray-500 py-3 divide-x-4">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                <div class="divide-red-500 py-3 divide-x-4">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                <div class="divide-yellow-500 py-3 divide-x-4">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                <div class="divide-green-500 py-3 divide-x-4">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                <div class="divide-blue-500 py-3 divide-x-4">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                <div class="divide-indigo-500 py-3 divide-x-4">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                <div class="divide-purple-500 py-3 divide-x-4">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                <div class="divide-pink-500 py-3 divide-x-4">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                </div>
+                <div class="ml-5 text-right">
+                <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">divide-COL-STR</div>
+                <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">COL</b><br>transparent current black<br>white gray red<br>yellow green blue<br>indigo purple pink</div>
+                <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">STR</b><br>100 200 300<br>400 500 600<br>700 800 900</div>
+                </div>
+            </li>
+            </ul>
+            <div class="container mx-auto">
+            </div>
+        </section>
+        <section>
+            <h2>Divide Style</h2>
+            <p><code>divide-(STL)</code></p>
+            <small>STL(divide-style)</small>
+            <ul>
+                <li><code>none</code></li>
+                <li><code>solid</code></li>
+                <li><code>dashed</code></li>
+                <li><code>dotted</code></li>
+                <li><code>double</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted">
+            <li class="flex items-center justify-between pl-4 py-2">
+                <div>
+                <div class="divide-solid divide-x-4 divide-indigo-600 py-3">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                <div class="divide-dashed divide-x-4 divide-indigo-600 py-3">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                <div class="divide-dotted divide-x-4 divide-indigo-600 py-3">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                <div class="divide-double divide-x-4 divide-indigo-600 py-3">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                <div class="divide-none divide-x-4 divide-indigo-600 py-3">
+                    <span class="text-center px-3">Fred</span>
+                    <span class="text-center px-3">Rivet</span>
+                    <span class="text-center px-3">Eileen</span>
+                </div>
+                </div>
+                <div class="ml-5 text-right">
+                <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-600 rounded-2">divide-STYL</div>
+                <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">STYL</b><br>solid dashed dotted double none</div>
+                </div>
+            </li>
+            </ul>
+            <div class="container mx-auto">
+            </div>
+        </section>
+    </main>
+</body>
+</html>
