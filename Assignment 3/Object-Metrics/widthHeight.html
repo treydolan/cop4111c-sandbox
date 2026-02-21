@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Width & Height</title>
+</head>
+<body>
+    <header>
+        <h1>Width and Height</h1>
+        <p>Some elements attempt to help you control the height and width of items and there are a lot of options for how to accomplish this.</p>
+    </header>
+    <main>
+        <section>
+            <h2 class="text-4xl font-bold">Width</h2>
+            <p><code>w-(SIZ)</code></p>
+            <small>SIZ</small>
+            <ul id="widthMetrics" class="text-2xl flex flex-wrap">
+                <li><code>0</code></li>
+                <li><code>0.5</code></li>
+                <li><code>1</code></li>
+                <li><code>1.5</code></li>
+                <li><code>2</code></li>
+                <li><code>2.5</code></li>
+                <li><code>3</code></li>
+                <li><code>3.5</code></li>
+                <li><code>4</code></li>
+                <li><code>5</code></li>
+                <li><code>6</code></li>
+                <li><code>7</code></li>
+                <li><code>8</code></li>
+                <li><code>9</code></li>
+                <li><code>10</code></li>
+                <li><code>11</code></li>
+                <li><code>12</code></li>
+                <li><code>14</code></li>
+                <li><code>16</code></li>
+                <li><code>20</code></li>
+                <li><code>24</code></li>
+                <li><code>28</code></li>
+                <li><code>32</code></li>
+                <li><code>36</code></li>
+                <li><code>40</code></li>
+                <li><code>44</code></li>
+                <li><code>48</code></li>
+                <li><code>52</code></li>
+                <li><code>56</code></li>
+                <li><code>60</code></li>
+                <li><code>64</code></li>
+                <li><code>72</code></li>
+                <li><code>80</code></li>
+                <li><code>96</code></li>
+                <li><code>1/2</code></li>
+                <li><code>1/3</code></li>
+                <li><code>2/3</code></li>
+                <li><code>1/4</code></li>
+                <li><code>2/4</code></li>
+                <li><code>3/4</code></li>
+                <li><code>1/5</code></li>
+                <li><code>2/5</code></li>
+                <li><code>3/5</code></li>
+                <li><code>4/5</code></li>
+                <li><code>1/6</code></li>
+                <li><code>2/6</code></li>
+                <li><code>3/6</code></li>
+                <li><code>4/6</code></li>
+                <li><code>5/6</code></li>
+                <li><code>1/12</code></li>
+                <li><code>2/12</code></li>
+                <li><code>3/12</code></li>
+                <li><code>4/12</code></li>
+                <li><code>5/12</code></li>
+                <li><code>6/12</code></li>
+                <li><code>7/12</code></li>
+                <li><code>8/12</code></li>
+                <li><code>9/12</code></li>
+                <li><code>10/12</code></li>
+                <li><code>11/12</code></li>
+                <li><code>auto</code></li>
+                <li><code>px</code></li>
+                <li><code>full</code></li>
+                <li><code>screen</code></li>
+                <li><code>min</code></li>
+                <li><code>max</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="antialiased">
+                <div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-0 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>0 - 0</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-0.5 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>0.5 -</span> 1.125 rem</div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-1 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>1 - 1.</span>25 rem</div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-1.5 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>1.5 -</span> 1.375 rem</div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-2 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>2 - 1.</span>5 rem</div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-2.5 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>2.5 -</span> 1.625 rem</div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-3 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>3 - 1.</span>75 rem</div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-3.5 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>3.5 -</span> 1.875 rem</div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-4 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>4 - 1 rem</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-5 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>5 - 1.</span>25 rem</div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-6 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>6 - 1.</span>5 rem</div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-7 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>7 - 1.</span>75 rem</div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-8 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>8 - 2 rem</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-9 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>9 - 1.</span>25 rem</div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-10 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>10 - 1.</span>5 rem</div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-11 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>11 - 1.</span>75 rem</div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-12 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>12 - 3 rem</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-14 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>14 - 1.</span>5 rem</div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-16 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>16 - 4 rem</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-20 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>20 - 24 rem</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-24 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>24 - 6 rem</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-28 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>28 - 7 rem</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-32 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>32 - 8 rem</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-36 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>36 - 9 rem</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-40 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>40 - 10 rem</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-44 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>44 - 11 rem</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-48 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>48 - 12 rem</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-52 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>52 - 13 rem</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-56 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>56 - 14 rem</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-60 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>60 - 15 rem</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-64 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>64 - 16 rem</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-72 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>72 - 18 rem</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-80 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>80 - 20 rem</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-96 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>96 - 24 rem</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-1/2 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>1/2 - 50%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-1/3 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>1/3 - 33.333333%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-2/3 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>2/3 - 66.666667%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-1/4 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>1/4 - 25%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-2/4 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>2/4 - 50%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-3/4 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>3/4 - 75%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-1/5 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>1/5 - 20%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-2/5 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>2/5 - 40%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-3/5 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>3/5 - 60%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-4/5 h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>4/5 - 80%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-1/6  h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>1/6 - 16.666667%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-2/6  h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>2/6 - 33.333333%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-3/6  h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>3/6 - 50%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-4/6  h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>4/6 - 66.666667%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-5/6  h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>5/6 - 83.333333%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-1/12  h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>1/12 - 8.333333%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-2/12  h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>2/12 - 16.666667%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-3/12  h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>3/12 - 25%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-4/12  h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>4/12 - 33.333333%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-5/12  h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>5/12 - 41.666667%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-6/12  h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>6/12 - 50%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-7/12  h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>7/12 - 58.333333%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-8/12  h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>8/12 - 66.666667%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-9/12  h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>9/12 - 75%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-10/12  h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>10/12 - 83.333333%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-11/12  h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>11/12 - 91.666667%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-full  h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <br><span>full - 100%</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-auto h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>auto - auto</span></div>
+                    <div class="whitespace-nowrap flex content-center"><span class="w-px h-5 m-1 text-center inline-block bg-green-200 text-green-900"></span> <span>px - 1 px</span></div>
+                    w-screen 100vw, w-min - min-content, w-max - max-content     
+                
+                
+                </div>
+                </div>
+                <div class="ml-5 text-right">
+                    <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">w-SIZ</div>
+                    <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">SIZ</b><br> 0 0.5 1 1.5 2 2.5 3 3.5 4 5 6 7 8 9 10 11 12 14 16 20 24 28 32 36 40 44 48 52 56 60 64 72 80 96<br>1/2 1/3 2/3 1/4 2/4 3/4 1/5 2/5 3/5 4/5 1/6 2/6 3/6 4/6 5/6 1/12 2/12 3/12 4/12 5/12 6/12 7/12 8/12 9/12 10/12 11/12<br>auto px full screen min max
+                    </div>
+                </div>
+            </li>
+
+            </ul>
+        </section>
+        <section>
+            <h2 class="text-4xl font-bold">Height</h2>
+            <ul id="heightMetrics" class="text-2xl flex flex-wrap">
+                <li><code>0</code></li>
+                <li><code>0.5</code></li>
+                <li><code>1</code></li>
+                <li><code>1.5</code></li>
+                <li><code>2</code></li>
+                <li><code>2.5</code></li>
+                <li><code>3</code></li>
+                <li><code>3.5</code></li>
+                <li><code>4</code></li>
+                <li><code>5</code></li>
+                <li><code>6</code></li>
+                <li><code>7</code></li>
+                <li><code>8</code></li>
+                <li><code>9</code></li>
+                <li><code>10</code></li>
+                <li><code>11</code></li>
+                <li><code>12</code></li>
+                <li><code>14</code></li>
+                <li><code>16</code></li>
+                <li><code>20</code></li>
+                <li><code>24</code></li>
+                <li><code>28</code></li>
+                <li><code>32</code></li>
+                <li><code>36</code></li>
+                <li><code>40</code></li>
+                <li><code>44</code></li>
+                <li><code>48</code></li>
+                <li><code>52</code></li>
+                <li><code>56</code></li>
+                <li><code>60</code></li>
+                <li><code>64</code></li>
+                <li><code>72</code></li>
+                <li><code>80</code></li>
+                <li><code>96</code></li>
+                <li><code>1/2</code></li>
+                <li><code>1/3</code></li>
+                <li><code>2/3</code></li>
+                <li><code>1/4</code></li>
+                <li><code>2/4</code></li>
+                <li><code>3/4</code></li>
+                <li><code>1/5</code></li>
+                <li><code>2/5</code></li>
+                <li><code>3/5</code></li>
+                <li><code>4/5</code></li>
+                <li><code>1/6</code></li>
+                <li><code>2/6</code></li>
+                <li><code>3/6</code></li>
+                <li><code>4/6</code></li>
+                <li><code>5/6</code></li>
+                <li><code>1/12</code></li>
+                <li><code>2/12</code></li>
+                <li><code>3/12</code></li>
+                <li><code>4/12</code></li>
+                <li><code>5/12</code></li>
+                <li><code>6/12</code></li>
+                <li><code>7/12</code></li>
+                <li><code>8/12</code></li>
+                <li><code>9/12</code></li>
+                <li><code>10/12</code></li>
+                <li><code>11/12</code></li>
+                <li><code>auto</code></li>
+                <li><code>px</code></li>
+                <li><code>full</code></li>
+                <li><code>screen</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="antialiased">
+                <div>
+                    <div class="h-screen flex content-center">
+                    <span class="h-96 w-full p-10 m-1 text-center inline-block bg-yellow-200 text-yellow-900 overflow-hidden">
+                        <div class="font-light text-5xl align-middle mb-2">Rex</div>
+                        <p class="text-md leading-tight">Rex is the Mayor of Binaryville and a well-loved personality in town. He rose to robotdom from a microprocessor plant on the south side of town, where many famous and influential robots before him were conceived.</p>
+                    </span>
+                    </div>
+                </div>
+                </div>
+                <div class="ml-5 text-right">
+                    <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">h-SIZ</div>
+                    <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">SIZ</b><br> 0 0.5 1 1.5 2 2.5 3 3.5 4 5 6 7 8 9 10 11 12 14 16 20 24 28 32 36 40 44 48 52 56 60 64 72 80 96<br>1/2 1/3 2/3 1/4 2/4 3/4 1/5 2/5 3/5 4/5 1/6 2/6 3/6 4/6 5/6 1/12 2/12 3/12 4/12 5/12 6/12 7/12 8/12 9/12 10/12 11/12<br>auto px full screen min max
+                    </div>
+                </div>
+            </li>
+
+            </ul>
+        </section>
+        <section>
+            <h2>Min Width</h2>
+            <p><code>min-w-(SIZ)</code></p>
+            <small>SIZ <code>0</code><code>full</code><code>min</code><code>max</code></small>
+            <p>The min width parameter lets you specify the minimum width an element should have. It has only four options.
+
+            0 is meant to reset most elements, full is meant to make the minimum width the size of the container, min means that it will try to fit the smallest word possible and max will try to fit all of the words.
+
+            In our example, notice that we've set the width of this element to 10, and if we didn't have these minimum utilities it would end up making our box too small.
+
+            </p>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+
+                <li >
+                    <div class="antialiased">
+                    <div>
+                        <span class="w-10 min-w-min p-10 text-center inline-block bg-yellow-200 text-yellow-900">
+                        <div class="font-light text-5xl align-middle mb-2">Rex</div>
+                        <p class="text-md leading-tight">Rex is the Mayor of Binaryville and a well-loved personality in town. He rose to robotdom from a microprocessor plant on the south side of town, where many famous and influential robots before him were conceived.</p>
+                        </span>
+                    </div>
+                    </div>
+                    <div class="mt-5 p-10">
+                        <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">min-w-SIZ</div>
+                        <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">SIZ</b><br> 0 full min max
+                        </div>
+                    </div>
+                </li>
+
+                </ul>
+        </section>
+        <section>
+            <h2>Max Width</h2>
+            <p><code>max-w-(SIZ)</code></p>
+            <small>SIZ</small>
+            <ul id="maxWidthProp" class="text-2xl flex flex-wrap">
+                <li><code>0</code></li>
+                <li><code>none</code></li>
+                <li><code>xs</code></li>
+                <li><code>sm</code></li>
+                <li><code>md</code></li>
+                <li><code>lg</code></li>
+                <li><code>xl</code></li>
+                <li><code>2xl</code></li>
+                <li><code>3xl</code></li>
+                <li><code>4xl</code></li>
+                <li><code>5xl</code></li>
+                <li><code>6xl</code></li>
+                <li><code>7xl</code></li>
+                <li><code>full</code></li>
+                <li><code>min</code></li>
+                <li><code>max</code></li>
+                <li><code>prose</code></li>
+                <li><code>screen-sm</code></li>
+                <li><code>screen-md</code></li>
+                <li><code>screen-lg</code></li>
+                <li><code>screen-xl</code></li>
+                <li><code>screen-2xl</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+
+                <li >
+                    <div class="antialiased">
+                    <div>
+                        <span class="max-w-prose p-10 text-center inline-block bg-yellow-200 text-yellow-900">
+                        <div class="font-light text-5xl align-middle mb-2">Rex</div>
+                        <p class="text-md leading-tight">Rex is the Mayor of Binaryville and a well-loved personality in town. He rose to robotdom from a microprocessor plant on the south side of town, where many famous and influential robots before him were conceived.</p>
+                        </span>
+                    </div>
+                    </div>
+                    <div class="mt-5 p-10">
+                        <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">max-w-SIZ</div>
+                        <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">SIZ</b> - max-width<br><br>
+                        0 - 0,
+                        none - none<br><br>
+                        REMs: 
+                        xs - 20rem, sm - 24rem, md - 28rem, lg - 32rem, xl - 36rem, 2xl - 42rem, 3xl - 48rem, 4xl - 56rem, 5xl - 64rem, 6xl - 72rem, 7xl - 80rem,
+                        <br><br>
+                        CONTENT: full - 100%, min - min-content, max - max-content, prose - 65ch
+                        <br><br>
+                        SCREEN: screen-sm - 640px, screen-md - 768px, screen-lg - 1024px, screen-xl - 1280px, screen-2xl - 1536px          
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+        <section>
+            <h2>Min Height</h2>
+            <p><code>min-h-(SIZ)</code></p>
+            <small>SIZ</small>
+            <ul>
+                <li><code>0</code></li>
+                <li><code>full</code></li>
+                <li><code>screen</code></li>
+            </ul>
+            <h3 class="text-5xl">Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div class="antialiased">
+                    <div>
+                        <div class="flex content-center">
+                        <span class="min-h-full w-full p-10 m-1 text-center inline-block bg-yellow-200 text-yellow-900 overflow-hidden">
+                            <div class="font-light text-5xl align-middle mb-2">Rex</div>
+                            <p class="text-md leading-tight">Rex is the Mayor of Binaryville and a well-loved personality in town. He rose to robotdom from a microprocessor plant on the south side of town, where many famous and influential robots before him were conceived.</p>
+                        </span>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="ml-5 text-right">
+                        <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">min-h-(SIZ)</div>
+                        <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">SIZ</b> min-height<br> 0-0, full-100%, screen-100vh
+                        </div>
+                    </div>
+                </li>
+
+            </ul>
+        </section>
+    </main>
+    <script>
+        function addStyles(el) {
+
+                var elementID = el;
+
+                const element = document.getElementById(elementID);
+                const items = element.querySelectorAll('li');
+
+                items.forEach(item => {
+                    item.classList.add(
+                        'px-4',
+                        'py-2',
+                        'm-2',
+                        'bg-slate-800',
+                        'rounded-lg',
+                        'shadow',
+                        'hover:bg-slate-700',
+                        'transition',
+                        'duration-200',
+                        'text-white',
+                        'font-mono'
+                    );
+                });
+                 
+                element.classList.add(
+                    'divide-y-9',
+                    'divide-yellow-600',
+                    'divide-solid',
+                    'list-disc'
+                );
+        };
+
+        const code = document.querySelectorAll('code');
+        code.forEach(font => {
+            font.classList.add(
+                'font-mono',
+                'p-2',
+                'm-2',
+                'text-pink-500'
+            );
+        });
+
+        addStyles("widthMetrics");
+        addStyles("heightMetrics");
+        addStyles("maxWidthProp");
+    </script>
+</body>
+</html>

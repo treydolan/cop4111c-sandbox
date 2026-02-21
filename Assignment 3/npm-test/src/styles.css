@@ -1,0 +1,8 @@
+@import "tailwindcss/preflight";
+@tailwind utilities;
+
+@layer base {
+    h1{
+        @apply mt-4
+    }
+}
