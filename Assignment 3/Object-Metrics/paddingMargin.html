@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Padding & Margin</title>
+</head>
+<body>
+    <header>
+        <nav id="siteNav"></nav>
+        <h1>Padding and Margin</h1>
+        <p>Padding controls the size of what surrounds the content, but is inside any borders, while margin lets you control the size of the spacing outside borders.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Padding</h2>
+            <p><code>p(-DIR)(SIZ)</code></p>
+            <small>DIR</small>
+            <ul>
+                <li><code>px</code></li>
+                <li><code>py</code></li>
+                <li><code>t</code></li>
+                <li><code>r</code></li>
+                <li><code>b</code></li>
+                <li><code>l</code></li>
+            </ul>
+            <small>SIZ(padding in rem)</small>
+            <ul id="paddingMetrics" class="text-2xl flex flex-wrap">
+                <li><code>0</code></li>
+                <li><code>0.5</code></li>
+                <li><code>1</code></li>
+                <li><code>1.5</code></li>
+                <li><code>2</code></li>
+                <li><code>2.5</code></li>
+                <li><code>3</code></li>
+                <li><code>3.5</code></li>
+                <li><code>4</code></li>
+                <li><code>5</code></li>
+                <li><code>6</code></li>
+                <li><code>7</code></li>
+                <li><code>8</code></li>
+                <li><code>9</code></li>
+                <li><code>10</code></li>
+                <li><code>11</code></li>
+                <li><code>12</code></li>
+                <li><code>14</code></li>
+                <li><code>16</code></li>
+                <li><code>20</code></li>
+                <li><code>24</code></li>
+                <li><code>28</code></li>
+                <li><code>32</code></li>
+                <li><code>36</code></li>
+                <li><code>40</code></li>
+                <li><code>44</code></li>
+                <li><code>48</code></li>
+                <li><code>52</code></li>
+                <li><code>56</code></li>
+                <li><code>60</code></li>
+                <li><code>64</code></li>
+                <li><code>72</code></li>
+                <li><code>80</code></li>
+                <li><code>96</code></li>
+                <li><code>px</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="antialiased">
+                <div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-0 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">0</span> 0 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-0.5 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">0.5</span> 1.125 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-1 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">1</span> 1.25 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-1.5 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">1.5</span> 1.375 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-2 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">2</span> 1.5 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-2.5 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">2.5</span> 1.625 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-3 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">3</span> 1.75 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-3.5 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">3.5</span> 1.875 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-4 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">4</span> 1 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-5 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">5</span> 1.25 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-6 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">6</span> 1.5 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-7 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">7</span> 1.75 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-8 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">8</span> 2 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-9 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">9</span> 1.25 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-10 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">10</span> 1.5 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-11 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">11</span> 1.75 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-12 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">12</span> 3 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-14 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">14</span> 1.5 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-16 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">16</span> 4 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-20 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">20</span> 24 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-24 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">24</span> 6 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-28 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">28</span> 7 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-32 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">32</span> 8 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-36 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">36</span> 9 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-40 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">40</span> 10 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-44 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">44</span> 11 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-48 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">48</span> 12 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-52 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">52</span> 13 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-56 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">56</span> 14 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-60 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">60</span> 15 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-64 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">64</span> 16 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-72 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">72</span> 18 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-80 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">80</span> 20 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-96 mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">96</span> 24 rem</div>
+                    <div class="whitespace-nowrap"><span class="p-1 pr-px mb-1 inline-block border-2 border-yellow-500 bg-yellow-300 rounded-md text-yellow-900">px</span> 1 px</div>
+                    </div>
+                </div>
+                <div class="ml-5 text-right">
+                    <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">p-DIR-SIZ</div>
+                    <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">DIR</b><br>t l d r</div>
+                    <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">SIZ</b><br> 0 0.5 1 1.5 2 2.5 3 3.5 4 5 6 7 8 9 10 11 12 14 16 20 24 28 32 36 40 44 48 52 56 60 64 72 80 96 px</div>
+                </div>
+            </li>
+
+            </ul>
+        </section>
+    </main>
+    <script src="../main.js"></script>
+</body>
+</html>

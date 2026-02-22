@@ -8,6 +8,7 @@
 </head>
 <body>
     <header>
+        <nav id="siteNav"></nav>
         <h1>Width and Height</h1>
         <p>Some elements attempt to help you control the height and width of items and there are a lot of options for how to accomplish this.</p>
     </header>
@@ -474,52 +475,6 @@
             </ul>
         </section>
     </main>
-    <script>
-        function addStyles(el) {
-
-                var elementID = el;
-
-                const element = document.getElementById(elementID);
-                const items = element.querySelectorAll('li');
-
-                items.forEach(item => {
-                    item.classList.add(
-                        'px-4',
-                        'py-2',
-                        'm-2',
-                        'bg-slate-800',
-                        'rounded-lg',
-                        'shadow',
-                        'hover:bg-slate-700',
-                        'transition',
-                        'duration-200',
-                        'text-white',
-                        'font-mono'
-                    );
-                });
-                 
-                element.classList.add(
-                    'divide-y-9',
-                    'divide-yellow-600',
-                    'divide-solid',
-                    'list-disc'
-                );
-        };
-
-        const code = document.querySelectorAll('code');
-        code.forEach(font => {
-            font.classList.add(
-                'font-mono',
-                'p-2',
-                'm-2',
-                'text-pink-500'
-            );
-        });
-
-        addStyles("widthMetrics");
-        addStyles("heightMetrics");
-        addStyles("maxWidthProp");
-        addStyles("maxHeightProp");
-    </script>
+    <script src="../main.js"></script>
 </body>
 </html>
