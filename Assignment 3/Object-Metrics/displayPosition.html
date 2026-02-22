@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title>Display and Position</title>
+</head>
+<body>
+    <header>
+        <h1>Display and Position</h1>
+        <p>There's a lot of classes related to how the element is displayed and positioned within the browser.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Display</h2>
+            <ul>
+                <li><code>block</code></li>
+                <li><code>inline-block</code></li>
+                <li><code>inline</code></li>
+                <li><code>flex</code></li>
+                <li><code>inline-flex</code></li>
+                <li><code>flow-root</code></li>
+                <li><code>grid</code></li>
+                <li><code>inline-grid</code></li>
+                <li><code>contents</code></li>
+                <li><code>hidden</code></li>
+                <li><code>table</code></li>
+                <li><code>inline-table</code></li>
+                <li><code>table-caption</code></li>
+                <li><code>table-cell</code></li>
+                <li><code>table-column</code></li>
+                <li><code>table-column-group</code></li>
+                <li><code>table-footer-group</code></li>
+                <li><code>table-header-group</code></li>
+                <li><code>table-row-group</code></li>
+                <li><code>table-row</code></li>
+                <li><code>list-item</code></li>
+                <li><code>flow-root</code></li>
+                <li><code>grid</code></li>
+                <li><code>inline-grid</code></li>
+                <li><code>contents</code></li>
+                <li><code>hidden</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div class="w-full">
+                    <span class="block w-16 h-16 bg-red-500 text-white px-3 py-2 rounded-md mb-1">1</span>
+                    <span class="block w-16 h-16 bg-green-500 text-white px-3 py-2 rounded-md mb-1">2</span>
+                    <span class="block w-16 h-16 bg-blue-500 text-white px-3 py-2 rounded-md mb-1">3</span>
+                    <span class="block w-16 h-16 bg-yellow-300 text-white px-3 py-2 rounded-md mb-1">4</span>
+                    </div>
+                    <div class="ml-5 text-right">
+                    <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">block</div>
+                    </div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div class="w-full">
+                    <span class="inline-block w-16 h-16 bg-red-500 text-white px-3 py-2 rounded-md mb-1">1</span>
+                    <span class="inline-block w-16 h-16 bg-green-500 text-white px-3 py-2 rounded-md mb-1">2</span>
+                    <span class="inline-block w-16 h-16 bg-blue-500 text-white px-3 py-2 rounded-md mb-1">3</span>
+                    <span class="inline-block w-16 h-16 bg-yellow-300 text-white px-3 py-2 rounded-md mb-1">4</span>
+                    </div>
+                    <div class="ml-5 text-right">
+                    <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">inline-block</div>
+                    </div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div class="w-full">
+                    <span class="inline w-16 h-16 bg-red-500 text-white px-3 py-2 rounded-md mr-1 mb-1">1</span>
+                    <span class="inline w-16 h-16 bg-green-500 text-white px-3 py-2 rounded-md mr-1 mb-1">2</span>
+                    <span class="inline w-16 h-16 bg-blue-500 text-white px-3 py-2 rounded-md mr-1 mb-1">3</span>
+                    <span class="inline w-16 h-16 bg-yellow-300 text-white px-3 py-2 rounded-md mr-1 mb-1">4</span>
+                    </div>
+                    <div class="ml-5 text-right">
+                    <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">inline</div>
+                    </div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <div class="table w-full">
+                        <div class="table-row-group">
+                        <div class="table-row">
+                            <div class="table-cell w-16 h-16 bg-red-500 text-white bg-red-500 text-white p-2">1</div>
+                            <div class="table-cell w-16 h-16 bg-red-500 text-white bg-green-500 text-white p-2">2</div>
+                        </div>
+                        <div class="table-row">
+                            <div class="table-cell w-16 h-16 bg-red-500 text-white bg-blue-500 text-white p-2">3</div>
+                            <div class="table-cell w-16 h-16 bg-red-500 text-white bg-yellow-300 text-white p-2">4</div>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+                    <div class="ml-5 text-right">
+                    <span class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2 mb-1 mr-1">table</span><span class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2 mb-1">inline-table</span><br>
+                    <span class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2 mb-1 text-xs">table-row</span>
+                    <span class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2 mb-1 text-xs">table-cell</span>
+                    <span class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2 mb-1 text-xs">table-caption</span><br>
+                    <span class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2 mb-1 text-xs">table-column</span>
+                    <span class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2 mb-1 text-xs">table-column-group</span><br>
+                    <span class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2 mb-1 text-xs">table-header-group</span>
+                    <span class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2 mb-1 text-xs">table-row-group</span><br>
+                    <span class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2 mb-1 text-xs">table-footer-group</span>
+                    </div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div class="w-full">
+                    <span class="list-item w-16 h-16 bg-red-500 text-white px-3 py-2 rounded-md mb-1">1</span>
+                    <span class="list-item w-16 h-16 bg-green-500 text-white px-3 py-2 rounded-md mb-1">2</span>
+                    <span class="list-item w-16 h-16 bg-blue-500 text-white px-3 py-2 rounded-md mb-1">3</span>
+                    <span class="list-item w-16 h-16 bg-yellow-300 text-white px-3 py-2 rounded-md mb-1">4</span>
+                    </div>
+                    <div class="ml-5 text-right">
+                    <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">list-item</div>
+                    </div>
+                </li>  <li class="flex items-center justify-between px-4 py-2">
+                    <div class="flex w-full">
+                    <span class="inline w-16 h-16 bg-red-500 text-white px-3 py-2 rounded-md mr-1 mb-1">1</span>
+                    <span class="inline w-16 h-16 bg-green-500 text-white px-3 py-2 rounded-md mr-1 mb-1">2</span>
+                    <span class="inline w-16 h-16 bg-blue-500 text-white px-3 py-2 rounded-md mr-1 mb-1">3</span>
+                    <span class="inline w-16 h-16 bg-yellow-300 text-white px-3 py-2 rounded-md mr-1 mb-1">4</span>
+                    </div>
+                    <div class="ml-5 text-right">
+                    <span class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2 mb-1">flex</span>
+                    <span class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">inline-flex</span>      
+                    </div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div class="grid grid-cols-2 gap-1">
+                    <span class="flex-1 w-16 h-16 bg-red-500 text-white px-3 py-2 rounded-md">1</span>
+                    <span class="flex-1 w-16 h-16 bg-green-500 text-white px-3 py-2 rounded-md">2</span>
+                    <span class="flex-1 w-16 h-16 bg-blue-500 text-white px-3 py-2 rounded-md">3</span>
+                    <span class="flex-1 w-16 h-16 bg-yellow-300 text-white px-3 py-2 rounded-md">4</span>
+                    </div>
+                    <div class="ml-5 text-right">
+                    <span class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2 mb-1">grid</span><br>
+                    <span class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">inline-grid</span>
+                    </div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div>
+                    <span class="flow-root">
+                        <img class="float-left" src="http://pixelprowess.com/i/powship.svg" alt="POW Logo">
+                        <img class="float-left" src="http://pixelprowess.com/i/powship.svg" alt="POW Logo">
+                    </span>
+                    <img class="float-left" src="http://pixelprowess.com/i/powship.svg" alt="POW Logo">
+                    </div>
+                    <div class="ml-5 text-right">
+                    <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">flow-root</div>
+                    </div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div class="w-full inline-block">
+                    <span class="inline-block w-16 h-16 bg-purple-500 text-white px-3 py-2 rounded-md mb-1">1</span>
+                    <div class="contents grid grid-cols-2 gap-1 inline-block">
+                        <span class="flex-1 w-16 h-16 bg-red-500 text-white px-3 py-2 rounded-md">2</span>
+                        <span class="flex-1 w-16 h-16 bg-green-500 text-white px-3 py-2 rounded-md">3</span>
+                        <span class="flex-1 w-16 h-16 bg-blue-500 text-white px-3 py-2 rounded-md">4</span>
+                        <span class="flex-1 w-16 h-16 bg-yellow-300 text-white px-3 py-2 rounded-md">5</span>
+                    </div>        
+                    <span class="inline-block w-16 h-16 bg-pink-500 text-white px-3 py-2 rounded-md mb-1">6</span>
+                    </div>
+                    <div class="ml-5 text-right">
+                    <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">contents</div>
+                    </div>
+                </li>
+                <li class="flex items-center justify-between px-4 py-2">
+                    <div class="w-full">
+                    <span class="inline-block w-16 h-16 bg-red-500 text-white px-3 py-2 rounded-md mb-1">1</span>
+                    <span class="inline-block w-16 h-16 bg-green-500 text-white px-3 py-2 rounded-md mb-1">2</span>
+                    <span class="hidden w-16 h-16 bg-blue-500 text-white px-3 py-2 rounded-md mb-1">3</span>
+                    <span class="inline-block w-16 h-16 bg-yellow-300 text-white px-3 py-2 rounded-md mb-1">4</span>
+                    </div>
+                    <div class="ml-5 text-right">
+                    <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">hidden</div>
+                    </div>
+                </li>
+                </ul>
+        </section>
+        <section>
+            <h2>Position</h2>
+            <ul>
+                <li><code>static</code></li>
+                <li><code>fixed</code></li>
+                <li><code>absolute</code></li>
+                <li><code>relative</code></li>
+                <li><code>sticky</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <div class="container mx-auto">
+            <p class="mb-5">Quaerat corrupti voluptatem reiciendis commodi dolores quod alias obcaecati dolore impedit hic libero, voluptatum ducimus sit! Nam autem dolore, quos consectetur, neque saepe ipsam, at dolorum veritatis praesentium nisi delectus?</p>
+            <ul class="sticky top-0 divide-y divide-gray-400 mb-5">
+                <li class="flex items-center justify-between px-4 py-2">
+                <div class="relative w-full bg-green-600 object-none h-32 w-full">
+                    <img class="absolute right-0 bottom-0" src="http://pixelprowess.com/i/powship.svg" alt="POW Ship">
+                </div> 
+                <div class="ml-5 text-right">
+                    <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">position-TYP</div>
+                    <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">TYP</b><br>static<br>fixed<br>absolute<br>relative<br>sticky</div>
+                </div>
+                </li>
+            </ul>
+            <p class="mb-5">Dolorum soluta reprehenderit molestias doloremque quos atque ut exercitationem sequi praesentium vero assumenda nisi facilis in, veritatis itaque, tenetur ad non, earum animi. Incidunt, eius laudantium earum minus molestiae dolores.</p>
+            <p class="mb-5">Libero placeat sequi at assumenda iste maiores magni possimus, eveniet eius deserunt, dicta velit reiciendis dolore! Aspernatur maxime ad consequatur eos natus sapiente assumenda ducimus, culpa perferendis magni porro vero?</p>
+            <p class="mb-5">Labore exercitationem facere unde voluptatem inventore rerum! Rerum nesciunt fugiat soluta eum minus nam, repudiandae reiciendis totam, alias sint accusamus illo non doloribus iste mollitia porro impedit? Debitis, fugiat laborum.</p>
+            <p class="mb-5">Iusto error ratione, repudiandae sequi velit beatae? Sint exercitationem adipisci, labore ipsam iusto maxime excepturi illo repudiandae nemo ipsa, praesentium laudantium, harum rem facilis! Ad consectetur voluptatem saepe! Nostrum, nihil?</p>
+            <p class="mb-5">Omnis sequi illum enim autem consequuntur, nihil neque mollitia molestias exercitationem architecto eum qui debitis aliquam sit laborum dolorem? Possimus perferendis officiis quo magni accusamus cupiditate beatae at aliquid a!</p>
+            <p class="mb-5">Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero quae quaerat provident aut iusto facilis minima. Eligendi obcaecati dolorum enim delectus eius ea ad ipsam, architecto, autem, officiis sint eum!</p>
+            <p class="mb-5">Modi dicta consequatur odit, ut perferendis voluptatum nam obcaecati fugiat velit at! Quos praesentium sit modi eligendi sapiente delectus, repudiandae corporis voluptates neque? Rem voluptatum ducimus eaque possimus necessitatibus veniam.</p>
+            <p class="mb-5">Illum nemo rerum provident cumque adipisci neque ad consequuntur omnis magnam quasi asperiores porro animi veniam, enim rem esse sapiente officia quas perferendis temporibus! Molestiae tempore consectetur nam tempora fugiat.</p>
+            <p class="mb-5">Quas eveniet perspiciatis incidunt ducimus dignissimos cumque atque est! Dicta maxime quidem porro quo itaque atque, iste natus quos eaque doloremque, ad mollitia voluptas accusamus voluptatem vitae assumenda facilis repellat?</p>
+            <p class="mb-5">Reprehenderit a ipsa temporibus delectus consequuntur quidem harum debitis. Non laudantium tenetur eveniet rem ipsa molestiae. Provident, laudantium eos? Quasi inventore sunt adipisci fugit aliquam soluta, sint eos labore harum?</p>
+            <p class="mb-5">Eaque deleniti unde non sit quo consectetur, odit eum mollitia qui accusamus quae consequuntur neque molestias impedit facere harum laboriosam hic nam consequatur. Blanditiis vitae, ad ex doloribus error esse!</p>
+            <p class="mb-5">Fugiat accusamus animi doloribus vero provident iusto, consectetur cumque dicta aliquid sequi earum non ut at consequatur, facere aspernatur natus magnam fuga perspiciatis quae velit ea deleniti. Facere, quibusdam sequi!</p>
+            <p class="mb-5">Et, nesciunt. Architecto quisquam alias iste nesciunt, nisi asperiores eius officiis et optio dolore, veritatis saepe mollitia quidem laudantium rem est sequi aperiam magnam reiciendis tenetur. Quo a similique dolor.</p>
+            <p class="mb-5">Deserunt deleniti veniam quod omnis dignissimos consequuntur ratione ab, exercitationem molestias veritatis, fuga impedit repellat quia magni id, libero officiis non illum dolores similique facilis illo. Tempore exercitationem saepe temporibus?</p>
+            <p class="mb-5">Ex, beatae distinctio culpa autem libero reprehenderit obcaecati corrupti minima voluptatem mollitia exercitationem temporibus odio ad possimus vitae nesciunt, voluptas quam nemo provident, eligendi architecto recusandae necessitatibus quisquam accusantium! Numquam!</p>
+            </div>
+        </section>
+        <section>
+            <h2>(-)(SID)(-DIR)(-SIZ)</h2>
+            <small>SID</small>
+            <ul>
+                <li><code>inset</code></li>
+                <li><code>top</code></li>
+                <li><code>right</code></li>
+                <li><code>bottom</code></li>
+                <li><code>left</code></li>
+            </ul>
+            <small>DIR</small>
+            <ul>
+                <li><code>x</code></li>
+                <li><code>y</code></li>
+            </ul>
+            <small>SIZ</small>
+                    <ul id="trblMetrics" class="text-2xl flex flex-wrap">
+                        <li><code>0</code></li>
+                        <li><code>0.5</code></li>
+                        <li><code>1</code></li>
+                        <li><code>1.5</code></li>
+                        <li><code>2</code></li>
+                        <li><code>2.5</code></li>
+                        <li><code>3</code></li>
+                        <li><code>3.5</code></li>
+                        <li><code>4</code></li>
+                        <li><code>5</code></li>
+                        <li><code>6</code></li>
+                        <li><code>7</code></li>
+                        <li><code>8</code></li>
+                        <li><code>9</code></li>
+                        <li><code>10</code></li>
+                        <li><code>11</code></li>
+                        <li><code>12</code></li>
+                        <li><code>14</code></li>
+                        <li><code>16</code></li>
+                        <li><code>20</code></li>
+                        <li><code>24</code></li>
+                        <li><code>28</code></li>
+                        <li><code>32</code></li>
+                        <li><code>36</code></li>
+                        <li><code>40</code></li>
+                        <li><code>44</code></li>
+                        <li><code>48</code></li>
+                        <li><code>52</code></li>
+                        <li><code>56</code></li>
+                        <li><code>60</code></li>
+                        <li><code>64</code></li>
+                        <li><code>72</code></li>
+                        <li><code>80</code></li>
+                        <li><code>96</code></li>
+                        <li><code>1/2</code></li>
+                        <li><code>1/3</code></li>
+                        <li><code>2/3</code></li>
+                        <li><code>1/4</code></li>
+                        <li><code>2/4</code></li>
+                        <li><code>3/4</code></li>
+                        <li><code>1/5</code></li>
+                        <li><code>2/5</code></li>
+                        <li><code>3/5</code></li>
+                        <li><code>4/5</code></li>
+                        <li><code>1/6</code></li>
+                        <li><code>2/6</code></li>
+                        <li><code>3/6</code></li>
+                        <li><code>4/6</code></li>
+                        <li><code>5/6</code></li>
+                        <li><code>1/12</code></li>
+                        <li><code>2/12</code></li>
+                        <li><code>3/12</code></li>
+                        <li><code>4/12</code></li>
+                        <li><code>5/12</code></li>
+                        <li><code>6/12</code></li>
+                        <li><code>7/12</code></li>
+                        <li><code>8/12</code></li>
+                        <li><code>9/12</code></li>
+                        <li><code>10/12</code></li>
+                        <li><code>11/12</code></li>
+                        <li><code>auto</code></li>
+                        <li><code>px</code></li>
+                        <li><code>full</code></li>
+                    </ul>
+                    <h3>Example:</h3>
+                    <div class="container mx-auto">
+                    <ul class="sticky top-0 divide-y divide-gray-400 mb-5">
+                        <li class="flex items-center justify-between px-4 py-2">
+                        <div class="relative w-full bg-pink-500 object-none h-96 w-full">
+                            <img class="inset-44 bottom-0 absolute" src="http://pixelprowess.com/i/powship.svg" alt="POW Ship">
+                        </div> 
+                        <div class="ml-5 text-right">
+                            <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">(-)(SID)(-DIR)(-SIZ)</div>
+                            <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">DIR</b><br>x y</div>
+                            <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">SIZ</b><br>
+                            0 0.5 1 1.5 2 2.5<br>
+                            3 3.5 4 5 6 7 8 9<br>
+                            10 11 12 14 16 20<br>
+                            24 28 32 36 40 44<br>
+                            48 52 56 60 64 72<br>
+                            80 96<br><br>
+
+                            1/2 1/3 2/3 1/4 2/4<br>
+                            3/4 1/5 2/5 3/5 4/5<br>
+                            1/6 2/6 3/6 4/6 5/6<br>
+                            1/12 2/12 3/12 4/12<br>
+                            5/12 6/12 7/12 8/12<br>
+                            9/12 10/12 11/12<br><br>
+
+                            auto px full screen</div>
+                        </div>
+                        </li>
+                    </ul>
+                    </div>
+        </section>
+    </main>
+</body>
+</html>
