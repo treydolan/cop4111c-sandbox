@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grids</title>
+</head>
+<body>
+    <header>
+        <h1>Grid</h1>
+        <p>Tailwind has a full compliment of classes to help you manage your grid layouts.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Grid Template Columns</h2>
+            <p><code>grid-cols(-AMT)</code></p>
+            <small>AMT</small>
+            <ul>
+                <li><code>1</code></li>
+                <li><code>2</code></li>
+                <li><code>3</code></li>
+                <li><code>4</code></li>
+                <li><code>5</code></li>
+                <li><code>6</code></li>
+                <li><code>7</code></li>
+                <li><code>8</code></li>
+                <li><code>9</code></li>
+                <li><code>10</code></li>
+                <li><code>11</code></li>
+                <li><code>12</code></li>
+                <li><code>none</code></li>
+            </ul>
+            <p>You can control up to a 12 columns using grid containers. using grid-cols, you add an amount from 1 to 12 or they keyword none.
+
+            Remember that you can use these with responsive variants to control how they are displayed depending on the size of the viewport.</p>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+            <li class="w-full flex items-center justify-between px-4 py-2">
+                <div class="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 grid-rows-3 gap-2">
+                <span class="w-16 h-16 bg-red-500 text-white px-3 py-2 rounded-md">1</span>
+                <span class="w-16 h-16 bg-green-500 text-white px-3 py-2 rounded-md">2</span>
+                <span class="w-16 h-16 bg-blue-500 text-white px-3 py-2 rounded-md">3</span>
+                <span class="w-16 h-16 bg-indigo-500 text-white px-3 py-2 rounded-md">4</span>
+                <span class="w-16 h-16 bg-purple-500 text-white px-3 py-2 rounded-md">5</span>
+                <span class="w-16 h-16 bg-yellow-300 text-white px-3 py-2 rounded-md">6</span>
+                <span class="w-16 h-16 bg-red-500 text-white px-3 py-2 rounded-md">7</span>
+                <span class="w-16 h-16 bg-green-500 text-white px-3 py-2 rounded-md">8</span>
+                <span class="w-16 h-16 bg-blue-500 text-white px-3 py-2 rounded-md">9</span>
+                <span class="w-16 h-16 bg-indigo-500 text-white px-3 py-2 rounded-md">10</span>
+                <span class="w-16 h-16 bg-purple-500 text-white px-3 py-2 rounded-md">11</span>
+                <span class="w-16 h-16 bg-yellow-300 text-white px-3 py-2 rounded-md">12</span>
+                </div>
+                <div class="ml-5 text-right">
+                <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">grid-cols-AMT</div>
+                <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">AMT</b><br>1 2 3<br>4 5 6<br>7 8 9<br>10 11 12<br>none</div>
+                </div>
+            </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
