@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Other Properties</title>
+</head>
+<body>
+    <header>
+        <h1>Other Properties</h1>
+        <p>There's a few other that control the visibility or opacity and what happens when elements are too big.</p>
+    </header>
+    <main>
+        <section>
+            <h2>Z-Index</h2>
+            <p><code>z-(AMT)</code></p>
+            <small>SID</small>
+            <ul>
+                <li><code>0</code></li>
+                <li><code>10</code></li>
+                <li><code>20</code></li>
+                <li><code>30</code></li>
+                <li><code>40</code></li>
+                <li><code>50</code></li>
+                <li><code>auto</code></li>
+            </ul>
+            <p>
+                Content is layered in CSS using a property called the z-index. Tailwind gives you 0 plus 5 other values you can use, plus auto. Remember that you can add your own by modifying the tailwind.config.js file.
+            </p>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="w-full position-relative">
+                <div class="z-auto inset-0 absolute w-16 h-16 bg-red-500 text-white px-3 py-2 rounded-md mb-1">1</div>
+                <div class="z-0 inset-4 absolute w-16 h-16 bg-green-500 text-white px-3 py-2 rounded-md mb-1">2</div>
+                <div class="z-10 inset-8 absolute w-16 h-16 bg-blue-500 text-white px-3 py-2 rounded-md mb-1">3</div>
+                <div class="z-20 inset-12 absolute w-16 h-16 bg-indigo-500 text-white px-3 py-2 rounded-md mb-1">4</div>
+                <div class="z-30 inset-16 absolute w-16 h-16 bg-purple-500 text-white px-3 py-2 rounded-md mb-1">5</div>
+                <div class="z-40 inset-20 absolute w-16 h-16 bg-yellow-300 text-white px-3 py-2 rounded-md mb-1">6</div>
+                <div class="z-50 inset-24 absolute w-16 h-16 bg-pink-500 text-white px-3 py-2 rounded-md mb-1">7</div>
+                </div>
+                <div class="ml-5 text-right">
+                <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">z-AMT</div>
+                <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">AMT</b><br>auto 0 10 20 30 40 50</div>
+                </div>
+            </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Visibility</h2>
+            <p><code>visible</code></p>
+            <p><code>invisible</code></p>
+            <p>show or hide throught their CSS visibility properties. Remember that these can be used with responsive variants to make things show up or hide at different breakpoints.</p>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+        <li class="flex items-center justify-between px-4 py-2">
+            <div class="text-left">
+
+            <h2 class="font-regular text-4xl align-middle mt-3 text-blue-500">Rex</h2>
+            <p class="invisible md:visible text-md leading-tight">Rex is the Mayor of Binaryville and a well-loved personality in town. He rose to robotdom from a microprocessor plant on the south side of town, where many famous and influential robots before him were conceived.</p>
+
+            <h2 class="font-regular text-4xl align-middle mt-3 text-blue-500">Dolores</h2>
+            <p class="invisible md:visible text-md leading-tight">Dolores robot is a computational genius who performs calculations for various Binaryville businesses and organizations. In her spare time, Dolores has been noodling on the creation of the perfect web browser that will make all other browsers obsolete. We're rooting for you, Dolores!</p>
+
+            <h2 class="font-regular text-4xl align-middle mt-3 text-blue-500">Bubbles</h2>
+            <p class="invisible md:visible text-md leading-tight">Bubble Gum robot, or “Bubbles” for short, is from a family of track-footed robots that ¬originated from an experiment melding candy vending machines with robotics in the early 1980s. Bubbles is a favorite of Binaryville, not just because she generously dispenses candy, but also because she has one of the more "bubbly" personalities of the villagers.</p>  
+
+            <h2 class="font-regular text-4xl align-middle mt-3 text-blue-500">Fred</h2>
+            <p class="invisible md:visible text-md leading-tight">Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville and the lives of its inhabitants. He's been at the forefront of many inventions, but has a special affinity for improving the world through alternative energy and green-living. Fred's engineering collaborations with the City of Binaryville have helped the city reduce its energy consumption year over year, and he's twice been awarded the highly coveted Binaryville Medallion of Honor.</p>  
+
+            </div>
+            <div>
+            <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2 mb-1">visible</div>
+            <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">invisible</div>
+            </div>
+        </li>
+        </ul>
+        </section>
+        <section>
+            <h2>Opacity</h2>
+            <p><code>opacity-AMT</code></p>
+            <small>AMT(opacity/100)</small>
+            <ul>
+                <li><code>0</code></li>
+                <li><code>5</code></li>
+                <li><code>10</code></li>
+                <li><code>20</code></li>
+                <li><code>25</code></li>
+                <li><code>30</code></li>
+                <li><code>40</code></li>
+                <li><code>50</code></li>
+                <li><code>60</code></li>
+                <li><code>70</code></li>
+                <li><code>75</code></li>
+                <li><code>80</code></li>
+                <li><code>90</code></li>
+                <li><code>95</code></li>
+                <li><code>100</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted">
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="opacity-0 bg-center bg-no-repeat bg-auto h-12 w-full bg-purple-600  flex justify-center items-center text-xl font-bold">Elton</div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">opacity-0</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="opacity-5 bg-center bg-no-repeat bg-auto h-12 w-full bg-purple-600  flex justify-center items-center text-xl font-bold">Elton</div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">opacity-5</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="opacity-10 bg-center bg-no-repeat bg-auto h-12 w-full bg-purple-600  flex justify-center items-center text-xl font-bold">Elton</div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">opacity-10</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="opacity-20 bg-center bg-no-repeat bg-auto h-12 w-full bg-purple-600 flex justify-center items-center text-xl font-bold"><div>Elton</div></div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">opacity-20</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="opacity-25 bg-center bg-no-repeat bg-auto h-12 w-full bg-purple-600  flex justify-center items-center text-xl font-bold">Elton</div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">opacity-25</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="opacity-30 bg-center bg-no-repeat bg-auto h-12 w-full bg-purple-600  flex justify-center items-center text-xl font-bold">Elton</div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">opacity-30</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="opacity-40 bg-center bg-no-repeat bg-auto h-12 w-full bg-purple-600  flex justify-center items-center text-xl font-bold">Elton</div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">opacity-40</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="opacity-50 bg-center bg-no-repeat bg-auto h-12 w-full bg-purple-600  flex justify-center items-center text-xl font-bold">Elton</div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">opacity-50</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="opacity-60 bg-center bg-no-repeat bg-auto h-12 w-full bg-purple-600  flex justify-center items-center text-xl font-bold">Elton</div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">opacity-60</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="opacity-70 bg-center bg-no-repeat bg-auto h-12 w-full bg-purple-600  flex justify-center items-center text-xl font-bold">Elton</div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">opacity-70</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="opacity-75 bg-center bg-no-repeat bg-auto h-12 w-full bg-purple-600  flex justify-center items-center text-xl font-bold">Elton</div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">opacity-75</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="opacity-80 bg-center bg-no-repeat bg-auto h-12 w-full bg-purple-600  flex justify-center items-center text-xl font-bold">Elton</div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">opacity-80</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="opacity-90 bg-center bg-no-repeat bg-auto h-12 w-full bg-purple-600  flex justify-center items-center text-xl font-bold">Elton</div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">opacity-90</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="opacity-95 bg-center bg-no-repeat bg-auto h-12 w-full bg-purple-600  flex justify-center items-center text-xl font-bold">Elton</div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">opacity-95</div>
+            </li>
+            <li class="flex items-center justify-between px-4 py-2">
+                <div class="opacity-100 bg-center bg-no-repeat bg-auto h-12 w-full bg-purple-600  flex justify-center items-center text-xl font-bold">Elton</div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-2 rounded text-white bg-pink-500 rounded-2">opacity-100</div>
+            </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Overflow</h2>
+            <p><code>overflow(-DIR)(-TYP)</code></p>
+            <small>DIR (overflow)</small>
+            <ul>
+                <li><code>x</code></li>
+                <li><code>y</code></li>
+            </ul>
+            <small>TYP (overflow)</small>
+            <ul>
+                <li><code>auto</code></li>
+                <li><code>hidden</code></li>
+                <li><code>visible</code></li>
+                <li><code>scroll</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+
+        <li class="flex items-center justify-between px-4 py-2">
+            <div>
+            <p class="overflow-auto h-20 w-5/6 bg-yellow-200 bg-yellow-200 text-md leading-tight">Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville and the lives of its inhabitants. He's been at the forefront of many inventions, but has a special affinity for improving the world through alternative energy and green-living. Fred's engineering collaborations with the City of Binaryville have helped the city reduce its energy consumption year over year, and he's twice been awarded the highly coveted Binaryville Medallion of Honor.</p>
+            </div>
+            <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">overflow-auto</div>
+        </li>
+
+        <li class="flex items-center justify-between px-4 py-2">
+            <div>
+            <p class="overflow-hidden h-20 w-5/6 bg-yellow-200 text-md leading-tight">Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville and the lives of its inhabitants. He's been at the forefront of many inventions, but has a special affinity for improving the world through alternative energy and green-living. Fred's engineering collaborations with the City of Binaryville have helped the city reduce its energy consumption year over year, and he's twice been awarded the highly coveted Binaryville Medallion of Honor.</p>
+            </div>
+            <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">overflow-hidden</div>
+        </li>
+
+        <li class="flex items-center justify-between px-4 py-2" style="height: 600px;">
+            <div>
+            <p class="overflow-visible h-20 w-5/6 bg-yellow-200 text-md leading-tight">Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville and the lives of its inhabitants. He's been at the forefront of many inventions, but has a special affinity for improving the world through alternative energy and green-living.</p>
+            </div>
+            <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">overflow-visible</div>
+        </li>
+
+        <li class="flex items-center justify-between px-4 py-2">
+            <div>
+            <p class="overflow-scroll h-20 w-5/6 bg-yellow-200 text-md leading-tight">Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville and the lives of its inhabitants. He's been at the forefront of many inventions, but has a special affinity for improving the world through alternative energy and green-living. Fred's engineering collaborations with the City of Binaryville have helped the city reduce its energy consumption year over year, and he's twice been awarded the highly coveted Binaryville Medallion of Honor.</p>
+            </div>
+            <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">overflow-scroll</div>
+        </li>
+
+        <li class="flex items-center justify-between px-4 py-2">
+            <div>
+            <p class="overflow-x-auto w-5/6 bg-yellow-200 text-md leading-tight whitespace-nowrap " style="max-width: 450px">Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville and the lives of its inhabitants. He's been at the forefront of many inventions, but has a special affinity for improving the world through alternative energy and green-living. Fred's engineering collaborations with the City of Binaryville have helped the city reduce its energy consumption year over year, and he's twice been awarded the highly coveted Binaryville Medallion of Honor.</p>
+            </div>
+            <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">overflow-x-auto</div>
+        </li>
+
+        <li class="flex items-center justify-between px-4 py-2">
+            <div>
+            <p class="overflow-y-auto h-20 w-5/6 bg-yellow-200 text-md leading-tight">Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville and the lives of its inhabitants. He's been at the forefront of many inventions, but has a special affinity for improving the world through alternative energy and green-living. Fred's engineering collaborations with the City of Binaryville have helped the city reduce its energy consumption year over year, and he's twice been awarded the highly coveted Binaryville Medallion of Honor.</p>
+            </div>
+            <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">overflow-y-auto</div>
+        </li>
+
+        <li class="flex items-center justify-between px-4 py-2">
+            <div>
+            <p class="overflow-x-hidden bg-yellow-200 text-md leading-tight whitespace-nowrap" style="max-width: 450px">Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville and the lives of its inhabitants. He's been at the forefront of many inventions, but has a special affinity for improving the world through alternative energy and green-living. Fred's engineering collaborations with the City of Binaryville have helped the city reduce its energy consumption year over year, and he's twice been awarded the highly coveted Binaryville Medallion of Honor.</p>
+            </div>
+            <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">overflow-x-hidden</div>
+        </li>
+
+        <li class="flex items-center justify-between px-4 py-2">
+            <div>
+            <p class="overflow-y-hidden h-20 w-5/6 bg-yellow-200 text-md leading-tight">Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville and the lives of its inhabitants. He's been at the forefront of many inventions, but has a special affinity for improving the world through alternative energy and green-living. Fred's engineering collaborations with the City of Binaryville have helped the city reduce its energy consumption year over year, and he's twice been awarded the highly coveted Binaryville Medallion of Honor.</p>
+            </div>
+            <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">overflow-y-hidden</div>
+        </li>
+        
+        <li class="flex items-center justify-between px-4 py-2">
+            <div>
+            <p class="overflow-x-visible  w-5/6 bg-yellow-200 text-md leading-tight whitespace-nowrap" style="max-width: 450px">Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville and the lives of its inhabitants. He's been at the forefront of many inventions, but has a special affinity for improving the world through alternative energy and green-living. Fred's engineering collaborations with the City of Binaryville have helped the city reduce its energy consumption year over year, and he's twice been awarded the highly coveted Binaryville Medallion of Honor.</p>
+            </div>
+            <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">overflow-x-visible</div>
+        </li>
+        
+        <li class="flex items-center justify-between px-4 py-2">
+            <div class="overflow-visible"  style="height: 600px;">
+            <p class="overflow-y-visible h-20 w-5/6 bg-yellow-200 text-md leading-tight">Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville and the lives of its inhabitants. He's been at the forefront of many inventions, but has a special affinity for improving the world through alternative energy and green-living. Fred's engineering collaborations with the City of Binaryville have helped the city reduce its energy consumption year over year, and he's twice been awarded the highly coveted Binaryville Medallion of Honor.</p>
+            </div>
+            <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">overflow-y-visible</div>
+        </li>
+
+        <li class="flex items-center justify-between px-4 py-2">
+            <div>
+            <p class="overflow-x-scroll h-20 w-5/6 bg-yellow-200 text-md leading-tight">Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville and the lives of its inhabitants. He's been at the forefront of many inventions, but has a special affinity for improving the world through alternative energy and green-living. Fred's engineering collaborations with the City of Binaryville have helped the city reduce its energy consumption year over year, and he's twice been awarded the highly coveted Binaryville Medallion of Honor.</p>
+            </div>
+            <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">overflow-x-scroll</div>
+        </li>
+
+        <li class="flex items-center justify-between px-4 py-2">
+            <div>
+            <p class="overflow-y-scroll h-20 w-5/6 bg-yellow-200 text-md leading-tight">Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville and the lives of its inhabitants. He's been at the forefront of many inventions, but has a special affinity for improving the world through alternative energy and green-living. Fred's engineering collaborations with the City of Binaryville have helped the city reduce its energy consumption year over year, and he's twice been awarded the highly coveted Binaryville Medallion of Honor.</p>
+            </div>
+            <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">overflow-y-scroll</div>
+        </li>
+        </ul>
+        </section>
+        <section>
+            <h2>Overscroll</h2>
+            <p><code>overscroll(-DIR)(-TYP)</code></p>
+            <small>DIR</small>
+            <ul>
+                <li><code>x</code></li>
+                <li><code>y</code></li>
+            </ul>
+            <small>TYP</small>
+            <ul>
+                <li><code>auto</code></li>
+                <li><code>contain</code></li>
+                <li><code>none</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <p class="overscroll-auto overflow-auto h-32 w-5/6 bg-yellow-200 bg-yellow-200 text-md leading-tight">Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville and the lives of its inhabitants. He's been at the forefront of many inventions, but has a special affinity for improving the world through alternative energy and green-living. Fred's engineering collaborations with the City of Binaryville have helped the city reduce its energy consumption year over year, and he's twice been awarded the highly coveted Binaryville Medallion of Honor.</p>
+                </div>
+                <div class="space-y-1">
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">overscroll-auto</div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">overscroll-y-auto</div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">overscroll-x-auto</div>
+                </div>
+            </li>
+
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <p class="overscroll-contain overflow-auto h-32 w-5/6 bg-yellow-200 bg-yellow-200 text-md leading-tight">Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville and the lives of its inhabitants. He's been at the forefront of many inventions, but has a special affinity for improving the world through alternative energy and green-living. Fred's engineering collaborations with the City of Binaryville have helped the city reduce its energy consumption year over year, and he's twice been awarded the highly coveted Binaryville Medallion of Honor.</p>
+                </div>
+                <div class="space-y-1 flex flex-col items-end justify-between">
+                <div class="text-xs font-semibold font-mono whitespace-nowrap inline-block px-2 py-1 rounded text-white bg-pink-500 rounded-2">overscroll-contain</div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap inline-block px-2 py-1 rounded text-white bg-pink-500 rounded-2">overscroll-y-contain</div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap inline-block px-2 py-1 rounded text-white bg-pink-500 rounded-2">overscroll-x-contain</div>
+                </div>
+            </li>
+
+            <li class="flex items-center justify-between px-4 py-2">
+                <div>
+                <p class="overscroll-none overflow-auto h-32 w-5/6 bg-yellow-200 bg-yellow-200 text-md leading-tight">Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville and the lives of its inhabitants. He's been at the forefront of many inventions, but has a special affinity for improving the world through alternative energy and green-living. Fred's engineering collaborations with the City of Binaryville have helped the city reduce its energy consumption year over year, and he's twice been awarded the highly coveted Binaryville Medallion of Honor.</p>
+                </div>
+                <div class="space-y-1">
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">overscroll-none</div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">overscroll-y-none</div>
+                <div class="text-xs font-semibold font-mono whitespace-nowrap px-2 py-1 ml-5 rounded text-white bg-pink-500 rounded-2">overscroll-x-none</div>
+                </div>
+            </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>
