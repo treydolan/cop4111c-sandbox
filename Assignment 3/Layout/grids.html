@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grids</title>
 </head>
@@ -53,6 +54,290 @@
                 <div class="ml-5 text-right">
                 <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">grid-cols-AMT</div>
                 <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">AMT</b><br>1 2 3<br>4 5 6<br>7 8 9<br>10 11 12<br>none</div>
+                </div>
+            </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Gap</h2>
+            <p><code>gap(-DIR)(-SIZ)</code></p>
+            <small>DIR</small>
+            <ul>
+                <li><code>x</code></li>
+                <li><code>y</code></li>
+            </ul>
+            <small>SIZ</small>
+            <ul>
+                <li><code>0</code></li>
+                <li><code>0.5</code></li>
+                <li><code>1</code></li>
+                <li><code>1.5</code></li>
+                <li><code>2</code></li>
+                <li><code>2.5</code></li>
+                <li><code>3</code></li>
+                <li><code>3.5</code></li>
+                <li><code>4</code></li>
+                <li><code>5</code></li>
+                <li><code>6</code></li>
+                <li><code>7</code></li>
+                <li><code>8</code></li>
+                <li><code>9</code></li>
+                <li><code>10</code></li>
+                <li><code>11</code></li>
+                <li><code>12</code></li>
+                <li><code>14</code></li>
+                <li><code>16</code></li>
+                <li><code>20</code></li>
+                <li><code>24</code></li>
+                <li><code>28</code></li>
+                <li><code>32</code></li>
+                <li><code>36</code></li>
+                <li><code>40</code></li>
+                <li><code>44</code></li>
+                <li><code>48</code></li>
+                <li><code>52</code></li>
+                <li><code>56</code></li>
+                <li><code>60</code></li>
+                <li><code>64</code></li>
+                <li><code>72</code></li>
+                <li><code>80</code></li>
+                <li><code>96</code></li>
+                <li><code>px</code></li>
+            </ul>
+            <p>Gaps are how you place spacing inside rows and columns and you can specify an optional direction here so you can have a different horizontal and vertical gaps, plus the traditional size scale from 0 to 96, plus px, which is the same as one pixel.</p>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+        <li class="w-full flex items-center justify-between px-4 py-2">
+            <div class="gap-2 grid-cols-3 grid">
+            <span class="w-16 h-16 bg-red-500 text-white px-3 py-2 rounded-md">1</span>
+            <span class="w-16 h-16 bg-green-500 text-white px-3 py-2 rounded-md">2</span>
+            <span class="w-16 h-16 bg-blue-500 text-white px-3 py-2 rounded-md">3</span>
+            <span class="w-16 h-16 bg-indigo-500 text-white px-3 py-2 rounded-md">4</span>
+            <span class="w-16 h-16 bg-purple-500 text-white px-3 py-2 rounded-md">5</span>
+            <span class="w-16 h-16 bg-yellow-300 text-white px-3 py-2 rounded-md">6</span>
+            <span class="w-16 h-16 bg-red-500 text-white px-3 py-2 rounded-md">7</span>
+            <span class="w-16 h-16 bg-green-500 text-white px-3 py-2 rounded-md">8</span>
+            <span class="w-16 h-16 bg-blue-500 text-white px-3 py-2 rounded-md">9</span>
+            </div>
+            <div class="ml-5 text-right">
+            <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">gap(-DIR)(-SIZ)</div>
+            <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">AMT</b><br>      
+                x y<br>
+            <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">AMT</b><br>      
+                0 0.5 1 1.5 2<br>
+                2.5 3 3.5 4 5 6<br>
+                7 8 9 10 11 12<br>
+                14 16 20 24 28<br>
+                32 36 40 44 48 52<br>
+                56 60 64 72 80 96<br>
+                px
+            </div>
+            </div>
+        </li>
+        </ul>
+        </section>
+        <section>
+            <h2>Grid Template Columns</h2>
+            <p><code>col(-TYP)(-AMT)</code></p>
+            <small>TYP</small>
+            <ul>
+                <li><code>auto</code></li>
+                <li><code>span</code></li>
+                <li><code>start</code></li>
+                <li><code>end</code></li>
+            </ul>
+            <small>AMT</small>
+            <ul>
+                <li><code>1</code></li>
+                <li><code>2</code></li>
+                <li><code>3</code></li>
+                <li><code>4</code></li>
+                <li><code>5</code></li>
+                <li><code>6</code></li>
+                <li><code>7</code></li>
+                <li><code>8</code></li>
+                <li><code>9</code></li>
+                <li><code>10</code></li>
+                <li><code>11</code></li>
+                <li><code>12</code></li>
+                <li><code>full</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+            <li class="w-full flex items-center justify-between px-4 py-2">
+                <div class="grid grid-cols-4 grid-rows-3 gap-2">
+                <span class="col-span-full h-16 bg-red-500 text-white px-3 py-2 rounded-md">1</span>
+                <span class="w-16 h-16 bg-green-500 text-white px-3 py-2 rounded-md">2</span>
+                <span class="w-16 h-16 bg-blue-500 text-white px-3 py-2 rounded-md">3</span>
+                <span class="col-start-4 h-16 bg-indigo-500 text-white px-3 py-2 rounded-md">4</span>
+                <span class="col-span-2 h-16 bg-purple-500 text-white px-3 py-2 rounded-md">5</span>
+                <span class="w-16 h-16 bg-yellow-300 text-white px-3 py-2 rounded-md">6</span>
+                <span class="w-16 h-16 bg-red-500 text-white px-3 py-2 rounded-md">7</span>
+                <span class="w-16 h-16 bg-green-500 text-white px-3 py-2 rounded-md">8</span>
+                <span class="col-span-3 h-16 bg-blue-500 text-white px-3 py-2 rounded-md">9</span>
+                <span class="col-start-1 col-end-4 h-16 bg-indigo-500 text-white px-3 py-2 rounded-md">10</span>
+                <span class="w-16 h-16 bg-purple-500 text-white px-3 py-2 rounded-md">11</span>
+                <span class="col-span-full h-16 bg-yellow-300 text-white px-3 py-2 rounded-md">12</span>
+                </div>
+                <div class="ml-5 text-right">
+                <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">col(-TYP)(-AMT)</div>
+                <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">TYP</b><br>auto start<br>end span</div>
+                <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">AMT</b><br>1 2 3<br>4 5 6<br>7 8 9<br>10 11 12<br>full</div>
+                </div>
+            </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Grid Template Rows</h2>
+            <p><code>grid-rows(-AMT)</code></p>
+            <small>AMT</small>
+            <ul>
+                <li><code>1</code></li>
+                <li><code>2</code></li>
+                <li><code>3</code></li>
+                <li><code>4</code></li>
+                <li><code>5</code></li>
+                <li><code>6</code></li>
+                <li><code>none</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+            <li class="w-full flex items-center justify-between px-4 py-2">
+                <div class=" grid-rows-3 grid grid-flow-col gap-2">
+                <span class="w-16 h-16 bg-red-500 text-white px-3 py-2 rounded-md">1</span>
+                <span class="w-16 h-16 bg-green-500 text-white px-3 py-2 rounded-md">2</span>
+                <span class="w-16 h-16 bg-blue-500 text-white px-3 py-2 rounded-md">3</span>
+                <span class="w-16 h-16 bg-indigo-500 text-white px-3 py-2 rounded-md">4</span>
+                <span class="w-16 h-16 bg-purple-500 text-white px-3 py-2 rounded-md">5</span>
+                <span class="w-16 h-16 bg-yellow-300 text-white px-3 py-2 rounded-md">6</span>
+                <span class="w-16 h-16 bg-red-500 text-white px-3 py-2 rounded-md">7</span>
+                <span class="w-16 h-16 bg-green-500 text-white px-3 py-2 rounded-md">8</span>
+                <span class="w-16 h-16 bg-blue-500 text-white px-3 py-2 rounded-md">9</span>
+                <span class="w-16 h-16 bg-indigo-500 text-white px-3 py-2 rounded-md">10</span>
+                <span class="w-16 h-16 bg-purple-500 text-white px-3 py-2 rounded-md">11</span>
+                <span class="w-16 h-16 bg-yellow-300 text-white px-3 py-2 rounded-md">12</span>
+                </div>
+                <div class="ml-5 text-right">
+                <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">grid-row-AMT</div>
+                <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">AMT</b><br>1 2 3<br>4 5 6<br>none</div>
+                </div>
+            </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Grid Row Start/End</h2>
+            <small>TYP</small>
+            <ul>
+                <li><code>auto</code></li>
+                <li><code>span</code></li>
+                <li><code>start</code></li>
+                <li><code>end</code></li>
+            </ul>
+            <small>AMT</small>
+            <ul>
+                <li><code>1</code></li>
+                <li><code>2</code></li>
+                <li><code>3</code></li>
+                <li><code>4</code></li>
+                <li><code>5</code></li>
+                <li><code>6</code></li>
+                <li><code>7</code></li>
+                <li><code>full</code></li>
+            </ul>
+            <p>In the example just like with rows you can see that sometimes you ahve to turn off the height in this case to properly adjust the spanning.</p>
+        </section>
+        <section>
+            <h2>Grid Auto Flow</h2>
+            <p>There's a few classes that let you change how items are placed on the grid. The key things is that the dense option allows the grid to fit the content.
+
+            This is just the type of thing that is best seen as an example. Take a look what what's happening here with the fifth element starting at a later space. Using grid-flow-row will leave a hole in the layout, but with the dense option the sixth element will fill the spot.
+
+            This can help build a better layout.</p>
+            <ul>
+                <li><code>auto-cols-auto</code></li>
+                <li><code>auto-cols-min</code></li>
+                <li><code>auto-cols-max</code></li>
+                <li><code>auto-cols-fr</code></li>
+            </ul>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+            <li class="w-full flex items-center justify-between px-4 py-2">
+                <div class="grid grid-flow-row-dense grid-cols-4 gap-2">
+                <span class="w-16 h-16 bg-red-500 text-white px-3 py-2 rounded-md">1</span>
+                <span class="w-16 h-16 bg-green-500 text-white px-3 py-2 rounded-md">2</span>
+                <span class="w-16 h-16 bg-blue-500 text-white px-3 py-2 rounded-md">3</span>
+                <span class="w-16 h-16 bg-indigo-500 text-white px-3 py-2 rounded-md">4</span>
+                <span class="col-start-2 col-span-3 h-16 bg-purple-500 text-white px-3 py-2 rounded-md">5</span>
+                <span class="w-16 h-16 bg-yellow-300 text-white px-3 py-2 rounded-md">6</span>
+                <span class="w-16 h-16 bg-red-500 text-white px-3 py-2 rounded-md">7</span>
+                <span class="w-16 h-16 bg-green-500 text-white px-3 py-2 rounded-md">8</span>
+                <span class="w-16 h-16 bg-blue-500 text-white px-3 py-2 rounded-md">9</span>
+                <span class="w-16 h-16 bg-indigo-500 text-white px-3 py-2 rounded-md">10</span>
+                <span class="w-16 h-16 bg-purple-500 text-white px-3 py-2 rounded-md">11</span>
+                <span class="w-16 h-16 bg-yellow-300 text-white px-3 py-2 rounded-md">12</span>
+                </div>
+                <div class="ml-5 text-right">
+                <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">grid-flow(-TYP)</div>
+                <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">TYP</b><br>row col<br>row-dense col-dense</div>
+                </div>
+            </li>
+            </ul>
+        </section>
+        <section>
+            <h2>Grid Auto Rows</h2>
+            <ul>
+                <li><code>auto-rows-auto</code></li>
+                <li><code>auto-rows-min</code></li>
+                <li><code>auto-rows-max</code></li>
+                <li><code>auto-rows-fr</code></li>
+            </ul>
+            <p>Grid Auto Rows is pretty similar to columns, but of course it works with rows instead. If you look at the example though, you'll see that using auto-rows-fr works well, but the other values are pretty similar.
+
+            That's because the making something the minimum height of an element doesn't make as much sense.</p>
+            <h3>Example:</h3>
+            <ul class="container mx-auto divide-y divide-gray-400 divide-dotted" style="font-family: Raleway">
+            <li class="w-full flex items-center justify-between px-4 py-2">
+                <div class="auto-rows-fr grid-rows-3 grid-cols-3 grid-flow-row grid gap-2">
+                <div class="bg-red-500 text-white px-3 py-2 rounded-md">
+                    <p>1. Rex is the Mayor of Binaryville and a well-loved personality in town. He rose to robotdom from a microprocessor plant on the south side of town.</p>
+                </div>
+                <div class="bg-green-500 text-white px-3 py-2 rounded-md">
+                    <p>2. Dolores robot is a computational genius who performs calculations for various Binaryville businesses and organizations.</p>
+                </div>
+                <div class="bg-blue-500 text-white px-3 py-2 rounded-md">
+                    <p>3. Bubbles is from a family of track-footed robots that ¬originated from an experiment melding candy vending machines with robotics in the early 1980s.</p>
+                </div>
+                <div class="bg-indigo-500 text-white px-3 py-2 rounded-md">
+                    <p>4. Fred is inquisitive and creative, and always conjuring up ways to improve Binaryville and the lives of its inhabitants</p>
+                </div>
+                <div class="bg-purple-500 text-white px-3 py-2 rounded-md">
+                    <p>5. Rivet descended from an assembly line of amphibious robots, but never quite took to deep water - though he does love rolling around in mucky marshes and soaking up the mud on vacation.</p>
+                </div>
+                <div class="bg-yellow-500 text-white px-3 py-2 rounded-md">
+                    <p>6. Binaryville's Advanced Robotics Assembly Division has become a highly profitable manufacturer of automation technology under Eileen's watchful managerial eye.</p>
+                </div>
+                <div class="bg-red-500 text-white px-3 py-2 rounded-md">
+                    <p>7. Belle is a safety inspector at Binaryville, blaring her siren when a concern is discovered</p>
+                </div>
+                <div class="bg-green-500 text-white px-3 py-2 rounded-md">
+                    <p>8. Cosmo manned the first ever flight to Mars from Binaryville.</p>
+                </div>
+                <div class="bg-purple-500 text-white px-3 py-2 rounded-md">
+                    <p>9. Dolly is Binaryville's local fitness guru with the huge "can-do" attitude. </p>
+                </div>
+                <div class="bg-yellow-500 text-white px-3 py-2 rounded-md">
+                    <p>10. Sergeant is always nearby to lend a helping claw to his fellow factory automation friends</p>
+                </div>
+                <div class="bg-red-500 text-white px-3 py-2 rounded-md">
+                <p>11. Oscar lives for watching Bronco’s games and managing their fan club.</p>
+                </div>
+                <div class="bg-green-500 text-white px-3 py-2 rounded-md">
+                <p>12. Levi picks out defective parts and sorting them for recycle.</p> 
+                </div>
+                </div>
+                <div class="ml-5 text-right">
+                <div class="text-xs font-semibold inline-block font-mono whitespace-nowrap px-2 py-1 rounded text-white bg-pink-500 rounded-2">auto-rows(-TYP)</div>
+                <div class="text-xs font-mono text-gray-500"><b class="text-black mt-3 inline-block">TYP</b><br>auto min max fr</div>
                 </div>
             </li>
             </ul>
