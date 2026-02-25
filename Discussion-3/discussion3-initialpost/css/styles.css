@@ -1,0 +1,13 @@
+/* Small custom styles (keeps Bootstrap doing most of the work) */
+.hero {
+  padding: 4rem 0;
+}
+
+.card-img-top {
+  object-fit: cover;
+  height: 200px;
+}
+
+.footer {
+  padding: 2rem 0;
+}
