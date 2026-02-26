@@ -1,33 +1,51 @@
-// Navigation -> open matching accordion panel and scroll into view.
-const group = document.getElementById("sections");
-const buttons = document.querySelectorAll(".nav sl-button");
+document.addEventListener("DOMContentLoaded", () => {
+  initAccordionNav();
+  initAnimations();
+  initIcons();
+});
 
-function openPanel(panelId) {
+function initAccordionNav() {
+  const group = document.getElementById("sections");
+  const buttons = document.querySelectorAll(".nav sl-button");
+  if (!group || buttons.length === 0) return;
+
+  function openPanel(panelId) {
     const panels = group.querySelectorAll("sl-details");
-    for (const p of panels) {
-        p.open = p.id === panelId;
-    }
+    panels.forEach((p) => (p.open = p.id === panelId));
 
     const active = document.getElementById(panelId);
-    if (active) {
-        active.scrollIntoView({ behavior: "smooth", block: "start" });
-    }
-}
+    if (active) active.scrollIntoView({ behavior: "smooth", block: "start" });
+  }
 
-for (const btn of buttons) {
+  buttons.forEach((btn) => {
     btn.addEventListener("click", () => {
-        const id = btn.getAttribute("data-target");
-        if (id) openPanel(id);
+      const id = btn.getAttribute("data-target");
+      if (id) openPanel(id);
     });
+  });
 }
 
-document.addEventListener("DOMContentLoaded", () => {
+function initAnimations() {
   const animations = document.querySelectorAll("sl-animation");
+  if (animations.length === 0) return;
 
-  // Assign specific animation names in order
   const names = ["bounce", "jello", "heartBeat"];
 
   animations.forEach((el, i) => {
-    el.setAttribute("name", names[i] || "bounce");
+    el.setAttribute("name", names[i] || names[0]);
   });
-});
+}
+
+function initIcons() {
+  // 1) Preferred: set any icon with data-icon (KPIs, etc.) — validator-safe
+  document.querySelectorAll("sl-icon[data-icon]").forEach((icon) => {
+    icon.setAttribute("name", icon.getAttribute("data-icon"));
+  });
+
+  // 2) Alerts: target just the two alert slot icons (no guessing by order)
+  const headerAlertIcon = document.querySelector(".alert-closable sl-icon[slot='icon']");
+  if (headerAlertIcon) headerAlertIcon.setAttribute("name", "info-circle");
+
+  const panel5AlertIcon = document.querySelector("#panel-5 sl-alert sl-icon[slot='icon']");
+  if (panel5AlertIcon) panel5AlertIcon.setAttribute("name", "info-circle");
+}

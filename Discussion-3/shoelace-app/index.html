@@ -35,47 +35,41 @@
 
           <div class="meta">
             <sl-card>
-            <div class="animation-overview">
-                <sl-animation duration="2000" play><div class="box"><span><strong>Mobile-first</strong> layout & components</span></div></sl-animation>
-                <sl-animation duration="2000" play><div class="box"><span><strong>Accessible</strong> components by default</span></div></sl-animation>
-                <sl-animation duration="2000" play><div class="box"><span><strong>CDN</strong> setup (no build tools)</span></div></sl-animation>
-            </div>
-              <div class="card-pad">
-                <div class="pill">
-                  <span><strong>Mobile-first</strong> layout & components</span>
+                <div class="animation-overview">
+                    <sl-animation duration="2000" play><div class="box"><span><strong>Mobile-first</strong> layout & components</span></div></sl-animation>
+                    <sl-animation duration="2000" play><div class="box"><span><strong>Accessible</strong> components by default</span></div></sl-animation>
+                    <sl-animation duration="2000" play><div class="box"><span><strong>CDN</strong> setup (no build tools)</span></div></sl-animation>
                 </div>
-                <div style="height: 10px"></div>
-                <div class="pill">
-                  <span><strong>Accessible</strong> components by default</span>
-                </div>
-                <div style="height: 10px"></div>
-                <div class="pill">
-                  <span><strong>CDN</strong> setup (no build tools)</span>
-                </div>
-              </div>
             </sl-card>
 
             <div class="kpi">
               <sl-card>
-                <div class="card-pad">
-                  <p><strong>Framework Style</strong> Web Components</p>
-                </div>
-              </sl-card>
-              <sl-card>
-                <div class="card-pad">
-                  <p><strong>Best Browsers</strong> Chrome, Edge, Safari</p>
-                </div>
-              </sl-card>
-              <sl-card>
-                <div class="card-pad">
-                  <p><strong>Use Case</strong> App-like UIs</p>
-                </div>
-              </sl-card>
-              <sl-card>
-                <div class="card-pad">
-                  <p><strong>Setup</strong> Link + Module</p>
-                </div>
-              </sl-card>
+                    <div class="card-pad kpi-item">
+                        <sl-icon class="kpi-icon" data-icon="braces"></sl-icon>
+                        <p><strong>Framework Style</strong> Web Components</p>
+                    </div>
+                    </sl-card>
+
+                    <sl-card>
+                    <div class="card-pad kpi-item">
+                        <sl-icon class="kpi-icon" data-icon="globe"></sl-icon>
+                        <p><strong>Best Browsers</strong> Chrome, Edge, Safari</p>
+                    </div>
+                    </sl-card>
+
+                    <sl-card>
+                    <div class="card-pad kpi-item">
+                        <sl-icon class="kpi-icon" data-icon="phone"></sl-icon>
+                        <p><strong>Use Case</strong> App-like UIs</p>
+                    </div>
+                    </sl-card>
+
+                    <sl-card>
+                    <div class="card-pad kpi-item">
+                        <sl-icon class="kpi-icon" data-icon="plug"></sl-icon>
+                        <p><strong>Setup</strong> Link + Module</p>
+                    </div>
+                </sl-card>
             </div>
           </div>
         </div>
@@ -201,13 +195,15 @@
     <sl-card>
         <div class="card-pad footer">
         <footer>
-            <sl-breadcrumb class="breadcrumb">
-                <sl-breadcrumb-item>Catalog</sl-breadcrumb-item>
-                <sl-breadcrumb-item>Clothing</sl-breadcrumb-item>
-                <sl-breadcrumb-item>Women's</sl-breadcrumb-item>
-                <sl-breadcrumb-item>Shirts &amp; Tops</sl-breadcrumb-item>
-            </sl-breadcrumb>
-            <small>&copy; Trey Dolan - COP4111C</small>
+        <sl-breadcrumb class="breadcrumb">
+            <span slot="separator">&gt;</span>
+
+            <sl-breadcrumb-item>Catalog</sl-breadcrumb-item>
+            <sl-breadcrumb-item>Clothing</sl-breadcrumb-item>
+            <sl-breadcrumb-item>Women&apos;s</sl-breadcrumb-item>
+            <sl-breadcrumb-item>Shirts &amp; Tops</sl-breadcrumb-item>
+        </sl-breadcrumb>
+        <small>&copy; Trey Dolan - COP4111C</small>
         </footer>
         </div>
     </sl-card>
