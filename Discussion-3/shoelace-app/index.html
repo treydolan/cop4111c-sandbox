@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.1/cdn/themes/light.css">
+    <link rel="stylesheet" href="css/main.css">
+    <script type="module" src="https://cdn.jsdelivr.net/npm/@shoelace-style/shoelace@2.15.1/cdn/shoelace.js"></script>
+    <title>Shoelace Framework</title>
+</head>
+<body>
+    <header>
+    <sl-alert variant="primary" open closable class="alert-closable">
+        <sl-icon slot="icon"></sl-icon>
+        Welcome to Discussion 3!
+    </sl-alert>
+      <div class="wrap hero">
+        <sl-avatar label="User avatar"></sl-avatar>
+        <div class="two-col">
+          <div>
+            <h1>Android-Friendly Web App UI (Shoelace Demo)</h1>
+            <p>
+              This page showcases <strong>Shoelace</strong>, a Web Components UI library that works great in modern
+              browsers (Chrome/Android included). It’s lightweight, accessible, and doesn’t require a package manager.
+            </p>
+
+            <div class="nav">
+              <sl-button variant="primary" data-target="panel-1">Overview</sl-button>
+              <sl-button variant="default" data-target="panel-2">Features</sl-button>
+              <sl-button variant="default" data-target="panel-3">UI Patterns</sl-button>
+              <sl-button variant="default" data-target="panel-4">Accessibility</sl-button>
+              <sl-button variant="default" data-target="panel-5">Install & Run</sl-button>
+            </div>
+          </div>
+
+          <div class="meta">
+            <sl-card>
+            <div class="animation-overview">
+                <sl-animation duration="2000" play><div class="box"><span><strong>Mobile-first</strong> layout & components</span></div></sl-animation>
+                <sl-animation duration="2000" play><div class="box"><span><strong>Accessible</strong> components by default</span></div></sl-animation>
+                <sl-animation duration="2000" play><div class="box"><span><strong>CDN</strong> setup (no build tools)</span></div></sl-animation>
+            </div>
+              <div class="card-pad">
+                <div class="pill">
+                  <span><strong>Mobile-first</strong> layout & components</span>
+                </div>
+                <div style="height: 10px"></div>
+                <div class="pill">
+                  <span><strong>Accessible</strong> components by default</span>
+                </div>
+                <div style="height: 10px"></div>
+                <div class="pill">
+                  <span><strong>CDN</strong> setup (no build tools)</span>
+                </div>
+              </div>
+            </sl-card>
+
+            <div class="kpi">
+              <sl-card>
+                <div class="card-pad">
+                  <p><strong>Framework Style</strong> Web Components</p>
+                </div>
+              </sl-card>
+              <sl-card>
+                <div class="card-pad">
+                  <p><strong>Best Browsers</strong> Chrome, Edge, Safari</p>
+                </div>
+              </sl-card>
+              <sl-card>
+                <div class="card-pad">
+                  <p><strong>Use Case</strong> App-like UIs</p>
+                </div>
+              </sl-card>
+              <sl-card>
+                <div class="card-pad">
+                  <p><strong>Setup</strong> Link + Module</p>
+                </div>
+              </sl-card>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <main>
+      <div class="wrap grid">
+        <sl-card>
+          <div class="card-pad">
+            <sl-details-group id="sections">
+              <sl-details id="panel-1" open>
+                <span slot="summary">1&rpar; Overview: What is Shoelace?</span>
+                <div class="content">
+                  <p>
+                    Shoelace is a library of prebuilt UI components (buttons, dialogs, inputs, tabs, drawers, etc.) made
+                    with Web Components. That means you can drop it into a plain HTML project and still build a modern,
+                    app-like interface.
+                  </p>
+                  <p>
+                    Because Web Components are native browser technology, Shoelace is a strong choice for an
+                    Android-friendly web app. You get consistent components, good mobile behavior, and less custom code.
+                  </p>
+                  <ul>
+                    <li>Works without React/Vue/Angular</li>
+                    <li>Great for “single page demos” and course assignments</li>
+                    <li>Easy to expand into a full site later</li>
+                  </ul>
+                </div>
+              </sl-details>
+
+              <sl-details id="panel-2">
+                <span slot="summary">2&rpar; Features: What you get out of the box</span>
+                <div class="content">
+                  <p>
+                    Shoelace includes a wide set of UI components that help you build professional layouts quickly while
+                    keeping your HTML readable. The components are styled, interactive, and designed to be usable on touch
+                    devices.
+                  </p>
+                  <p>
+                    In this demo, you’re seeing buttons, cards, icons, and accordion-style details panels. You could add
+                    drawers, dialogs, form controls, tabs, progress indicators, and alerts with just a few tags.
+                  </p>
+                  <ul>
+                    <li>Clean component API (attributes + events)</li>
+                    <li>Built-in icons and themes</li>
+                    <li>Good keyboard support + focus management</li>
+                    <li>Ideal for “dashboard” or “settings” style layouts</li>
+                  </ul>
+                </div>
+              </sl-details>
+
+              <sl-details id="panel-3">
+                <span slot="summary">3&rpar; UI Patterns: Google/Android-friendly layout ideas</span>
+                <div class="content">
+                  <p>
+                    If you want a Google-ish feel, you usually want: whitespace, readable typography, simple surfaces,
+                    rounded corners, subtle shadows, and predictable UI behavior on mobile. Shoelace helps you get there
+                    fast.
+                  </p>
+                  <p>
+                    A few easy “Android-style” patterns you can build with Shoelace components:
+                  </p>
+                  <ul>
+                    <li><strong>Settings screen:</strong> grouped toggles and selects inside cards</li>
+                    <li><strong>Drive-style dashboard:</strong> cards for documents + a toolbar</li>
+                    <li><strong>Gmail-style inbox:</strong> list items + filter chips + a compose button</li>
+                    <li><strong>Bottom sheet / drawer:</strong> mobile navigation that feels native</li>
+                  </ul>
+                </div>
+              </sl-details>
+
+              <sl-details id="panel-4">
+                <span slot="summary">4&rpar; Accessibility: Why this matters</span>
+                <div class="content">
+                  <p>
+                    A big reason to use a component library is that accessibility is baked into the UI elements. Shoelace
+                    components typically handle keyboard interactions, focus styles, and ARIA behavior so you don’t have to
+                    reinvent them.
+                  </p>
+                  <p>
+                    In an academic setting, accessibility also supports clean, professional deliverables. You can still
+                    validate your markup, keep semantic structure, and provide meaningful labels around your components.
+                  </p>
+                  <ul>
+                    <li>Keyboard-friendly navigation</li>
+                    <li>Better defaults for focus and interaction patterns</li>
+                    <li>Clearer UI consistency (especially on mobile)</li>
+                  </ul>
+                </div>
+              </sl-details>
+
+              <sl-details id="panel-5">
+                <span slot="summary">5&rpar; Install & Run: Simple CDN setup</span>
+                <div class="content">
+                  <p>
+                    This page uses Shoelace via CDN, which is ideal when you can’t use a package manager. You only need two
+                    things:
+                  </p>
+                  <ul>
+                    <li>A theme stylesheet (light or dark)</li>
+                    <li>The Shoelace JavaScript module (type="module")</li>
+                  </ul>
+
+                  <p>
+                    To run locally, just open the file in a browser, or use a simple server like VS Code Live Server. If
+                    your class requires it, document the setup steps in your README.
+                  </p>
+
+                  <sl-alert variant="primary" open>
+                    <sl-icon slot="icon"></sl-icon>
+                    Tip: If you later want “installable on Android,” look into turning it into a PWA
+                    (manifest + service worker).
+                  </sl-alert>
+                </div>
+              </sl-details>
+            </sl-details-group>
+          </div>
+        </sl-card>
+
+        <sl-button class="toTop"><a href="#">Back to Top</a></sl-button>
+      </div>
+    </main>
+    <sl-card>
+        <div class="card-pad footer">
+        <footer>
+            <sl-breadcrumb class="breadcrumb">
+                <sl-breadcrumb-item>Catalog</sl-breadcrumb-item>
+                <sl-breadcrumb-item>Clothing</sl-breadcrumb-item>
+                <sl-breadcrumb-item>Women's</sl-breadcrumb-item>
+                <sl-breadcrumb-item>Shirts &amp; Tops</sl-breadcrumb-item>
+            </sl-breadcrumb>
+            <small>&copy; Trey Dolan - COP4111C</small>
+        </footer>
+        </div>
+    </sl-card>
+    <script src="js/main.js"></script>
+</body>
+</html>

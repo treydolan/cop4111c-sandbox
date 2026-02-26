@@ -1,0 +1,169 @@
+ :root {
+    --app-max: 1000px;
+}
+
+body {
+margin: 0;
+font-family: "Roboto", system-ui, -apple-system, Segoe UI, Arial, sans-serif;
+background: #f6f8fc;
+color: #1f1f1f;
+}
+
+header {
+background: white;
+border-bottom: 1px solid #e6e8ee;
+}
+
+.wrap {
+max-width: var(--app-max);
+margin: 0 auto;
+padding: 18px 16px;
+}
+
+.hero {
+display: grid;
+gap: 12px;
+}
+
+.hero h1 {
+margin: 0;
+font-size: 1.5rem;
+letter-spacing: -0.01em;
+}
+
+.hero p {
+margin: 0;
+color: #444;
+line-height: 1.5;
+}
+
+.nav {
+display: flex;
+flex-wrap: wrap;
+gap: 10px;
+margin-top: 12px;
+}
+
+main {
+padding: 18px 0 40px;
+}
+
+sl-card::part(base) {
+border-radius: 14px;
+}
+
+.card-pad {
+padding: 8px 6px;
+}
+
+.grid {
+display: grid;
+gap: 14px;
+}
+
+.two-col {
+display: grid;
+gap: 14px;
+}
+
+@media (min-width: 860px) {
+.two-col {
+    grid-template-columns: 1.4fr 1fr;
+    align-items: start;
+}
+}
+
+.meta {
+display: grid;
+gap: 10px;
+}
+
+.kpi {
+display: grid;
+grid-template-columns: repeat(2, minmax(0, 1fr));
+gap: 10px;
+}
+
+.kpi sl-card::part(base) {
+border-radius: 12px;
+}
+
+.kpi p {
+margin: 0;
+color: #444;
+line-height: 1.4;
+}
+
+.kpi strong {
+display: block;
+font-size: 1.05rem;
+margin-bottom: 2px;
+}
+
+.content p {
+margin: 0 0 12px;
+line-height: 1.6;
+color: #333;
+}
+
+.content ul {
+margin: 0;
+padding-left: 20px;
+line-height: 1.6;
+color: #333;
+}
+
+.footer {
+color: #555;
+font-size: 0.95rem;
+padding-top: 10px;
+}
+
+.pill {
+display: inline-flex;
+align-items: center;
+gap: 6px;
+padding: 6px 10px;
+border-radius: 999px;
+background: #eef2ff;
+color: #2b2b2b;
+}
+
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  vertical-align: middle;
+}
+
+.phone-icon {
+  background-image: url("../icons/");
+}
+
+.shield-icon {
+  background-image: url("images/shield.svg");
+}
+
+.cloud-icon {
+  background-image: url("images/cloud.svg");
+}
+
+.breadcrumb {
+    display: block;
+    text-align: center;
+}
+
+.toTop {
+    position: sticky;
+}
+
+.animation-overview .box {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    background-color: var(--sl-color-primary-600);
+    margin: 1.5rem;
+}
