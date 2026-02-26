@@ -49,8 +49,8 @@
         target.setHours(Number(parts[0]), Number(parts[1]), 0, 0);
 
         var diffMin = Math.round((target - now) / 60000);
-        if (diffMin >= 0 && diffMin <= 10) return "urgent bg-danger";
-        if (diffMin >= 0 && diffMin <= 30) return "soon bg-warning";
+        if (diffMin >= 0 && diffMin <= 10) return "list-group-item-danger";
+        if (diffMin >= 0 && diffMin <= 30) return "list-group-item-warning";
         return "";
     }
 
@@ -181,22 +181,27 @@
             // The top-level node is a div.wrap that contains all three sections.
             // Returning a single root node is required (just like in React).
             return m("div.container-fluid", [
-                m("nav.navbar.mb-4",
-                    m("div.container-fluid",
-                        m("span.navbar-brand.fw-bold", "📋 Productivity Dashboard"),
-                        m("button.btn.btn-secondary", {onclick: toggleDarkMode}, state.darkMode ? "Light Mode" : "Dark Mode")
-                    )
+                m("nav.navbar.px-3.py-2.mb-4",
+                    m("div.container-fluid", [
+                        m("span.navbar-brand.fw-bold.fs-5", [
+                            m("i.bi.bi-check2-square.me-2"),
+                            "Productivity Dashboard"
+                       ]),
+                        m("button.btn.btn-secondary.btn-sm", {onclick: toggleDarkMode}, [
+                            m("i.bi", { class: state.darkMode ? "bi-sun-fill" : "bi-moon-fill"}),
+                            " ",
+                            state.darkMode ? "Light Mode" : "Dark Mode"
+                         ])
+                    ])
                 ),
                 m("div.row.g-3", [
 
-                    // SECTION 1 — TO-DO LIST
-                    m("div.col-12.col-md-4",
-                        m("section.card.h-100.p-3.shadow-sm", [
-                            m("h2.fs-1.fw-bold.text-center", "To-Do"),
-
+                    //TO-DO LIST
+                    m("div.col-12",
+                        m("section.card.p-3.shadow-sm.rounded-3", [
+                            m("h2.fs-1.fw-bold.text-center", [m("i.bi.bi-list-check.me-2"), "To-Do"]),
+                            m("div.dol-12.col-md-8", [
                             // Add-task form.
-                            // onsubmit is on the <form> so pressing Enter in the input also works.
-                            // e.preventDefault() stops the browser from doing a real page submit.
                             m("form", {
                                 onsubmit: function (e) {
                                     e.preventDefault();
@@ -214,7 +219,7 @@
                                     value: state.newTask,
                                     oninput: function (e) { state.newTask = e.target.value; }
                                 }),
-                                m("button.btn.btn-primary.mx-1[type=submit]", "Add"),
+                                m("button.btn.btn-primary.mx-1[type=submit]", [m("i.bi.bi-plus-lg.me-1"), "Add"]),
 
                                 // "Clear done" is disabled unless at least one task is checked off.
                                 // Clicking it filters state.tasks to remove all completed tasks.
@@ -250,7 +255,7 @@
                             // Without keys, Mithril may re-render the wrong items.
                             m("ul",
                                 filteredTasks().map(function (task) {
-                                    return m("li.d-flex.align-items-center.gap-2.py-1.border-bottom", { key: task.id }, [
+                                    return m("li.d-flex.align-items-center.gap-2.py-2.border-bottom", { key: task.id }, [
                                         m("div.left", [
                                             // Toggling the checkbox flips task.done directly.
                                             // Mithril will redraw automatically after this onclick.
@@ -264,32 +269,35 @@
                                         // Delete: filter out this task by id and replace state.tasks
                                         m("button.btn.btn-sm.btn-outline-danger[type=button]", {
                                             onclick: function () {
-                                                state.tasks = state.tasks.filter(function (t) { return t.id !== task.id; });
-                                            }
-                                        }, "Delete")
+                                                state.tasks = state.tasks.filter(function (t) { return t.id !== task.id; }, );
+                                            },
+                                        }, "Delete", m("i.bi.bi-trash.mx-2"))
                                     ]);
                                 })
                             )
+                            ])
+
+                            
                         ])
                     ),
 
-                    // SECTION 2 — POMODORO TIMER
-                    m("div.col-12.col-md-4", 
-                        m("section.card.h-100.p-3.shadow-sm", [
-                            m("h2.fs-1.fw-bold.text-center", "Pomodoro Timer"),
+                    //POMODORO TIMER
+                    m("div.col-12.col-md-6", 
+                        m("section.card.h-100.p-3.shadow-sm.rounded-3", [
+                            m("h2.fs-1.fw-bold.text-center", [m("i.bi.bi-stopwatch.me-2"), "Pomodoro Timer"]),
 
                             // Mode buttons: each sets state.mode then calls resetTimer()
                             // to load the correct duration for that mode.
                             m("div.btn-group.w-100.gap-2", [
                                 m("button.btn.btn-secondary[type=button]", {
                                     onclick: function () { state.mode = "focus"; resetTimer(); }
-                                }, "Focus 25"), // Button Text
+                                }, [m("i.bi.bi-pencil.me-1"), "Focus 25"]), // Button Text
                                 m("button.btn.btn-secondary[type=button]", {
                                     onclick: function () { state.mode = "short"; resetTimer(); }
-                                }, "Break 5"), // Button Text
+                                }, [m("i.bi.bi-cup-hot.me-1"), "Break 5"]), // Button Text
                                 m("button.btn.btn-secondary[type=button]", {
                                     onclick: function () { state.mode = "long"; resetTimer(); }
-                                }, "Long 15") // Button Text
+                                }, [m("i.bi.bi-pause-fill.me-1"), "Long 15"]) // Button Text
                             ]),
 
                             m("div.text-center.mt-2",
@@ -299,7 +307,7 @@
                             
 
                             // Large countdown display — formatTime() converts raw seconds to MM:SS
-                            m("p.display-4.fw-bold.text-center.my-3", formatTime(state.secondsLeft)),
+                            m("p.display-3.fw-bold.text-center.my-3", formatTime(state.secondsLeft)),
 
                             // Progress bar: the inner div's width is set as a percentage inline style.
                             m("div.progress.my-2", {style:"height: 8px"}, [
@@ -317,19 +325,19 @@
                             m("div.btn-group.gap-2", { style: "margin-top: 10px;" }, [
                                 // toggleTimer handles both starting and stopping
                                 m("button.btn[type=button]", {
-                                    class: state.isRunning ? "btn btn-warning" : "btn btn-success",
+                                    class: state.isRunning ? "bg-warning bi-pause-fill me-1" : "bg-success bi-play-fill me-1",
                                     onclick: toggleTimer },
                                     state.isRunning ? "Pause" : "Start"
                                 ),
-                                m("button.btn.btn-danger[type=button]", { onclick: resetTimer }, "Reset")
+                                m("button.btn.btn-danger[type=button]", { onclick: resetTimer }, [m("i.bi.bi-arrow-counterclockwise.me-1"), "Reset"])
                             ])
                         ])
                     ),
 
-                    // SECTION 3 — REMINDERS
-                    m("div.col-12.col-md-4", 
-                        m("section.card.h-100.p-3.shadow-sm", [
-                            m("h2.fs-1.fw-bold.text-center", "Reminders"),
+                    //REMINDERS
+                    m("div.col-12.col-md-6", 
+                        m("section.card.h-100.p-3.shadow-sm.rounded-3", [
+                            m("h2.fs-1.fw-bold.text-center", [m("i.bi.bi-bell.me-2"), "Reminders"]),
 
                             // Add-reminder form: requires both a text description and a time.
                             m("form.row", {
@@ -356,7 +364,7 @@
                                     value: state.newReminderTime,
                                     oninput: function (e) { state.newReminderTime = e.target.value; }
                                 }),
-                                m("button.btn.btn-primary[type=submit]", "Add")
+                                m("button.btn.btn-primary[type=submit]", [m("i.bi.bi-plus-circle.me-1"), "Add"])
                             ]),
 
                             // Show a hint message when the list is empty
@@ -367,23 +375,24 @@
 
                             // Reminder list, sorted ascending by time string (HH:MM compares correctly as a string).
                             // .slice() creates a shallow copy before sorting so we don't mutate state.reminders.
-                            m("ul",
+                            m("ul.list-group.list-group-flush.mt-2",
                                 state.reminders
                                     .slice()
                                     .sort(function (a, b) { return a.time.localeCompare(b.time); })
                                     .map(function (rem) {
                                         // reminderClass() returns "urgent", "soon", or "" based on
                                         // how close the reminder time is to right now.
-                                        return m("li", { key: rem.id, class: reminderClass(rem.time) }, [
-                                            m("div.left", [
-                                                m("span.pill", rem.time),
-                                                m("span.text", rem.text)
-                                            ]),
-                                            m("button.btn.btn-outline-danger[type=button]", {
+                                        return m("li", {
+                                            key: rem.id, 
+                                            class: "list-group-item d-flex align-items-center gap-2 " + reminderClass(rem.time)
+                                        }, [
+                                            m("span.badge.bg-secondary", rem.time),
+                                            m("span.flex-grow-1", rem.text),
+                                            m("button.btn.btn-sm.btn-outline-danger[type=button]", {
                                                 onclick: function () {
                                                     state.reminders = state.reminders.filter(function (r) { return r.id !== rem.id; });
                                                 }
-                                            }, "Delete")
+                                            }, "Delete", m("i.bi.bi-trash.mx-2"))
                                         ]);
                                     })
                             )
