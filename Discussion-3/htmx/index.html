@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTMX</title>
+</head>
+<body>
+    <main class="card">
+  <h1>Productivity Dashboard (htmx)</h1>
+
+  <form id="todoForm">
+    <label for="task" class="sr-only">New Task</label>
+    <input id="task" type="text" required placeholder="Add a task">
+    <button type="submit">Add</button>
+  </form>
+
+  <ul id="list"></ul>
+</main>
+
+<script>
+document.getElementById("todoForm").addEventListener("submit", function (e) {
+  e.preventDefault();
+
+  const input = document.getElementById("task");
+  const text = input.value.trim();
+  if (!text) return;
+
+  const li = document.createElement("li");
+  li.innerHTML = text + '<button type="button">Delete</button>';
+
+  li.querySelector("button").addEventListener("click", function () {
+    li.remove();
+  });
+
+  document.getElementById("list").prepend(li);
+  input.value = "";
+});
+</script>
+</body>
+</html>

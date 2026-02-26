@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.15.0/cdn.js' integrity='sha512-nHfCQtLDRfNgzsuMx2O2Joo3+xM8antMOBxo9GodZry1h33+lWa2Dd3a/lkVY4fHJK1CAkFcUrz2jilsaZFWeQ==' crossorigin='anonymous'></script>
+    <title>Document</title>
+</head>
+<body>
+      <header>
+    <h1>Productivity Dashboard</h1>
+    <p class="sub">W3C-valid HTML using Alpine.js via CDN: to-dos, Pomodoro, reminders.</p>
+  </header>
+
+  <main data-x-data="dashboard()" data-x-init="init()">
+    <!-- TO-DO -->
+    <section class="card grid-6" aria-labelledby="todoTitle">
+      <h2 id="todoTitle">To-Do List</h2>
+
+      <form class="row" data-x-on-submit-prevent="addTask()">
+        <label class="sr-only" for="newTask">New task</label>
+        <input id="newTask" type="text" data-x-model-trim="newTask"
+               placeholder="Add a task (e.g., Finish README)" required>
+        <button type="submit">Add</button>
+        <button type="button" class="secondary"
+                data-x-on-click="clearCompleted()"
+                data-x-bind-disabled="!tasks.some(function(t){ return t.done; })">
+          Clear done
+        </button>
+      </form>
+
+      <div class="row" style="margin-top: 10px;">
+        <span class="pill" data-x-text="'Total: ' + tasks.length"></span>
+        <span class="pill" data-x-text="'Remaining: ' + remaining"></span>
+
+        <label for="filter" style="margin-left:auto;">Filter</label>
+        <select id="filter" data-x-model="filter">
+          <option value="all">All</option>
+          <option value="active">Active</option>
+          <option value="done">Done</option>
+        </select>
+      </div>
+
+      <div class="stack" style="margin-top: 12px;">
+        <template data-x-if="filteredTasks.length === 0">
+          <p class="sub" style="margin: 6px 0 0;">No tasks in this view.</p>
+        </template>
+
+        <ul class="stack" aria-label="Task list">
+          <template data-x-for="task in filteredTasks" data-x-bind-key="task.id">
+            <li>
+              <div class="task-left">
+                <input type="checkbox"
+                       data-x-bind-id="'t_' + task.id"
+                       data-x-model="task.done">
+                <label class="task-text"
+                       data-x-bind-for="'t_' + task.id"
+                       data-x-bind-class="task.done ? 'done' : ''"
+                       data-x-text="task.text">
+                </label>
+              </div>
+              <button type="button" class="secondary" data-x-on-click="removeTask(task.id)">Delete</button>
+            </li>
+          </template>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TIMER -->
+    <section class="card grid-6" aria-labelledby="timerTitle">
+      <h2 id="timerTitle">Pomodoro Timer</h2>
+
+      <div class="row">
+        <button type="button" class="secondary" data-x-on-click="setMode('focus')">Focus 25</button>
+        <button type="button" class="secondary" data-x-on-click="setMode('break')">Break 5</button>
+        <button type="button" class="secondary" data-x-on-click="setMode('long')">Long 15</button>
+        <span class="pill" data-x-text="modeLabel"></span>
+      </div>
+
+      <div style="margin-top: 14px;">
+        <p style="font-size: 2.4rem; margin: 8px 0;" data-x-text="timeDisplay"></p>
+        <div class="bar">
+          <div data-x-bind-style="'width: ' + progressPercent + '%;'"></div>
+        </div>
+        <p class="sub" style="margin: 8px 0 0;" data-x-text="isRunning ? 'Running…' : 'Paused'"></p>
+      </div>
+
+      <div class="row" style="margin-top: 12px;">
+        <button type="button" data-x-on-click="toggleTimer()" data-x-text="isRunning ? 'Pause' : 'Start'"></button>
+        <button type="button" class="secondary" data-x-on-click="resetTimer()">Reset</button>
+      </div>
+    </section>
+
+    <!-- REMINDERS -->
+    <section class="card grid-12" aria-labelledby="remindersTitle">
+      <h2 id="remindersTitle">Quick Reminders</h2>
+
+      <form class="row" data-x-on-submit-prevent="addReminder()">
+        <label class="sr-only" for="remText">Reminder</label>
+        <input id="remText" type="text" data-x-model-trim="newReminderText"
+               placeholder="Reminder (e.g., Call dentist)" required>
+        <label class="sr-only" for="remTime">Time</label>
+        <input id="remTime" type="time" data-x-model="newReminderTime" required>
+        <button type="submit">Add</button>
+      </form>
+
+      <div class="stack" style="margin-top: 12px;">
+        <template data-x-if="reminders.length === 0">
+          <p class="sub" style="margin: 6px 0 0;">Add a reminder with a time. This demo does not send notifications.</p>
+        </template>
+
+        <ul class="stack" aria-label="Reminders list">
+          <template data-x-for="rem in sortedReminders" data-x-bind-key="rem.id">
+            <li data-x-bind-class="remClass(rem.time)">
+              <div class="task-left">
+                <span class="pill" data-x-text="rem.time"></span>
+                <span class="task-text" data-x-text="rem.text"></span>
+              </div>
+              <button type="button" class="secondary" data-x-on-click="removeReminder(rem.id)">Delete</button>
+            </li>
+          </template>
+        </ul>
+      </div>
+    </section>
+  </main>
+    <script src="js/main.js"></script>
+</body>
+</html>
