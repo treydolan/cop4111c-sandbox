@@ -1,21 +1,10 @@
-// ============================================================
-// main.js — Productivity Dashboard
-// Built with Mithril.js (https://mithril.js.org)
-//
-// Mithril key concepts used here:
-//   m(selector, attrs, children) — creates a virtual DOM node
-//   m.mount(element, Component)  — mounts a component into a real DOM element m.redraw() — manually triggers a re-render of the UI
-//
-// The whole app is wrapped in an IIFE (Immediately Invoked Function Expression) so that none of our variables leak into the global window scope.
-// ============================================================
+
 
 (function () {
-
-    // ============================================================
+    
     // HELPERS
     // These are small utility functions used throughout the app.
-    // They don't depend on state — just pure input → output.
-    // ============================================================
+    // They don't depend on state — just pure input output.
 
     // uid() generates a unique ID for each task/reminder.
     // We use the browser's built-in crypto API when available,
@@ -75,17 +64,9 @@
 
     // Shorthand to trigger a Mithril redraw.
     // Mithril automatically redraws after DOM events (onclick, oninput, etc.),
-    // but the timer's setInterval runs outside of Mithril's event system,
-    // so we have to call m.redraw() manually each tick to update the display.
     function redraw() { m.redraw(); }
 
-
-    // ============================================================
     // STATE
-    // A single plain object that holds ALL of the app's data.
-    // Mithril doesn't require a special store or observable —
-    // mutating this object and then letting Mithril redraw is enough.
-    // ============================================================
     var state = {
         // Dark mode
         darkMode: false,
@@ -112,12 +93,7 @@
         reminders:       []   // Array of { id, text, time } reminder objects
     };
 
-
-    // ============================================================
     // TO-DO LOGIC
-    // Pure functions that read/filter state.tasks.
-    // We keep logic separate from the view to keep things readable.
-    // ============================================================
 
     // Count how many tasks are NOT yet done.
     function remaining() {
@@ -131,10 +107,7 @@
         return state.tasks; // "all" — return everything
     }
 
-
-    // ============================================================
     // TIMER LOGIC
-    // ============================================================
 
     // Reset: stop any running timer and restore secondsLeft/totalSeconds
     // to whatever the current mode's full duration is.
@@ -191,21 +164,7 @@
         return Math.round((elapsed / state.totalSeconds) * 100);
     }
 
-
-    // ============================================================
     // COMPONENT — App
-    //
-    // In Mithril, a component is just a plain object with a `view` method.
-    // The view method returns a virtual DOM tree built with m() calls.
-    //
-    // m(selector, attrs, children):
-    //   - selector: CSS-style string like "div.class#id" or "button[type=submit]"
-    //   - attrs: optional object of HTML attributes / event handlers
-    //   - children: a string, another m() call, or an array of either
-    //
-    // Mithril diffs the virtual DOM on each redraw and only updates
-    // the real DOM nodes that actually changed — similar to React.
-    // ============================================================
     var App = {
 
         // oninit runs once when the component is first mounted.
