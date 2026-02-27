@@ -238,7 +238,7 @@
                                 m("label[for=filterSel]", { style: "margin-left:auto;" }, "Filter"),
                                 // onchange updates state.filter, which causes filteredTasks() to return
                                 // a different subset on the next redraw.
-                                m("select.form-select.form-select-sm.ms-auto.w-auto", {
+                                m("select.form-select.form-select-sm.ms-auto.w-auto#filterSel", {
                                     value: state.filter,
                                     onchange: function (e) { state.filter = e.target.value; }
                                 }, [
@@ -297,7 +297,7 @@
                                 }, [m("i.bi.bi-cup-hot.me-1"), "Break 5"]), // Button Text
                                 m("button.btn.btn-secondary[type=button]", {
                                     onclick: function () { state.mode = "long"; resetTimer(); }
-                                }, [m("i.bi.bi-pause-fill.me-1"), "Long 15"]) // Button Text
+                                }, [m("i.bi.bi-fork-knife.me-1"), "Break 15"]) // Button Text
                             ]),
 
                             m("div.text-center.mt-2",
@@ -325,7 +325,7 @@
                             m("div.btn-group.gap-2", { style: "margin-top: 10px;" }, [
                                 // toggleTimer handles both starting and stopping
                                 m("button.btn[type=button]", {
-                                    class: state.isRunning ? "bg-warning bi-pause-fill me-1" : "bg-success bi-play-fill me-1",
+                                    class: state.isRunning ? "text-dark bg-warning bi-pause-fill me-1" : "text-light bg-success bi-play-fill me-1",
                                     onclick: toggleTimer },
                                     state.isRunning ? "Pause" : "Start"
                                 ),
@@ -364,7 +364,10 @@
                                     value: state.newReminderTime,
                                     oninput: function (e) { state.newReminderTime = e.target.value; }
                                 }),
-                                m("button.btn.btn-primary[type=submit]", [m("i.bi.bi-plus-circle.me-1"), "Add"])
+                                m("div.btn-group.w-25.m-2" , [
+                                    m("button.btn.btn-primary[type=submit]", [m("i.bi.bi-plus-circle.me-1"), "Add"])
+                                ])
+                                
                             ]),
 
                             // Show a hint message when the list is empty
