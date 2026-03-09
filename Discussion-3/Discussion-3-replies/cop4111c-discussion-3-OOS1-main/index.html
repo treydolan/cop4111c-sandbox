@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZENITH &mdash; by Skybenn</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container" x-data="taskApp">
+
+        <header>
+            <div>
+                <div class="logo">ZEN<span>ITH</span></div>
+                <div class="tagline">by Skybenn &mdash; Your tasks. Your rules.</div>
+            </div>
+            <div class="stats">
+                <div>
+                    <div class="stat-value s-total" x-text="total"></div>
+                    <div class="stat-label">Total</div>
+                </div>
+                <div>
+                    <div class="stat-value s-active" x-text="active"></div>
+                    <div class="stat-label">Active</div>
+                </div>
+                <div>
+                    <div class="stat-value s-done" x-text="completed"></div>
+                    <div class="stat-label">Done</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Progress Bar -->
+        <div class="progress-wrap">
+            <div class="progress-label">
+                <span>Progress</span>
+                <span x-text="progress + '%'"></span>
+            </div>
+            <div class="progress-bar-bg">
+                <div class="progress-bar-fill" x-bind:style="'width:' + progress + '%'"></div>
+            </div>
+        </div>
+
+        <!-- Add Task Form -->
+        <div class="add-form">
+            <input
+                type="text"
+                placeholder="Add a new task..."
+                x-model="newTask"
+                x-on:keydown.enter="addTask()"
+            >
+            <select x-model="newPriority">
+                <option value="high">High</option>
+                <option value="medium" selected>Medium</option>
+                <option value="low">Low</option>
+            </select>
+            <button class="add-btn" type="button" x-on:click="addTask()">+ Add Task</button>
+        </div>
+
+        <!-- Filter Tabs -->
+        <div class="filters">
+            <button class="filter-btn" type="button" x-bind:class="{ active: filter === 'all' }" x-on:click="filter = 'all'">All</button>
+            <button class="filter-btn" type="button" x-bind:class="{ active: filter === 'active' }" x-on:click="filter = 'active'">Active</button>
+            <button class="filter-btn" type="button" x-bind:class="{ active: filter === 'done' }" x-on:click="filter = 'done'">Done</button>
+        </div>
+
+        <!-- Task List -->
+        <div class="task-list">
+            <template x-for="task in filtered" x-bind:key="task.id">
+                <div class="task-card" x-bind:class="{ done: task.done }">
+                    <div class="task-check" x-bind:class="{ checked: task.done }" x-on:click="toggleTask(task.id)">
+                        <span class="check-icon">&#10003;</span>
+                    </div>
+                    <span class="task-text" x-text="task.text"></span>
+                    <span class="priority-tag" x-bind:class="task.priority" x-text="task.priority"></span>
+                    <button class="delete-btn" type="button" x-on:click="deleteTask(task.id)" title="Delete">&#10005;</button>
+                </div>
+            </template>
+
+            <div class="empty" x-show="filtered.length === 0">
+                <div class="empty-icon">&#9744;</div>
+                <div class="empty-text">No tasks here</div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

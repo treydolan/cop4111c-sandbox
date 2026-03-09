@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@300;400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+/* ─── 60/30/10 COLOR SYSTEM ─────────────────────────────
+   60% → Charcoal  (background, cards, surfaces)
+   30% → Emerald   (borders, buttons, progress, UI chrome)
+   10% → Yellow    (accent, highlights, priority tags)
+──────────────────────────────────────────────────────── */
+:root {
+    --bg:        #1a1c18;
+    --surface:   #20231e;
+    --card:      #252820;
+    --card-hover:#2c2f27;
+    --border:    #333630;
+    --green:     #3d9e6a;
+    --green-dim: #2a6e4a;
+    --green-glow:rgba(61,158,106,0.15);
+    --green-text:#5ec98a;
+    --yellow:    #e8c84a;
+    --yellow-dim:rgba(232,200,74,0.12);
+    --yellow-border:rgba(232,200,74,0.3);
+    --text:      #d4d8cc;
+    --muted:     #6b7066;
+    --danger:    #e05c5c;
+}
+
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 2.5rem 2rem;
+    background-image:
+        radial-gradient(ellipse at 0% 0%, rgba(61,158,106,0.07) 0%, transparent 45%),
+        radial-gradient(ellipse at 100% 100%, rgba(232,200,74,0.04) 0%, transparent 45%);
+}
+
+.container { max-width: 780px; margin: 0 auto; }
+
+header {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+    padding-bottom: 1.25rem;
+    border-bottom: 1px solid var(--green-dim);
+}
+
+.logo {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2.8rem;
+    letter-spacing: 0.08em;
+    line-height: 1;
+    color: var(--green-text);
+}
+
+.logo span { color: var(--yellow); }
+
+.tagline {
+    font-size: 0.65rem;
+    color: var(--muted);
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-top: 0.3rem;
+}
+
+.stats { display: flex; gap: 1.75rem; text-align: right; }
+
+.stat-value {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 2rem;
+    letter-spacing: 0.05em;
+    line-height: 1;
+}
+
+.stat-label {
+    font-size: 0.6rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-top: 0.1rem;
+}
+
+.stat-value.s-total  { color: var(--text); }
+.stat-value.s-active { color: var(--green-text); }
+.stat-value.s-done   { color: var(--yellow); }
+
+.progress-wrap {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--green);
+    border-radius: 6px;
+    padding: 0.9rem 1.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.progress-label {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.65rem;
+    color: var(--muted);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    margin-bottom: 0.6rem;
+}
+
+.progress-label span:last-child { color: var(--green-text); }
+
+.progress-bar-bg {
+    height: 3px;
+    background: var(--border);
+    border-radius: 100px;
+    overflow: hidden;
+}
+
+.progress-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, var(--green-dim), var(--green-text));
+    border-radius: 100px;
+    transition: width 0.5s ease;
+    box-shadow: 0 0 8px rgba(94,201,138,0.4);
+}
+
+.add-form { display: flex; gap: 0.6rem; margin-bottom: 1.5rem; }
+
+.add-form input,
+.add-form select {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.78rem;
+    background: var(--card);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 0.6rem 1rem;
+    border-radius: 6px;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+}
+
+.add-form input { flex: 1; }
+.add-form input::placeholder { color: var(--muted); }
+.add-form input:focus,
+.add-form select:focus { border-color: var(--green); background: var(--card-hover); }
+.add-form select option { background: var(--card); }
+
+.add-btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.75rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
+    padding: 0.6rem 1.4rem;
+    border-radius: 6px;
+    border: 1px solid var(--green);
+    background: var(--green-glow);
+    color: var(--green-text);
+    cursor: pointer;
+    transition: background 0.2s, transform 0.15s, box-shadow 0.2s;
+    white-space: nowrap;
+}
+
+.add-btn:hover {
+    background: var(--green-dim);
+    color: #fff;
+    box-shadow: 0 0 12px rgba(61,158,106,0.3);
+    transform: translateY(-1px);
+}
+
+.add-btn:active { transform: translateY(0); }
+
+.filters { display: flex; gap: 0.4rem; margin-bottom: 1.25rem; }
+
+.filter-btn {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 0.65rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.35rem 0.9rem;
+    border-radius: 4px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--muted);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.filter-btn:hover { border-color: var(--green-dim); color: var(--green-text); }
+.filter-btn.active { background: var(--green-glow); border-color: var(--green); color: var(--green-text); }
+
+.task-list { display: flex; flex-direction: column; gap: 0.5rem; }
+
+.task-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 0.85rem 1.1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    transition: border-color 0.2s, background 0.2s, transform 0.2s;
+    animation: slideIn 0.25s ease;
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+.task-card:hover { border-color: var(--green-dim); background: var(--card-hover); transform: translateX(3px); }
+.task-card.done { opacity: 0.45; }
+.task-card.done .task-text { text-decoration: line-through; color: var(--muted); }
+
+.task-check {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    border: 1px solid var(--green-dim);
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s;
+}
+
+.task-check:hover { border-color: var(--green-text); background: var(--green-glow); }
+.task-check.checked { background: var(--green); border-color: var(--green); }
+
+.check-icon { font-size: 0.6rem; color: #fff; display: none; }
+.task-check.checked .check-icon { display: block; }
+
+.task-text { flex: 1; font-size: 0.82rem; transition: all 0.2s; }
+
+.priority-tag {
+    font-size: 0.58rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.18rem 0.55rem;
+    border-radius: 3px;
+    font-weight: 500;
+}
+
+.priority-tag.high   { background: rgba(224,92,92,0.12); color: var(--danger); border: 1px solid rgba(224,92,92,0.25); }
+.priority-tag.medium { background: var(--yellow-dim); color: var(--yellow); border: 1px solid var(--yellow-border); }
+.priority-tag.low    { background: var(--green-glow); color: var(--green-text); border: 1px solid rgba(61,158,106,0.25); }
+
+.delete-btn {
+    background: none;
+    border: none;
+    color: var(--muted);
+    cursor: pointer;
+    font-size: 0.9rem;
+    padding: 0.2rem;
+    border-radius: 3px;
+    transition: color 0.2s;
+    line-height: 1;
+}
+
+.delete-btn:hover { color: var(--danger); }
+
+.empty { text-align: center; padding: 4rem 2rem; color: var(--muted); }
+.empty-icon { font-size: 2rem; margin-bottom: 0.75rem; }
+.empty-text { font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase; }
